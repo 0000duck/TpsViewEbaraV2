@@ -83,42 +83,52 @@
     <Reference Include="ABB.Robotics, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>C:\Program Files (x86)\ABB Industrial IT\Robotics IT\SDK\FlexPendant SDK 6.08\bin\ABB.Robotics.dll</HintPath>
       <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
     </Reference>
     <Reference Include="ABB.Robotics.Controllers, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>C:\Program Files (x86)\ABB Industrial IT\Robotics IT\SDK\FlexPendant SDK 6.08\bin\ABB.Robotics.Controllers.dll</HintPath>
       <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
     </Reference>
     <Reference Include="ABB.Robotics.GTPU, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>C:\Program Files (x86)\ABB Industrial IT\Robotics IT\SDK\FlexPendant SDK 6.08\bin\ABB.Robotics.GTPU.dll</HintPath>
       <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
     </Reference>
     <Reference Include="ABB.Robotics.GTPU.Windows.Forms, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>C:\Program Files (x86)\ABB Industrial IT\Robotics IT\SDK\FlexPendant SDK 6.08\bin\ABB.Robotics.GTPU.Windows.Forms.dll</HintPath>
       <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
     </Reference>
     <Reference Include="ABB.Robotics.Taf.Base, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>C:\Program Files (x86)\ABB Industrial IT\Robotics IT\SDK\FlexPendant SDK 6.08\bin\ABB.Robotics.Taf.Base.dll</HintPath>
       <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
     </Reference>
     <Reference Include="ABB.Robotics.Tps.Resources, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>C:\Program Files (x86)\ABB Industrial IT\Robotics IT\SDK\FlexPendant SDK 6.08\bin\ABB.Robotics.Tps.Resources.dll</HintPath>
       <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
     </Reference>
     <Reference Include="ABB.Robotics.Tps.Taf, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>C:\Program Files (x86)\ABB Industrial IT\Robotics IT\SDK\FlexPendant SDK 6.08\bin\ABB.Robotics.Tps.Taf.dll</HintPath>
       <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
     </Reference>
     <Reference Include="ABB.Robotics.Tps.Windows.Forms, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>C:\Program Files (x86)\ABB Industrial IT\Robotics IT\SDK\FlexPendant SDK 6.08\bin\ABB.Robotics.Tps.Windows.Forms.dll</HintPath>
       <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
     </Reference>
     <Reference Include="ABB.Robotics.DataBinding, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>C:\Program Files (x86)\ABB Industrial IT\Robotics IT\SDK\FlexPendant SDK 6.08\bin\ABB.Robotics.DataBinding.dll</HintPath>
       <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
     </Reference>
     <Reference Include="ABB.Robotics.ScreenMaker.Windows.Forms, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>C:\Program Files (x86)\ABB Industrial IT\Robotics IT\SDK\FlexPendant SDK 6.08\bin\ABB.Robotics.ScreenMaker.Windows.Forms.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
     </Reference>
     <Reference Include="ProductionScreenBase, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -196,7 +206,7 @@
       <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
         <HostingProcess disable="1" />
       </FlavorProperties>
-      <UserProperties SDKVersion="5.8.0.0" TDLFILE="Gtpu.tdl" TDLELEMENTTYPE="GTPULibrary" />
+      <UserProperties TDLELEMENTTYPE="GTPULibrary" TDLFILE="Gtpu.tdl" SDKVersion="5.8.0.0" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Condition="'$(TargetFrameworkVersion)' == 'v1.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.v1.targets" />

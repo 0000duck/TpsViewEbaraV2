@@ -9,6 +9,7 @@ using TpsViewEbaraV2NameSpace.Robot;
 using TpsViewEbaraV2NameSpace.Ebara;
 using ABB.Robotics.Tps.Taf;
 using ABB.Robotics.Tps.Resources;
+using ABB.Robotics.ProductionScreen.Base;
 
 namespace TpsViewEbaraV2NameSpace
 {
@@ -29,6 +30,8 @@ namespace TpsViewEbaraV2NameSpace
         private TpsLabel tpsLabel_numTorchCleanIntervalCount;
         private NumEditor numEditor_numTorchCleanIntervalCount;
         private ABB.Robotics.Tps.Windows.Forms.MenuItem menuItem_Close;
+        private ABB.Robotics.Tps.Windows.Forms.Button button_limitSTN1Axis1;
+        private ABB.Robotics.Tps.Windows.Forms.Button button_unLimitSTN1Axis1;
 
         /// <summary>
         /// Required designer variable.
@@ -104,6 +107,8 @@ namespace TpsViewEbaraV2NameSpace
             this.tpsLabel_numTorchCleanIntervalCount = new ABB.Robotics.Tps.Windows.Forms.TpsLabel();
             this.numEditor_numTorchCleanIntervalCount = new ABB.Robotics.Tps.Windows.Forms.NumEditor();
             this.menuItem_Close = new ABB.Robotics.Tps.Windows.Forms.MenuItem();
+            this.button_limitSTN1Axis1 = new ABB.Robotics.Tps.Windows.Forms.Button();
+            this.button_unLimitSTN1Axis1 = new ABB.Robotics.Tps.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // checkBox_boolBlocksiFr1ArcStable
@@ -321,9 +326,43 @@ namespace TpsViewEbaraV2NameSpace
             this.menuItem_Close.Width = 128;
             this.menuItem_Close.Click += new System.EventHandler(this.menuItem_Close_Click);
             // 
+            // button_limitSTN1Axis1
+            // 
+            this.button_limitSTN1Axis1.BackColor = System.Drawing.Color.White;
+            this.button_limitSTN1Axis1.BackgroundImage = null;
+            this.button_limitSTN1Axis1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.button_limitSTN1Axis1.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.button_limitSTN1Axis1.Image = null;
+            this.button_limitSTN1Axis1.Location = new System.Drawing.Point(420, 99);
+            this.button_limitSTN1Axis1.Name = "button_limitSTN1Axis1";
+            this.button_limitSTN1Axis1.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.button_limitSTN1Axis1.Size = new System.Drawing.Size(140, 70);
+            this.button_limitSTN1Axis1.TabIndex = 44;
+            this.button_limitSTN1Axis1.Text = "Limit Axis 1";
+            this.button_limitSTN1Axis1.TextAlign = ABB.Robotics.Tps.Windows.Forms.ContentAlignmentABB.MiddleCenter;
+            this.button_limitSTN1Axis1.Click += new System.EventHandler(this.button_limitSTN1Axis1_Click);
+            // 
+            // button_unLimitSTN1Axis1
+            // 
+            this.button_unLimitSTN1Axis1.BackColor = System.Drawing.Color.White;
+            this.button_unLimitSTN1Axis1.BackgroundImage = null;
+            this.button_unLimitSTN1Axis1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.button_unLimitSTN1Axis1.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.button_unLimitSTN1Axis1.Image = null;
+            this.button_unLimitSTN1Axis1.Location = new System.Drawing.Point(420, 185);
+            this.button_unLimitSTN1Axis1.Name = "button_unLimitSTN1Axis1";
+            this.button_unLimitSTN1Axis1.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.button_unLimitSTN1Axis1.Size = new System.Drawing.Size(140, 70);
+            this.button_unLimitSTN1Axis1.TabIndex = 44;
+            this.button_unLimitSTN1Axis1.Text = "Unlimit Axis 1";
+            this.button_unLimitSTN1Axis1.TextAlign = ABB.Robotics.Tps.Windows.Forms.ContentAlignmentABB.MiddleCenter;
+            this.button_unLimitSTN1Axis1.Click += new System.EventHandler(this.button_unLimitSTN1Axis1_Click);
+            // 
             // TpsFormSetting
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.Controls.Add(this.button_unLimitSTN1Axis1);
+            this.Controls.Add(this.button_limitSTN1Axis1);
             this.Controls.Add(this.checkBox_boolBlocksiFr1ArcStable);
             this.Controls.Add(this.numEditor_numTorchCleanIntervalCount);
             this.Controls.Add(this.numEditor_numShoulderGrooveCoefficient);
@@ -350,6 +389,8 @@ namespace TpsViewEbaraV2NameSpace
             this.Controls.SetChildIndex(this.numEditor_numShoulderGrooveCoefficient, 0);
             this.Controls.SetChildIndex(this.numEditor_numTorchCleanIntervalCount, 0);
             this.Controls.SetChildIndex(this.checkBox_boolBlocksiFr1ArcStable, 0);
+            this.Controls.SetChildIndex(this.button_limitSTN1Axis1, 0);
+            this.Controls.SetChildIndex(this.button_unLimitSTN1Axis1, 0);
             this.ResumeLayout(false);
 
         }
@@ -365,6 +406,8 @@ namespace TpsViewEbaraV2NameSpace
             this.tpsLabel_numIsometricalSaddleCoefficient.Text = _tpsRm.GetString("TXT_tpsLabel_numIsometricalSaddleCoefficient");
             this.tpsLabel_numShoulderGrooveCoefficient.Text = _tpsRm.GetString("TXT_tpsLabel_numShoulderGrooveCoefficient");
             this.tpsLabel_numTorchCleanIntervalCount.Text = _tpsRm.GetString("TXT_tpsLabel_numTorchCleanIntervalCount");
+            this.button_limitSTN1Axis1.Text = _tpsRm.GetString("TXT_button_limitSTN1Axis1");
+            this.button_unLimitSTN1Axis1.Text = _tpsRm.GetString("TXT_button_unLimitSTN1Axis1");
         }
 
         #region ITpsViewActivation Members
@@ -459,5 +502,39 @@ namespace TpsViewEbaraV2NameSpace
         {
             this.menuItem_Apply.Enabled = true;
         }
+
+        private void button_limitSTN1Axis1_Click(object sender, EventArgs e)
+        {
+            this.rwSystem.Controller.Configuration.Write("0","MOC", "Arm", "M8DM2", "upper_joint_bound");
+            this.rwSystem.Controller.Configuration.Write("0", "MOC", "Arm", "M8DM2", "lower_joint_bound");
+            GTPUMessageBox.Show(this.Parent
+                , RestartController
+                , "The changes will not take effect until the controller is restarted.\n\nDo you want to restart now?"
+                , "Restart"
+                , MessageBoxIcon.Asterisk, MessageBoxButtons.YesNo);
+            //this.rwSystem.Controller.Restart();
+        }
+
+        private void button_unLimitSTN1Axis1_Click(object sender, EventArgs e)
+        {
+            this.rwSystem.Controller.Configuration.Write("3.159", "MOC", "Arm", "M8DM2", "upper_joint_bound");
+            this.rwSystem.Controller.Configuration.Write("-3.159", "MOC", "Arm", "M8DM2", "lower_joint_bound");
+            GTPUMessageBox.Show(this.Parent
+                , RestartController
+                , "The changes will not take effect until the controller is restarted.\n\nDo you want to restart now?"
+                , "Restart"
+                , MessageBoxIcon.Asterisk, MessageBoxButtons.YesNo);
+            //this.rwSystem.Controller.Restart();
+        }
+
+        private void RestartController( Object sender, MessageBoxEventArgs e)
+        {
+            if (e.DialogResult == DialogResult.Yes)
+            {
+                this.rwSystem.Controller.Restart();
+            }
+            //ErrorHandler.AddErrorMessage("MichaelLog",string.Format("{0},{1},{2}",e.ButtonText,e.DialogResult,e.State));
+        }
+
     }
 }

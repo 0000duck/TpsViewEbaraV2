@@ -58,11 +58,29 @@ namespace TpsViewEbaraV2NameSpace {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Limit Axis 1.
+        /// </summary>
+        internal static string TXT_button_limitSTN1Axis1 {
+            get {
+                return ResourceManager.GetString("TXT_button_limitSTN1Axis1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Setting.
         /// </summary>
         internal static string TXT_button_Setting {
             get {
                 return ResourceManager.GetString("TXT_button_Setting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unlimit Axis 1.
+        /// </summary>
+        internal static string TXT_button_unLimitSTN1Axis1 {
+            get {
+                return ResourceManager.GetString("TXT_button_unLimitSTN1Axis1", resourceCulture);
             }
         }
         

@@ -58,11 +58,29 @@ namespace TpsViewEbaraV2NameSpace.zh {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 锁定1轴.
+        /// </summary>
+        internal static string TXT_button_limitSTN1Axis1 {
+            get {
+                return ResourceManager.GetString("TXT_button_limitSTN1Axis1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 设置.
         /// </summary>
         internal static string TXT_button_Setting {
             get {
                 return ResourceManager.GetString("TXT_button_Setting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 解锁1轴.
+        /// </summary>
+        internal static string TXT_button_unLimitSTN1Axis1 {
+            get {
+                return ResourceManager.GetString("TXT_button_unLimitSTN1Axis1", resourceCulture);
             }
         }
         

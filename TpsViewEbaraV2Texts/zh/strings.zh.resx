@@ -210,4 +210,10 @@
   <data name="TXT_tpsLabel_intIndex" xml:space="preserve">
     <value>序号</value>
   </data>
+  <data name="TXT_button_limitSTN1Axis1" xml:space="preserve">
+    <value>锁定1轴</value>
+  </data>
+  <data name="TXT_button_unLimitSTN1Axis1" xml:space="preserve">
+    <value>解锁1轴</value>
+  </data>
 </root>

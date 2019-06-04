@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TpsViewEbaraV2", "TpsViewEbaraV2\TpsViewEbaraV2.csproj", "{8BFF2E2E-DBA3-413A-B82D-FC4BBD2EBC69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TpsViewEbaraV2Texts", "TpsViewEbaraV2Texts\TpsViewEbaraV2Texts.csproj", "{E8A60F99-0CBF-4ABF-BBBE-7F9A96231D47}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8BFF2E2E-DBA3-413A-B82D-FC4BBD2EBC69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BFF2E2E-DBA3-413A-B82D-FC4BBD2EBC69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BFF2E2E-DBA3-413A-B82D-FC4BBD2EBC69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BFF2E2E-DBA3-413A-B82D-FC4BBD2EBC69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8A60F99-0CBF-4ABF-BBBE-7F9A96231D47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8A60F99-0CBF-4ABF-BBBE-7F9A96231D47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8A60F99-0CBF-4ABF-BBBE-7F9A96231D47}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E8A60F99-0CBF-4ABF-BBBE-7F9A96231D47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8A60F99-0CBF-4ABF-BBBE-7F9A96231D47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8A60F99-0CBF-4ABF-BBBE-7F9A96231D47}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

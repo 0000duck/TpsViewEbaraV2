@@ -10,6 +10,7 @@ using TpsViewEbaraV2NameSpace.Ebara;
 using ABB.Robotics.Tps.Taf;
 using ABB.Robotics.Tps.Resources;
 using ABB.Robotics.ProductionScreen.Base;
+using ABB.Robotics.Controllers.RapidDomain;
 
 namespace TpsViewEbaraV2NameSpace
 {
@@ -21,17 +22,18 @@ namespace TpsViewEbaraV2NameSpace
         private ABB.Robotics.Tps.Windows.Forms.CheckBox checkBox_boolBlocksiFr1ArcStable;
         private NumEditor numEditor_numBlocksiArcStableLength;
         private TpsLabel tpsLabel_numBlocksiArcStableLength;
-        private ABB.Robotics.Tps.Windows.Forms.MenuItem menuItem_Refresh;
-        private ABB.Robotics.Tps.Windows.Forms.MenuItem menuItem_Apply;
         private TpsLabel tpsLabel_numIsometricalSaddleCoefficient;
         private NumEditor numEditor_numIsometricalSaddleCoefficient;
         private TpsLabel tpsLabel_numShoulderGrooveCoefficient;
         private NumEditor numEditor_numShoulderGrooveCoefficient;
         private TpsLabel tpsLabel_numTorchCleanIntervalCount;
         private NumEditor numEditor_numTorchCleanIntervalCount;
-        private ABB.Robotics.Tps.Windows.Forms.MenuItem menuItem_Close;
         private ABB.Robotics.Tps.Windows.Forms.Button button_limitSTN1Axis1;
         private ABB.Robotics.Tps.Windows.Forms.Button button_unLimitSTN1Axis1;
+
+        private ABB.Robotics.Tps.Windows.Forms.MenuItem menuItem_Refresh;
+        private ABB.Robotics.Tps.Windows.Forms.MenuItem menuItem_Apply;
+        private ABB.Robotics.Tps.Windows.Forms.MenuItem menuItem_Close;
 
         /// <summary>
         /// Required designer variable.
@@ -333,7 +335,7 @@ namespace TpsViewEbaraV2NameSpace
             this.button_limitSTN1Axis1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.button_limitSTN1Axis1.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
             this.button_limitSTN1Axis1.Image = null;
-            this.button_limitSTN1Axis1.Location = new System.Drawing.Point(420, 99);
+            this.button_limitSTN1Axis1.Location = new System.Drawing.Point(420, 95);
             this.button_limitSTN1Axis1.Name = "button_limitSTN1Axis1";
             this.button_limitSTN1Axis1.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
             this.button_limitSTN1Axis1.Size = new System.Drawing.Size(140, 70);

@@ -200,6 +200,13 @@ namespace TpsViewEbaraV2NameSpace.Ebara
             set { reviseScanHeaderType = value; }
         }
 
+        private int algorithmType;
+        public int numAlgorithmType
+        {
+            get { return algorithmType; }
+            set { algorithmType = value; }
+        }
+
         private bool continuous;
         public bool boolContinuous
         {
@@ -271,7 +278,7 @@ namespace TpsViewEbaraV2NameSpace.Ebara
 
         public override string ToString()
         {
-            //return string.Format("[{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16},{17},{18},{19},{20},{21},{22},{23},{24},{25},{26},\"{27}\",\"{28}\"]"
+            //return string.Format("[{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16},{17},{18},{19},{20},{21},{22},{23},{24},{25},{26},{27},\"{28}\",\"{29}\"]"
             //    , this.numIndex, this.numPipeGrooveType, this.numSeamCenterX, this.numSeamNormalAngle
             //    , this.numHeaderDiameter, this.numHeaderThickness, this.numHeaderMaterial, this.numBranchDiameter, this.numBranchThickness, this.numBranchMaterial
             //    , this.numMultiPassTotal, this.numCooperativeRobots, this.numPathSource, this.numReviseScanBranchType, this.numReviseScanHeaderType
@@ -280,12 +287,12 @@ namespace TpsViewEbaraV2NameSpace.Ebara
             //    , this.boolContinuous.ToString().ToUpper(), this.boolUseAlignedSTNbyFixedValue.ToString().ToUpper(), this.strID, this.strRemark);
 
             //For a string, don't need quotes "" 
-            return string.Format("[{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16},{17},{18},{19},{20},{21},{22},{23},{24},{25},{26},{27},{28}]"
+            return string.Format("[{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16},{17},{18},{19},{20},{21},{22},{23},{24},{25},{26},{27},{28},{29}]"
                 , this.numIndex, this.numPipeGrooveType, this.numSeamCenterX, this.numSeamNormalAngle
                 , this.numHeaderDiameter, this.numHeaderThickness, this.numHeaderMaterial, this.numBranchDiameter, this.numBranchThickness, this.numBranchMaterial
                 , this.numMultiPassTotal, this.numCooperativeRobots, this.numPathSource, this.numReviseScanBranchType, this.numReviseScanHeaderType
                 , this.numWeldLegWidth, this.numGrooveGap, this.numBranchGrooveRoot, this.numBranchGrooveAngle
-                , this.numBranchGrooveAngle90, this.numTopHeight90, this.numBottomHeight90, this.numProfCosine, this.numLayerHeight, this.numLayerPassTotalRoundType
+                , this.numBranchGrooveAngle90, this.numTopHeight90, this.numBottomHeight90, this.numProfCosine, this.numLayerHeight, this.numLayerPassTotalRoundType, this.numAlgorithmType
                 , this.boolContinuous.ToString().ToUpper(), this.boolUseAlignedSTNbyFixedValue.ToString().ToUpper(), this.strID, this.strRemark);
         }
 
@@ -331,6 +338,7 @@ namespace TpsViewEbaraV2NameSpace.Ebara
 
             this.numLayerHeight = decimal.Parse(rPipeGrooveModelUserDefine.Components[i++].ToString());
             this.numLayerPassTotalRoundType = decimal.Parse(rPipeGrooveModelUserDefine.Components[i++].ToString());
+            this.numAlgorithmType = int.Parse(rPipeGrooveModelUserDefine.Components[i++].ToString());
 
             this.boolContinuous = bool.Parse(rPipeGrooveModelUserDefine.Components[i++].ToString());
             this.boolUseAlignedSTNbyFixedValue = bool.Parse(rPipeGrooveModelUserDefine.Components[i++].ToString());

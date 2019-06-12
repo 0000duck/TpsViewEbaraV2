@@ -54,6 +54,8 @@ namespace TpsViewEbaraV2NameSpace
         private ABB.Robotics.Tps.Windows.Forms.TabPage tabPage_Detail;
         private ABB.Robotics.Tps.Windows.Forms.TabPage tabPage_Debug;
         private ABB.Robotics.Tps.Windows.Forms.MenuItem menuItem_Close;
+        private TpsLabel tpsLabel_numAlgorithmType;
+        private ABB.Robotics.Tps.Windows.Forms.ComboBox comboBox_numAlgorithmType;
 
 
         /// <summary>
@@ -152,13 +154,15 @@ namespace TpsViewEbaraV2NameSpace
             this.tpsLabel_numSeamCenterX = new ABB.Robotics.Tps.Windows.Forms.TpsLabel();
             this.checkBox_boolUseAlignedSTNbyFixedValue = new ABB.Robotics.Tps.Windows.Forms.CheckBox();
             this.tabControl1 = new ABB.Robotics.Tps.Windows.Forms.TabControl();
-            this.tabPage_Scan = new ABB.Robotics.Tps.Windows.Forms.TabPage();
             this.tabPage_Detail = new ABB.Robotics.Tps.Windows.Forms.TabPage();
+            this.tpsLabel_numAlgorithmType = new ABB.Robotics.Tps.Windows.Forms.TpsLabel();
+            this.comboBox_numAlgorithmType = new ABB.Robotics.Tps.Windows.Forms.ComboBox();
+            this.tabPage_Scan = new ABB.Robotics.Tps.Windows.Forms.TabPage();
             this.tabPage_Debug = new ABB.Robotics.Tps.Windows.Forms.TabPage();
             this.menuItem_Close = new ABB.Robotics.Tps.Windows.Forms.MenuItem();
             this.tabControl1.SuspendLayout();
-            this.tabPage_Scan.SuspendLayout();
             this.tabPage_Detail.SuspendLayout();
+            this.tabPage_Scan.SuspendLayout();
             this.tabPage_Debug.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -674,20 +678,64 @@ namespace TpsViewEbaraV2NameSpace
             // tabControl1
             // 
             this.tabControl1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tabControl1.Controls.Add(this.tabPage_Debug);
             this.tabControl1.Controls.Add(this.tabPage_Detail);
             this.tabControl1.Controls.Add(this.tabPage_Scan);
+            this.tabControl1.Controls.Add(this.tabPage_Debug);
             this.tabControl1.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
             this.tabControl1.ImageList = null;
             this.tabControl1.Location = new System.Drawing.Point(0, 70);
             this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 2;
+            this.tabControl1.SelectedIndex = 1;
             this.tabControl1.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
             this.tabControl1.Size = new System.Drawing.Size(640, 271);
             this.tabControl1.TabIndex = 43;
             this.tabControl1.TabPages.Add(this.tabPage_Scan);
             this.tabControl1.TabPages.Add(this.tabPage_Detail);
             this.tabControl1.TabPages.Add(this.tabPage_Debug);
+            // 
+            // tabPage_Detail
+            // 
+            this.tabPage_Detail.Controls.Add(this.tpsLabel_numAlgorithmType);
+            this.tabPage_Detail.Controls.Add(this.comboBox_numAlgorithmType);
+            this.tabPage_Detail.Controls.Add(this.checkBox_Rob1);
+            this.tabPage_Detail.Controls.Add(this.checkBox_boolContinuous);
+            this.tabPage_Detail.Controls.Add(this.checkBox_Rob2);
+            this.tabPage_Detail.Controls.Add(this.checkBox_boolUseAlignedSTNbyFixedValue);
+            this.tabPage_Detail.Controls.Add(this.checkBox_Pos1);
+            this.tabPage_Detail.ImageIndex = -1;
+            this.tabPage_Detail.Location = new System.Drawing.Point(0, 40);
+            this.tabPage_Detail.Name = "tabPage_Detail";
+            this.tabPage_Detail.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.tabPage_Detail.Size = new System.Drawing.Size(640, 231);
+            this.tabPage_Detail.TabIndex = 2;
+            this.tabPage_Detail.Text = "Detail";
+            // 
+            // tpsLabel_numAlgorithmType
+            // 
+            this.tpsLabel_numAlgorithmType.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tpsLabel_numAlgorithmType.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.tpsLabel_numAlgorithmType.Location = new System.Drawing.Point(299, 28);
+            this.tpsLabel_numAlgorithmType.Multiline = true;
+            this.tpsLabel_numAlgorithmType.Name = "tpsLabel_numAlgorithmType";
+            this.tpsLabel_numAlgorithmType.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.tpsLabel_numAlgorithmType.Size = new System.Drawing.Size(97, 24);
+            this.tpsLabel_numAlgorithmType.TabIndex = 38;
+            this.tpsLabel_numAlgorithmType.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.tpsLabel_numAlgorithmType.Title = "Algorithm";
+            // 
+            // comboBox_numAlgorithmType
+            // 
+            this.comboBox_numAlgorithmType.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.comboBox_numAlgorithmType.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.comboBox_numAlgorithmType.Items.Add("1,23,456...");
+            this.comboBox_numAlgorithmType.Items.Add("12,345,6789...");
+            this.comboBox_numAlgorithmType.Location = new System.Drawing.Point(416, 29);
+            this.comboBox_numAlgorithmType.Name = "comboBox_numAlgorithmType";
+            this.comboBox_numAlgorithmType.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.comboBox_numAlgorithmType.Size = new System.Drawing.Size(187, 30);
+            this.comboBox_numAlgorithmType.TabIndex = 39;
+            this.comboBox_numAlgorithmType.Text = "comboBox1";
+            this.comboBox_numAlgorithmType.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(this.dataControl_PropertyChanged);
             // 
             // tabPage_Scan
             // 
@@ -713,21 +761,6 @@ namespace TpsViewEbaraV2NameSpace
             this.tabPage_Scan.Size = new System.Drawing.Size(640, 231);
             this.tabPage_Scan.TabIndex = 1;
             this.tabPage_Scan.Text = "Scan";
-            // 
-            // tabPage_Detail
-            // 
-            this.tabPage_Detail.Controls.Add(this.checkBox_Rob1);
-            this.tabPage_Detail.Controls.Add(this.checkBox_boolContinuous);
-            this.tabPage_Detail.Controls.Add(this.checkBox_Rob2);
-            this.tabPage_Detail.Controls.Add(this.checkBox_boolUseAlignedSTNbyFixedValue);
-            this.tabPage_Detail.Controls.Add(this.checkBox_Pos1);
-            this.tabPage_Detail.ImageIndex = -1;
-            this.tabPage_Detail.Location = new System.Drawing.Point(0, 40);
-            this.tabPage_Detail.Name = "tabPage_Detail";
-            this.tabPage_Detail.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
-            this.tabPage_Detail.Size = new System.Drawing.Size(640, 231);
-            this.tabPage_Detail.TabIndex = 2;
-            this.tabPage_Detail.Text = "Detail";
             // 
             // tabPage_Debug
             // 
@@ -778,8 +811,8 @@ namespace TpsViewEbaraV2NameSpace
             this.Controls.SetChildIndex(this.tabControl1, 0);
             this.Controls.SetChildIndex(this.pictureBox_Logo, 0);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage_Scan.ResumeLayout(false);
             this.tabPage_Detail.ResumeLayout(false);
+            this.tabPage_Scan.ResumeLayout(false);
             this.tabPage_Debug.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -888,6 +921,7 @@ namespace TpsViewEbaraV2NameSpace
                 {
                     this.comboBox_numScanHeaderRob2.SelectedIndex = 3;
                 }
+                this.comboBox_numAlgorithmType.SelectedIndex = this.pipeGrooveModel.numAlgorithmType - 1;
 
                 this.checkBox_boolContinuous.Checked = this.pipeGrooveModel.boolContinuous;
                 this.checkBox_boolUseAlignedSTNbyFixedValue.Checked = this.pipeGrooveModel.boolUseAlignedSTNbyFixedValue;
@@ -1009,6 +1043,7 @@ namespace TpsViewEbaraV2NameSpace
                     this.pipeGrooveModel.numReviseScanHeaderType = this.pipeGrooveModel.numReviseScanHeaderType | 32;
                 }
 
+                this.pipeGrooveModel.numAlgorithmType = this.comboBox_numAlgorithmType.SelectedIndex+1;
                 this.pipeGrooveModel.boolContinuous = this.checkBox_boolContinuous.Checked;
                 this.pipeGrooveModel.boolUseAlignedSTNbyFixedValue = this.checkBox_boolUseAlignedSTNbyFixedValue.Checked;
 
@@ -1072,7 +1107,6 @@ namespace TpsViewEbaraV2NameSpace
             this.checkBox_boolKeepLastWobj.Text = _tpsRm.GetString("TXT_checkBox_boolKeepLastWobj");
             this.checkBox_boolMoveLSubstituted.Text = _tpsRm.GetString("TXT_checkBox_boolMoveLSubstituted");
         }
-
 
     }
 }

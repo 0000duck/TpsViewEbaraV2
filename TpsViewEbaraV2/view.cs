@@ -45,6 +45,7 @@ namespace TpsViewEbaraV2NameSpace
             PipeGrooveModel = 1,
             Setting = 2,
             WeldingParameter=3,
+            WobjCurrent=4,
         }
 
         private PipeGrooveModel pipeGrooveModel = null;
@@ -55,6 +56,7 @@ namespace TpsViewEbaraV2NameSpace
         private TpsFormPipeGrooveModel _viewPipeGrooveModel = null;
         private TpsFormSetting _viewSetting = null;
         private TpsFormWeldingParameter _viewWeldingParameter = null;
+        private TpsFormWobjCurrent _viewWobjCurrent = null;
 
         //sets this first view to the currently active view
         private ActiveView _activeView = ActiveView.Desktop;
@@ -76,6 +78,7 @@ namespace TpsViewEbaraV2NameSpace
         private ABB.Robotics.Tps.Windows.Forms.PictureBox pictureBox_Logo;
         private ABB.Robotics.Tps.Windows.Forms.Button button_Setting;
         private ABB.Robotics.Tps.Windows.Forms.Button button_WeldingParameter;
+        private ABB.Robotics.Tps.Windows.Forms.Button button_wobjCurrent;
 
         private const string CURRENT_MODULE_NAME = "TpsViewEbaraV2";
 
@@ -191,6 +194,7 @@ namespace TpsViewEbaraV2NameSpace
             this.pictureBox_Logo = new ABB.Robotics.Tps.Windows.Forms.PictureBox();
             this.button_Setting = new ABB.Robotics.Tps.Windows.Forms.Button();
             this.button_WeldingParameter = new ABB.Robotics.Tps.Windows.Forms.Button();
+            this.button_wobjCurrent = new ABB.Robotics.Tps.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_PipeGrooveModel
@@ -200,7 +204,7 @@ namespace TpsViewEbaraV2NameSpace
             this.button_PipeGrooveModel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.button_PipeGrooveModel.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
             this.button_PipeGrooveModel.Image = null;
-            this.button_PipeGrooveModel.Location = new System.Drawing.Point(84, 160);
+            this.button_PipeGrooveModel.Location = new System.Drawing.Point(34, 160);
             this.button_PipeGrooveModel.Name = "button_PipeGrooveModel";
             this.button_PipeGrooveModel.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
             this.button_PipeGrooveModel.Size = new System.Drawing.Size(120, 120);
@@ -243,7 +247,7 @@ namespace TpsViewEbaraV2NameSpace
             this.button_Setting.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.button_Setting.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
             this.button_Setting.Image = null;
-            this.button_Setting.Location = new System.Drawing.Point(259, 160);
+            this.button_Setting.Location = new System.Drawing.Point(188, 160);
             this.button_Setting.Name = "button_Setting";
             this.button_Setting.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
             this.button_Setting.Size = new System.Drawing.Size(120, 120);
@@ -259,7 +263,7 @@ namespace TpsViewEbaraV2NameSpace
             this.button_WeldingParameter.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.button_WeldingParameter.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
             this.button_WeldingParameter.Image = null;
-            this.button_WeldingParameter.Location = new System.Drawing.Point(429, 160);
+            this.button_WeldingParameter.Location = new System.Drawing.Point(343, 160);
             this.button_WeldingParameter.Name = "button_WeldingParameter";
             this.button_WeldingParameter.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
             this.button_WeldingParameter.Size = new System.Drawing.Size(120, 120);
@@ -268,10 +272,27 @@ namespace TpsViewEbaraV2NameSpace
             this.button_WeldingParameter.TextAlign = ABB.Robotics.Tps.Windows.Forms.ContentAlignmentABB.MiddleCenter;
             this.button_WeldingParameter.Click += new System.EventHandler(this.button_WeldingParameter_Click);
             // 
+            // button_wobjCurrent
+            // 
+            this.button_wobjCurrent.BackColor = System.Drawing.Color.White;
+            this.button_wobjCurrent.BackgroundImage = null;
+            this.button_wobjCurrent.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.button_wobjCurrent.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.button_wobjCurrent.Image = null;
+            this.button_wobjCurrent.Location = new System.Drawing.Point(501, 160);
+            this.button_wobjCurrent.Name = "button_wobjCurrent";
+            this.button_wobjCurrent.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.button_wobjCurrent.Size = new System.Drawing.Size(120, 120);
+            this.button_wobjCurrent.TabIndex = 9;
+            this.button_wobjCurrent.Text = "wobjCurrent";
+            this.button_wobjCurrent.TextAlign = ABB.Robotics.Tps.Windows.Forms.ContentAlignmentABB.MiddleCenter;
+            this.button_wobjCurrent.Click += new System.EventHandler(this.button_wobjCurrent_Click);
+            // 
             // TpsViewEbaraV2
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.LightGray;
+            this.Controls.Add(this.button_wobjCurrent);
             this.Controls.Add(this.button_WeldingParameter);
             this.Controls.Add(this.button_Setting);
             this.Controls.Add(this.pictureBox_Logo);
@@ -284,6 +305,7 @@ namespace TpsViewEbaraV2NameSpace
             this.Controls.SetChildIndex(this.pictureBox_Logo, 0);
             this.Controls.SetChildIndex(this.button_Setting, 0);
             this.Controls.SetChildIndex(this.button_WeldingParameter, 0);
+            this.Controls.SetChildIndex(this.button_wobjCurrent, 0);
             this.ResumeLayout(false);
 
         }
@@ -540,6 +562,38 @@ namespace TpsViewEbaraV2NameSpace
             {
                 Cursor.Current = Cursors.Default;
             }
+        }
+
+        private void button_wobjCurrent_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Wait cursor if it is performance demanding to open the view...
+                Cursor.Current = Cursors.WaitCursor;
+
+                // Set active view 
+                _activeView = ActiveView.WobjCurrent;
+
+                // Create view
+                _viewWobjCurrent = new TpsFormWobjCurrent(this._tpsRm, this.rwSystem, this.pipeGrooveModel);
+
+                // Set up subscription to Closing event of Production view
+                _viewWobjCurrent.Closing += new System.ComponentModel.CancelEventHandler(_onViewClosing);
+                _viewWobjCurrent.Closed += new EventHandler(_viewClosed);
+                _viewWobjCurrent.ShowMe(this);
+
+                // Ask Production view to set up its subscriptions to controller events
+                _viewWobjCurrent.Activate();
+            }
+            catch (System.Exception ex)
+            {
+                DisplayErrorMessage(ex.Message);
+            }
+            finally
+            {
+                Cursor.Current = Cursors.Default;
+            }
+
         }
 
 

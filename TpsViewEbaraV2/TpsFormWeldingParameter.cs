@@ -83,6 +83,7 @@ namespace TpsViewEbaraV2NameSpace
         private TpsLabel tpsLabel2;
         private TpsLabel tpsLabel1;
         private ABB.Robotics.Tps.Windows.Forms.Button button_UpdateID;
+        private ABB.Robotics.Tps.Windows.Forms.PictureBox pictureBox_Logo;
 
         /// <summary>
         /// Required designer variable.
@@ -154,6 +155,7 @@ namespace TpsViewEbaraV2NameSpace
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TpsFormWeldingParameter));
             this.menuItem_Refresh = new ABB.Robotics.Tps.Windows.Forms.MenuItem();
             this.menuItem_Apply = new ABB.Robotics.Tps.Windows.Forms.MenuItem();
             this.menuItem_Close = new ABB.Robotics.Tps.Windows.Forms.MenuItem();
@@ -219,6 +221,7 @@ namespace TpsViewEbaraV2NameSpace
             this.numericUpDown_intGroupIndex = new ABB.Robotics.Tps.Windows.Forms.NumericUpDown();
             this.tpsLabel_intIndex = new ABB.Robotics.Tps.Windows.Forms.TpsLabel();
             this.numericUpDown_intIndex = new ABB.Robotics.Tps.Windows.Forms.NumericUpDown();
+            this.pictureBox_Logo = new ABB.Robotics.Tps.Windows.Forms.PictureBox();
             this.tabControl_WeldingParameter.SuspendLayout();
             this.tabPage_Weld.SuspendLayout();
             this.tabPage_Weave.SuspendLayout();
@@ -1427,7 +1430,7 @@ namespace TpsViewEbaraV2NameSpace
             this.numericUpDown_intGroupIndex.SelectionLength = 0;
             this.numericUpDown_intGroupIndex.SelectionStart = 0;
             this.numericUpDown_intGroupIndex.SelectionVisible = false;
-            this.numericUpDown_intGroupIndex.Size = new System.Drawing.Size(160, 40);
+            this.numericUpDown_intGroupIndex.Size = new System.Drawing.Size(132, 40);
             this.numericUpDown_intGroupIndex.TabIndex = 4;
             this.numericUpDown_intGroupIndex.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.numericUpDown_intGroupIndex.Value = new decimal(new int[] {
@@ -1441,7 +1444,7 @@ namespace TpsViewEbaraV2NameSpace
             // 
             this.tpsLabel_intIndex.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tpsLabel_intIndex.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
-            this.tpsLabel_intIndex.Location = new System.Drawing.Point(341, 31);
+            this.tpsLabel_intIndex.Location = new System.Drawing.Point(301, 29);
             this.tpsLabel_intIndex.Multiline = true;
             this.tpsLabel_intIndex.Name = "tpsLabel_intIndex";
             this.tpsLabel_intIndex.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
@@ -1455,7 +1458,7 @@ namespace TpsViewEbaraV2NameSpace
             this.numericUpDown_intIndex.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numericUpDown_intIndex.CaretVisible = false;
             this.numericUpDown_intIndex.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
-            this.numericUpDown_intIndex.Location = new System.Drawing.Point(435, 29);
+            this.numericUpDown_intIndex.Location = new System.Drawing.Point(398, 29);
             this.numericUpDown_intIndex.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1468,7 +1471,7 @@ namespace TpsViewEbaraV2NameSpace
             this.numericUpDown_intIndex.SelectionLength = 0;
             this.numericUpDown_intIndex.SelectionStart = 0;
             this.numericUpDown_intIndex.SelectionVisible = false;
-            this.numericUpDown_intIndex.Size = new System.Drawing.Size(160, 40);
+            this.numericUpDown_intIndex.Size = new System.Drawing.Size(127, 40);
             this.numericUpDown_intIndex.TabIndex = 4;
             this.numericUpDown_intIndex.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.numericUpDown_intIndex.Value = new decimal(new int[] {
@@ -1478,9 +1481,22 @@ namespace TpsViewEbaraV2NameSpace
             0});
             this.numericUpDown_intIndex.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(this.numericUpDown_intIndex_PropertyChanged);
             // 
+            // pictureBox_Logo
+            // 
+            this.pictureBox_Logo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.pictureBox_Logo.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.pictureBox_Logo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Logo.Image")));
+            this.pictureBox_Logo.Location = new System.Drawing.Point(531, 0);
+            this.pictureBox_Logo.Name = "pictureBox_Logo";
+            this.pictureBox_Logo.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.pictureBox_Logo.Size = new System.Drawing.Size(108, 32);
+            this.pictureBox_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_Logo.TabIndex = 6;
+            // 
             // TpsFormWeldingParameter
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.Controls.Add(this.pictureBox_Logo);
             this.Controls.Add(this.tabControl_WeldingParameter);
             this.Controls.Add(this.numericUpDown_intGroupIndex);
             this.Controls.Add(this.numericUpDown_intIndex);
@@ -1499,6 +1515,7 @@ namespace TpsViewEbaraV2NameSpace
             this.Controls.SetChildIndex(this.numericUpDown_intIndex, 0);
             this.Controls.SetChildIndex(this.numericUpDown_intGroupIndex, 0);
             this.Controls.SetChildIndex(this.tabControl_WeldingParameter, 0);
+            this.Controls.SetChildIndex(this.pictureBox_Logo, 0);
             this.tabControl_WeldingParameter.ResumeLayout(false);
             this.tabPage_Weld.ResumeLayout(false);
             this.tabPage_Weave.ResumeLayout(false);

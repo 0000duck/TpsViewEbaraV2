@@ -148,6 +148,11 @@ namespace TpsViewEbaraV2NameSpace
                             this._viewWeldingParameter.Dispose();
                             this._viewWeldingParameter = null;
                         }
+                        if (this._viewWobjCurrent != null)
+                        {
+                            this._viewWobjCurrent.Dispose();
+                            this._viewWobjCurrent = null;
+                        }
 
                         if (this.pipeGrooveModel != null)
                         {
@@ -233,7 +238,7 @@ namespace TpsViewEbaraV2NameSpace
             this.pictureBox_Logo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.pictureBox_Logo.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
             this.pictureBox_Logo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Logo.Image")));
-            this.pictureBox_Logo.Location = new System.Drawing.Point(531, 0);
+            this.pictureBox_Logo.Location = new System.Drawing.Point(530, 0);
             this.pictureBox_Logo.Name = "pictureBox_Logo";
             this.pictureBox_Logo.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
             this.pictureBox_Logo.Size = new System.Drawing.Size(108, 32);
@@ -379,6 +384,15 @@ namespace TpsViewEbaraV2NameSpace
                 {
                     // this._viewPipeGrooveModel.UnSubscribe();
                 }
+                else if (_activeView == ActiveView.WeldingParameter)
+                {
+                    // this._viewWeldingParameter.UnSubscribe();
+                }
+                else if (_activeView == ActiveView.WobjCurrent)
+                {
+                    // this._viewWobjCurrent.UnSubscribe();
+                }
+
                 _appInFocus = false;
             }
             catch (Exception ex)
@@ -407,6 +421,14 @@ namespace TpsViewEbaraV2NameSpace
                 else if (_activeView == ActiveView.Setting)
                 {
                     _viewSetting.Activate();
+                }
+                else if (_activeView == ActiveView.WeldingParameter)
+                {
+                    _viewWeldingParameter.Activate();
+                }
+                else if (_activeView == ActiveView.WobjCurrent)
+                {
+                    _viewWobjCurrent.Activate();
                 }
 
                 _appInFocus = true;

@@ -37,6 +37,7 @@ namespace TpsViewEbaraV2NameSpace
         private NumEditor numEditor_numSeamNormalAngle;
         private TpsLabel tpsLabel_numSeamNormalAngle;
         private ABB.Robotics.Tps.Windows.Forms.Button button_UpdatebyWorldOffset;
+        private ABB.Robotics.Tps.Windows.Forms.PictureBox pictureBox_Logo;
 
         /// <summary>
         /// Required designer variable.
@@ -101,6 +102,7 @@ namespace TpsViewEbaraV2NameSpace
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TpsFormWobjCurrent));
             this.menuItem_Refresh = new ABB.Robotics.Tps.Windows.Forms.MenuItem();
             this.menuItem_Apply = new ABB.Robotics.Tps.Windows.Forms.MenuItem();
             this.menuItem_Close = new ABB.Robotics.Tps.Windows.Forms.MenuItem();
@@ -117,6 +119,7 @@ namespace TpsViewEbaraV2NameSpace
             this.numEditor_numSeamNormalAngle = new ABB.Robotics.Tps.Windows.Forms.NumEditor();
             this.tpsLabel_numSeamNormalAngle = new ABB.Robotics.Tps.Windows.Forms.TpsLabel();
             this.button_UpdatebyWorldOffset = new ABB.Robotics.Tps.Windows.Forms.Button();
+            this.pictureBox_Logo = new ABB.Robotics.Tps.Windows.Forms.PictureBox();
             this.SuspendLayout();
             // 
             // menuItem_Refresh
@@ -418,9 +421,22 @@ namespace TpsViewEbaraV2NameSpace
             this.button_UpdatebyWorldOffset.TextAlign = ABB.Robotics.Tps.Windows.Forms.ContentAlignmentABB.MiddleCenter;
             this.button_UpdatebyWorldOffset.Click += new System.EventHandler(this.button_UpdatebyWorldOffset_Click);
             // 
+            // pictureBox_Logo
+            // 
+            this.pictureBox_Logo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.pictureBox_Logo.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.pictureBox_Logo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Logo.Image")));
+            this.pictureBox_Logo.Location = new System.Drawing.Point(530, 1);
+            this.pictureBox_Logo.Name = "pictureBox_Logo";
+            this.pictureBox_Logo.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.pictureBox_Logo.Size = new System.Drawing.Size(108, 32);
+            this.pictureBox_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_Logo.TabIndex = 33;
+            // 
             // TpsFormWobjCurrent
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.Controls.Add(this.pictureBox_Logo);
             this.Controls.Add(this.button_UpdatebyWorldOffset);
             this.Controls.Add(this.numEditor_numSeamNormalAngle);
             this.Controls.Add(this.tpsLabel_numSeamNormalAngle);
@@ -455,6 +471,7 @@ namespace TpsViewEbaraV2NameSpace
             this.Controls.SetChildIndex(this.tpsLabel_numSeamNormalAngle, 0);
             this.Controls.SetChildIndex(this.numEditor_numSeamNormalAngle, 0);
             this.Controls.SetChildIndex(this.button_UpdatebyWorldOffset, 0);
+            this.Controls.SetChildIndex(this.pictureBox_Logo, 0);
             this.ResumeLayout(false);
 
         }

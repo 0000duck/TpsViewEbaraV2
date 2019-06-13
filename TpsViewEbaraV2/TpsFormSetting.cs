@@ -34,6 +34,7 @@ namespace TpsViewEbaraV2NameSpace
         private ABB.Robotics.Tps.Windows.Forms.MenuItem menuItem_Refresh;
         private ABB.Robotics.Tps.Windows.Forms.MenuItem menuItem_Apply;
         private ABB.Robotics.Tps.Windows.Forms.MenuItem menuItem_Close;
+        private ABB.Robotics.Tps.Windows.Forms.PictureBox pictureBox_Logo;
 
         /// <summary>
         /// Required designer variable.
@@ -97,6 +98,7 @@ namespace TpsViewEbaraV2NameSpace
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TpsFormSetting));
             this.checkBox_boolBlocksiFr1ArcStable = new ABB.Robotics.Tps.Windows.Forms.CheckBox();
             this.numEditor_numBlocksiArcStableLength = new ABB.Robotics.Tps.Windows.Forms.NumEditor();
             this.tpsLabel_numBlocksiArcStableLength = new ABB.Robotics.Tps.Windows.Forms.TpsLabel();
@@ -111,6 +113,7 @@ namespace TpsViewEbaraV2NameSpace
             this.menuItem_Close = new ABB.Robotics.Tps.Windows.Forms.MenuItem();
             this.button_limitSTN1Axis1 = new ABB.Robotics.Tps.Windows.Forms.Button();
             this.button_unLimitSTN1Axis1 = new ABB.Robotics.Tps.Windows.Forms.Button();
+            this.pictureBox_Logo = new ABB.Robotics.Tps.Windows.Forms.PictureBox();
             this.SuspendLayout();
             // 
             // checkBox_boolBlocksiFr1ArcStable
@@ -360,9 +363,22 @@ namespace TpsViewEbaraV2NameSpace
             this.button_unLimitSTN1Axis1.TextAlign = ABB.Robotics.Tps.Windows.Forms.ContentAlignmentABB.MiddleCenter;
             this.button_unLimitSTN1Axis1.Click += new System.EventHandler(this.button_unLimitSTN1Axis1_Click);
             // 
+            // pictureBox_Logo
+            // 
+            this.pictureBox_Logo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.pictureBox_Logo.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.pictureBox_Logo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Logo.Image")));
+            this.pictureBox_Logo.Location = new System.Drawing.Point(530, 0);
+            this.pictureBox_Logo.Name = "pictureBox_Logo";
+            this.pictureBox_Logo.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.pictureBox_Logo.Size = new System.Drawing.Size(108, 32);
+            this.pictureBox_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_Logo.TabIndex = 45;
+            // 
             // TpsFormSetting
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.Controls.Add(this.pictureBox_Logo);
             this.Controls.Add(this.button_unLimitSTN1Axis1);
             this.Controls.Add(this.button_limitSTN1Axis1);
             this.Controls.Add(this.checkBox_boolBlocksiFr1ArcStable);
@@ -393,6 +409,7 @@ namespace TpsViewEbaraV2NameSpace
             this.Controls.SetChildIndex(this.checkBox_boolBlocksiFr1ArcStable, 0);
             this.Controls.SetChildIndex(this.button_limitSTN1Axis1, 0);
             this.Controls.SetChildIndex(this.button_unLimitSTN1Axis1, 0);
+            this.Controls.SetChildIndex(this.pictureBox_Logo, 0);
             this.ResumeLayout(false);
 
         }

@@ -1625,7 +1625,21 @@ namespace TpsViewEbaraV2NameSpace
                 this.weldProcedure.numTrackBias = this.numEditor_numTrackBias.Value;
                 this.weldProcedure.numWeaveWidth90 = this.numEditor_numWeaveWidth90.Value;
                 this.weldProcedure.strRemark = this.dataEditor_strRemark.Text;
-                
+
+                if (this.weldProcedure.numWeaveShape != 0)
+                {                    
+                    if (this.weldProcedure.numWeaveWidth == 0)
+                    {
+                         this.weldProcedure.numWeaveWidth = 0.1M;
+                    }
+                    if (this.weldProcedure.numWeaveWidth90 == 0)
+                    {
+                        this.weldProcedure.numWeaveWidth90 = 0.1M;
+                    }
+                }
+                this.numEditor_numWeaveWidth.Value = this.weldProcedure.numWeaveWidth;
+                this.numEditor_numWeaveWidth90.Value = this.weldProcedure.numWeaveWidth90;
+
                 this.weldProcedure.ApplyData(this.rwSystem);
                 
                 this.menuItem_Apply.Enabled = false;

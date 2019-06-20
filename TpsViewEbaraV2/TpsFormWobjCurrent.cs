@@ -36,8 +36,14 @@ namespace TpsViewEbaraV2NameSpace
         private TpsLabel tpsLabel_WorldZOffset;
         private NumEditor numEditor_numSeamNormalAngle;
         private TpsLabel tpsLabel_numSeamNormalAngle;
-        private ABB.Robotics.Tps.Windows.Forms.Button button_UpdatebyWorldOffset;
+        private ABB.Robotics.Tps.Windows.Forms.Button button_UpdatebyOframeOffset;
         private ABB.Robotics.Tps.Windows.Forms.PictureBox pictureBox_Logo;
+        private ABB.Robotics.Tps.Windows.Forms.ComboBox comboBox_numPipeGrooveType;
+        private TpsLabel tpsLabel_numPipeGrooveType;
+        private NumEditor numEditor_WorldXOffset;
+        private TpsLabel tpsLabel_WorldXOffset;
+        private TpsLabel tpsLabel_numSeamCenterX;
+        private NumEditor numEditor_numSeamCenterX;
 
         /// <summary>
         /// Required designer variable.
@@ -118,8 +124,14 @@ namespace TpsViewEbaraV2NameSpace
             this.tpsLabel_WorldZOffset = new ABB.Robotics.Tps.Windows.Forms.TpsLabel();
             this.numEditor_numSeamNormalAngle = new ABB.Robotics.Tps.Windows.Forms.NumEditor();
             this.tpsLabel_numSeamNormalAngle = new ABB.Robotics.Tps.Windows.Forms.TpsLabel();
-            this.button_UpdatebyWorldOffset = new ABB.Robotics.Tps.Windows.Forms.Button();
+            this.button_UpdatebyOframeOffset = new ABB.Robotics.Tps.Windows.Forms.Button();
             this.pictureBox_Logo = new ABB.Robotics.Tps.Windows.Forms.PictureBox();
+            this.comboBox_numPipeGrooveType = new ABB.Robotics.Tps.Windows.Forms.ComboBox();
+            this.tpsLabel_numPipeGrooveType = new ABB.Robotics.Tps.Windows.Forms.TpsLabel();
+            this.numEditor_WorldXOffset = new ABB.Robotics.Tps.Windows.Forms.NumEditor();
+            this.tpsLabel_WorldXOffset = new ABB.Robotics.Tps.Windows.Forms.TpsLabel();
+            this.tpsLabel_numSeamCenterX = new ABB.Robotics.Tps.Windows.Forms.TpsLabel();
+            this.numEditor_numSeamCenterX = new ABB.Robotics.Tps.Windows.Forms.NumEditor();
             this.SuspendLayout();
             // 
             // menuItem_Refresh
@@ -165,7 +177,7 @@ namespace TpsViewEbaraV2NameSpace
             // 
             this.tpsLabel_oframeX.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tpsLabel_oframeX.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
-            this.tpsLabel_oframeX.Location = new System.Drawing.Point(32, 78);
+            this.tpsLabel_oframeX.Location = new System.Drawing.Point(32, 170);
             this.tpsLabel_oframeX.Multiline = true;
             this.tpsLabel_oframeX.Name = "tpsLabel_oframeX";
             this.tpsLabel_oframeX.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
@@ -179,7 +191,7 @@ namespace TpsViewEbaraV2NameSpace
             this.numEditor_oframeX.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numEditor_oframeX.CaretVisible = false;
             this.numEditor_oframeX.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
-            this.numEditor_oframeX.Location = new System.Drawing.Point(132, 78);
+            this.numEditor_oframeX.Location = new System.Drawing.Point(132, 170);
             this.numEditor_oframeX.Maximum = new decimal(new int[] {
             -1,
             -1,
@@ -197,7 +209,7 @@ namespace TpsViewEbaraV2NameSpace
             this.numEditor_oframeX.SelectionLength = 0;
             this.numEditor_oframeX.SelectionStart = 0;
             this.numEditor_oframeX.SelectionVisible = false;
-            this.numEditor_oframeX.Size = new System.Drawing.Size(149, 30);
+            this.numEditor_oframeX.Size = new System.Drawing.Size(102, 30);
             this.numEditor_oframeX.TabIndex = 29;
             this.numEditor_oframeX.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.numEditor_oframeX.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(this.dataControl_PropertyChanged);
@@ -207,7 +219,7 @@ namespace TpsViewEbaraV2NameSpace
             this.numEditor_oframeY.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numEditor_oframeY.CaretVisible = false;
             this.numEditor_oframeY.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
-            this.numEditor_oframeY.Location = new System.Drawing.Point(132, 130);
+            this.numEditor_oframeY.Location = new System.Drawing.Point(132, 206);
             this.numEditor_oframeY.Maximum = new decimal(new int[] {
             -1,
             -1,
@@ -225,7 +237,7 @@ namespace TpsViewEbaraV2NameSpace
             this.numEditor_oframeY.SelectionLength = 0;
             this.numEditor_oframeY.SelectionStart = 0;
             this.numEditor_oframeY.SelectionVisible = false;
-            this.numEditor_oframeY.Size = new System.Drawing.Size(149, 30);
+            this.numEditor_oframeY.Size = new System.Drawing.Size(102, 30);
             this.numEditor_oframeY.TabIndex = 29;
             this.numEditor_oframeY.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.numEditor_oframeY.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(this.dataControl_PropertyChanged);
@@ -234,7 +246,7 @@ namespace TpsViewEbaraV2NameSpace
             // 
             this.tpsLabel_oframeY.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tpsLabel_oframeY.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
-            this.tpsLabel_oframeY.Location = new System.Drawing.Point(32, 130);
+            this.tpsLabel_oframeY.Location = new System.Drawing.Point(32, 206);
             this.tpsLabel_oframeY.Multiline = true;
             this.tpsLabel_oframeY.Name = "tpsLabel_oframeY";
             this.tpsLabel_oframeY.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
@@ -248,7 +260,7 @@ namespace TpsViewEbaraV2NameSpace
             this.numEditor_oframeZ.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numEditor_oframeZ.CaretVisible = false;
             this.numEditor_oframeZ.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
-            this.numEditor_oframeZ.Location = new System.Drawing.Point(132, 182);
+            this.numEditor_oframeZ.Location = new System.Drawing.Point(132, 242);
             this.numEditor_oframeZ.Maximum = new decimal(new int[] {
             -1,
             -1,
@@ -266,7 +278,7 @@ namespace TpsViewEbaraV2NameSpace
             this.numEditor_oframeZ.SelectionLength = 0;
             this.numEditor_oframeZ.SelectionStart = 0;
             this.numEditor_oframeZ.SelectionVisible = false;
-            this.numEditor_oframeZ.Size = new System.Drawing.Size(149, 30);
+            this.numEditor_oframeZ.Size = new System.Drawing.Size(102, 30);
             this.numEditor_oframeZ.TabIndex = 29;
             this.numEditor_oframeZ.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.numEditor_oframeZ.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(this.dataControl_PropertyChanged);
@@ -275,7 +287,7 @@ namespace TpsViewEbaraV2NameSpace
             // 
             this.tpsLabel_oframeZ.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tpsLabel_oframeZ.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
-            this.tpsLabel_oframeZ.Location = new System.Drawing.Point(32, 182);
+            this.tpsLabel_oframeZ.Location = new System.Drawing.Point(32, 242);
             this.tpsLabel_oframeZ.Multiline = true;
             this.tpsLabel_oframeZ.Name = "tpsLabel_oframeZ";
             this.tpsLabel_oframeZ.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
@@ -289,7 +301,7 @@ namespace TpsViewEbaraV2NameSpace
             this.numEditor_WorldYOffset.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numEditor_WorldYOffset.CaretVisible = false;
             this.numEditor_WorldYOffset.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
-            this.numEditor_WorldYOffset.Location = new System.Drawing.Point(500, 78);
+            this.numEditor_WorldYOffset.Location = new System.Drawing.Point(499, 206);
             this.numEditor_WorldYOffset.Maximum = new decimal(new int[] {
             -1,
             -1,
@@ -315,21 +327,21 @@ namespace TpsViewEbaraV2NameSpace
             // 
             this.tpsLabel_WorldYOffset.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tpsLabel_WorldYOffset.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
-            this.tpsLabel_WorldYOffset.Location = new System.Drawing.Point(353, 78);
+            this.tpsLabel_WorldYOffset.Location = new System.Drawing.Point(411, 206);
             this.tpsLabel_WorldYOffset.Multiline = true;
             this.tpsLabel_WorldYOffset.Name = "tpsLabel_WorldYOffset";
             this.tpsLabel_WorldYOffset.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
-            this.tpsLabel_WorldYOffset.Size = new System.Drawing.Size(128, 24);
+            this.tpsLabel_WorldYOffset.Size = new System.Drawing.Size(81, 24);
             this.tpsLabel_WorldYOffset.TabIndex = 28;
             this.tpsLabel_WorldYOffset.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.tpsLabel_WorldYOffset.Title = "World Y Offset";
+            this.tpsLabel_WorldYOffset.Title = "World Y";
             // 
             // numEditor_WorldZOffset
             // 
             this.numEditor_WorldZOffset.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numEditor_WorldZOffset.CaretVisible = false;
             this.numEditor_WorldZOffset.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
-            this.numEditor_WorldZOffset.Location = new System.Drawing.Point(500, 130);
+            this.numEditor_WorldZOffset.Location = new System.Drawing.Point(499, 242);
             this.numEditor_WorldZOffset.Maximum = new decimal(new int[] {
             -1,
             -1,
@@ -355,14 +367,14 @@ namespace TpsViewEbaraV2NameSpace
             // 
             this.tpsLabel_WorldZOffset.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tpsLabel_WorldZOffset.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
-            this.tpsLabel_WorldZOffset.Location = new System.Drawing.Point(353, 130);
+            this.tpsLabel_WorldZOffset.Location = new System.Drawing.Point(411, 242);
             this.tpsLabel_WorldZOffset.Multiline = true;
             this.tpsLabel_WorldZOffset.Name = "tpsLabel_WorldZOffset";
             this.tpsLabel_WorldZOffset.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
-            this.tpsLabel_WorldZOffset.Size = new System.Drawing.Size(128, 24);
+            this.tpsLabel_WorldZOffset.Size = new System.Drawing.Size(81, 24);
             this.tpsLabel_WorldZOffset.TabIndex = 28;
             this.tpsLabel_WorldZOffset.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.tpsLabel_WorldZOffset.Title = "World Z Offset";
+            this.tpsLabel_WorldZOffset.Title = "World Z";
             // 
             // numEditor_numSeamNormalAngle
             // 
@@ -370,7 +382,7 @@ namespace TpsViewEbaraV2NameSpace
             this.numEditor_numSeamNormalAngle.CaretVisible = false;
             this.numEditor_numSeamNormalAngle.Enabled = false;
             this.numEditor_numSeamNormalAngle.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
-            this.numEditor_numSeamNormalAngle.Location = new System.Drawing.Point(500, 182);
+            this.numEditor_numSeamNormalAngle.Location = new System.Drawing.Point(499, 96);
             this.numEditor_numSeamNormalAngle.Maximum = new decimal(new int[] {
             -1,
             -1,
@@ -396,30 +408,30 @@ namespace TpsViewEbaraV2NameSpace
             // 
             this.tpsLabel_numSeamNormalAngle.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tpsLabel_numSeamNormalAngle.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
-            this.tpsLabel_numSeamNormalAngle.Location = new System.Drawing.Point(352, 182);
+            this.tpsLabel_numSeamNormalAngle.Location = new System.Drawing.Point(411, 96);
             this.tpsLabel_numSeamNormalAngle.Multiline = true;
             this.tpsLabel_numSeamNormalAngle.Name = "tpsLabel_numSeamNormalAngle";
             this.tpsLabel_numSeamNormalAngle.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
-            this.tpsLabel_numSeamNormalAngle.Size = new System.Drawing.Size(129, 24);
+            this.tpsLabel_numSeamNormalAngle.Size = new System.Drawing.Size(81, 24);
             this.tpsLabel_numSeamNormalAngle.TabIndex = 30;
             this.tpsLabel_numSeamNormalAngle.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.tpsLabel_numSeamNormalAngle.Title = "Normal Angle";
+            this.tpsLabel_numSeamNormalAngle.Title = "Angle";
             // 
-            // button_UpdatebyWorldOffset
+            // button_UpdatebyOframeOffset
             // 
-            this.button_UpdatebyWorldOffset.BackColor = System.Drawing.Color.White;
-            this.button_UpdatebyWorldOffset.BackgroundImage = null;
-            this.button_UpdatebyWorldOffset.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.button_UpdatebyWorldOffset.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
-            this.button_UpdatebyWorldOffset.Image = null;
-            this.button_UpdatebyWorldOffset.Location = new System.Drawing.Point(353, 261);
-            this.button_UpdatebyWorldOffset.Name = "button_UpdatebyWorldOffset";
-            this.button_UpdatebyWorldOffset.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
-            this.button_UpdatebyWorldOffset.Size = new System.Drawing.Size(140, 70);
-            this.button_UpdatebyWorldOffset.TabIndex = 32;
-            this.button_UpdatebyWorldOffset.Text = "Offset";
-            this.button_UpdatebyWorldOffset.TextAlign = ABB.Robotics.Tps.Windows.Forms.ContentAlignmentABB.MiddleCenter;
-            this.button_UpdatebyWorldOffset.Click += new System.EventHandler(this.button_UpdatebyWorldOffset_Click);
+            this.button_UpdatebyOframeOffset.BackColor = System.Drawing.Color.White;
+            this.button_UpdatebyOframeOffset.BackgroundImage = null;
+            this.button_UpdatebyOframeOffset.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.button_UpdatebyOframeOffset.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.button_UpdatebyOframeOffset.Image = null;
+            this.button_UpdatebyOframeOffset.Location = new System.Drawing.Point(278, 170);
+            this.button_UpdatebyOframeOffset.Name = "button_UpdatebyOframeOffset";
+            this.button_UpdatebyOframeOffset.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.button_UpdatebyOframeOffset.Size = new System.Drawing.Size(94, 70);
+            this.button_UpdatebyOframeOffset.TabIndex = 32;
+            this.button_UpdatebyOframeOffset.Text = "<=";
+            this.button_UpdatebyOframeOffset.TextAlign = ABB.Robotics.Tps.Windows.Forms.ContentAlignmentABB.MiddleCenter;
+            this.button_UpdatebyOframeOffset.Click += new System.EventHandler(this.button_UpdatebyWorldOffset_Click);
             // 
             // pictureBox_Logo
             // 
@@ -433,19 +445,134 @@ namespace TpsViewEbaraV2NameSpace
             this.pictureBox_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_Logo.TabIndex = 33;
             // 
+            // comboBox_numPipeGrooveType
+            // 
+            this.comboBox_numPipeGrooveType.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.comboBox_numPipeGrooveType.Enabled = false;
+            this.comboBox_numPipeGrooveType.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.comboBox_numPipeGrooveType.Items.Add("Platoon Container");
+            this.comboBox_numPipeGrooveType.Items.Add("Platoon Header");
+            this.comboBox_numPipeGrooveType.Items.Add("Saddle");
+            this.comboBox_numPipeGrooveType.Location = new System.Drawing.Point(132, 48);
+            this.comboBox_numPipeGrooveType.Name = "comboBox_numPipeGrooveType";
+            this.comboBox_numPipeGrooveType.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.comboBox_numPipeGrooveType.Size = new System.Drawing.Size(218, 33);
+            this.comboBox_numPipeGrooveType.TabIndex = 35;
+            this.comboBox_numPipeGrooveType.Text = "comboBox1";
+            // 
+            // tpsLabel_numPipeGrooveType
+            // 
+            this.tpsLabel_numPipeGrooveType.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tpsLabel_numPipeGrooveType.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.tpsLabel_numPipeGrooveType.Location = new System.Drawing.Point(32, 48);
+            this.tpsLabel_numPipeGrooveType.Multiline = true;
+            this.tpsLabel_numPipeGrooveType.Name = "tpsLabel_numPipeGrooveType";
+            this.tpsLabel_numPipeGrooveType.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.tpsLabel_numPipeGrooveType.Size = new System.Drawing.Size(85, 24);
+            this.tpsLabel_numPipeGrooveType.TabIndex = 34;
+            this.tpsLabel_numPipeGrooveType.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.tpsLabel_numPipeGrooveType.Title = "Type";
+            // 
+            // numEditor_WorldXOffset
+            // 
+            this.numEditor_WorldXOffset.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numEditor_WorldXOffset.CaretVisible = false;
+            this.numEditor_WorldXOffset.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.numEditor_WorldXOffset.Location = new System.Drawing.Point(499, 170);
+            this.numEditor_WorldXOffset.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.numEditor_WorldXOffset.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
+            this.numEditor_WorldXOffset.Multiline = true;
+            this.numEditor_WorldXOffset.Name = "numEditor_WorldXOffset";
+            this.numEditor_WorldXOffset.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.numEditor_WorldXOffset.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.numEditor_WorldXOffset.SelectionLength = 0;
+            this.numEditor_WorldXOffset.SelectionStart = 0;
+            this.numEditor_WorldXOffset.SelectionVisible = false;
+            this.numEditor_WorldXOffset.Size = new System.Drawing.Size(102, 30);
+            this.numEditor_WorldXOffset.TabIndex = 29;
+            this.numEditor_WorldXOffset.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // tpsLabel_WorldXOffset
+            // 
+            this.tpsLabel_WorldXOffset.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tpsLabel_WorldXOffset.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.tpsLabel_WorldXOffset.Location = new System.Drawing.Point(411, 170);
+            this.tpsLabel_WorldXOffset.Multiline = true;
+            this.tpsLabel_WorldXOffset.Name = "tpsLabel_WorldXOffset";
+            this.tpsLabel_WorldXOffset.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.tpsLabel_WorldXOffset.Size = new System.Drawing.Size(81, 24);
+            this.tpsLabel_WorldXOffset.TabIndex = 28;
+            this.tpsLabel_WorldXOffset.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.tpsLabel_WorldXOffset.Title = "World X";
+            // 
+            // tpsLabel_numSeamCenterX
+            // 
+            this.tpsLabel_numSeamCenterX.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tpsLabel_numSeamCenterX.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.tpsLabel_numSeamCenterX.Location = new System.Drawing.Point(32, 96);
+            this.tpsLabel_numSeamCenterX.Multiline = true;
+            this.tpsLabel_numSeamCenterX.Name = "tpsLabel_numSeamCenterX";
+            this.tpsLabel_numSeamCenterX.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.tpsLabel_numSeamCenterX.Size = new System.Drawing.Size(94, 24);
+            this.tpsLabel_numSeamCenterX.TabIndex = 36;
+            this.tpsLabel_numSeamCenterX.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.tpsLabel_numSeamCenterX.Title = "Center X";
+            // 
+            // numEditor_numSeamCenterX
+            // 
+            this.numEditor_numSeamCenterX.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numEditor_numSeamCenterX.CaretVisible = false;
+            this.numEditor_numSeamCenterX.Enabled = false;
+            this.numEditor_numSeamCenterX.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.numEditor_numSeamCenterX.Location = new System.Drawing.Point(132, 96);
+            this.numEditor_numSeamCenterX.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.numEditor_numSeamCenterX.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
+            this.numEditor_numSeamCenterX.Multiline = true;
+            this.numEditor_numSeamCenterX.Name = "numEditor_numSeamCenterX";
+            this.numEditor_numSeamCenterX.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.numEditor_numSeamCenterX.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.numEditor_numSeamCenterX.SelectionLength = 0;
+            this.numEditor_numSeamCenterX.SelectionStart = 0;
+            this.numEditor_numSeamCenterX.SelectionVisible = false;
+            this.numEditor_numSeamCenterX.Size = new System.Drawing.Size(102, 30);
+            this.numEditor_numSeamCenterX.TabIndex = 37;
+            this.numEditor_numSeamCenterX.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // TpsFormWobjCurrent
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.Controls.Add(this.tpsLabel_numSeamCenterX);
+            this.Controls.Add(this.numEditor_numSeamCenterX);
+            this.Controls.Add(this.comboBox_numPipeGrooveType);
+            this.Controls.Add(this.tpsLabel_numPipeGrooveType);
             this.Controls.Add(this.pictureBox_Logo);
-            this.Controls.Add(this.button_UpdatebyWorldOffset);
+            this.Controls.Add(this.button_UpdatebyOframeOffset);
             this.Controls.Add(this.numEditor_numSeamNormalAngle);
             this.Controls.Add(this.tpsLabel_numSeamNormalAngle);
             this.Controls.Add(this.tpsLabel_oframeZ);
             this.Controls.Add(this.numEditor_oframeZ);
             this.Controls.Add(this.tpsLabel_oframeY);
+            this.Controls.Add(this.tpsLabel_WorldXOffset);
             this.Controls.Add(this.tpsLabel_WorldYOffset);
             this.Controls.Add(this.numEditor_oframeY);
             this.Controls.Add(this.tpsLabel_WorldZOffset);
+            this.Controls.Add(this.numEditor_WorldXOffset);
             this.Controls.Add(this.numEditor_WorldYOffset);
             this.Controls.Add(this.numEditor_WorldZOffset);
             this.Controls.Add(this.tpsLabel_oframeX);
@@ -462,16 +589,22 @@ namespace TpsViewEbaraV2NameSpace
             this.Controls.SetChildIndex(this.tpsLabel_oframeX, 0);
             this.Controls.SetChildIndex(this.numEditor_WorldZOffset, 0);
             this.Controls.SetChildIndex(this.numEditor_WorldYOffset, 0);
+            this.Controls.SetChildIndex(this.numEditor_WorldXOffset, 0);
             this.Controls.SetChildIndex(this.tpsLabel_WorldZOffset, 0);
             this.Controls.SetChildIndex(this.numEditor_oframeY, 0);
             this.Controls.SetChildIndex(this.tpsLabel_WorldYOffset, 0);
+            this.Controls.SetChildIndex(this.tpsLabel_WorldXOffset, 0);
             this.Controls.SetChildIndex(this.tpsLabel_oframeY, 0);
             this.Controls.SetChildIndex(this.numEditor_oframeZ, 0);
             this.Controls.SetChildIndex(this.tpsLabel_oframeZ, 0);
             this.Controls.SetChildIndex(this.tpsLabel_numSeamNormalAngle, 0);
             this.Controls.SetChildIndex(this.numEditor_numSeamNormalAngle, 0);
-            this.Controls.SetChildIndex(this.button_UpdatebyWorldOffset, 0);
+            this.Controls.SetChildIndex(this.button_UpdatebyOframeOffset, 0);
             this.Controls.SetChildIndex(this.pictureBox_Logo, 0);
+            this.Controls.SetChildIndex(this.tpsLabel_numPipeGrooveType, 0);
+            this.Controls.SetChildIndex(this.comboBox_numPipeGrooveType, 0);
+            this.Controls.SetChildIndex(this.numEditor_numSeamCenterX, 0);
+            this.Controls.SetChildIndex(this.tpsLabel_numSeamCenterX, 0);
             this.ResumeLayout(false);
 
         }
@@ -504,6 +637,8 @@ namespace TpsViewEbaraV2NameSpace
             try
             {
                 this.pipeGrooveModel.RefreshData(this.rwSystem);
+                this.comboBox_numPipeGrooveType.SelectedIndex = this.pipeGrooveModel.numPipeGrooveType - 1;
+                this.numEditor_numSeamCenterX.Value = this.pipeGrooveModel.numSeamCenterX;
                 this.numEditor_numSeamNormalAngle.Value = this.pipeGrooveModel.numSeamNormalAngle;
 
                 RapidData rapidData = rwSystem.Controller.Rapid.GetRapidData("T_ROB1", "CalibDataModule", "wobjCurrent");
@@ -513,8 +648,18 @@ namespace TpsViewEbaraV2NameSpace
                 this.numEditor_oframeY.Value = (Decimal)this.wobjCurrent.Oframe.Trans.Y;
                 this.numEditor_oframeZ.Value = (Decimal)this.wobjCurrent.Oframe.Trans.Z;
 
-                this.numEditor_WorldYOffset.Value = 0;
-                this.numEditor_WorldZOffset.Value = 0;
+                if (this.pipeGrooveModel.numPipeGrooveType >= 3)
+                {
+                    this.numEditor_WorldXOffset.Value = (Decimal)this.wobjCurrent.Oframe.Trans.Z;
+                    this.numEditor_WorldYOffset.Value = 0;
+                    this.numEditor_WorldZOffset.Value = 0;
+                }
+                else
+                {
+                    this.numEditor_WorldXOffset.Value = (Decimal)this.wobjCurrent.Oframe.Trans.X;
+                    this.numEditor_WorldYOffset.Value = (Decimal)this.wobjCurrent.Oframe.Trans.Y;
+                    this.numEditor_WorldZOffset.Value = (Decimal)this.wobjCurrent.Oframe.Trans.Z;
+                }      
 
                 this.menuItem_Apply.Enabled = false;
             }
@@ -540,6 +685,7 @@ namespace TpsViewEbaraV2NameSpace
             {
                 this.wobjCurrent.Oframe.Trans.X =(float) this.numEditor_oframeX.Value;
                 this.wobjCurrent.Oframe.Trans.Y = (float)this.numEditor_oframeY.Value;
+                this.wobjCurrent.Oframe.Trans.Z = (float)this.numEditor_oframeZ.Value;
 
                 RapidData rapidData = rwSystem.Controller.Rapid.GetRapidData("T_ROB1", "CalibDataModule", "wobjCurrent");
                 rapidData.Value = this.wobjCurrent;
@@ -568,14 +714,27 @@ namespace TpsViewEbaraV2NameSpace
 
         private void button_UpdatebyWorldOffset_Click(object sender, EventArgs e)
         {
+            double dWorldXOffset = (double)this.numEditor_WorldXOffset.Value;
             double dWorldYOffset = (double)this.numEditor_WorldYOffset.Value;
             double dWorldZOffset = (double)this.numEditor_WorldZOffset.Value;
-            double dSeamNormalAngle =Math.PI* ((double)this.numEditor_numSeamNormalAngle.Value)/180 ;
-            double doframeX = dWorldYOffset * Math.Cos(dSeamNormalAngle) + dWorldZOffset * Math.Sin(dSeamNormalAngle);
-            double doframeY = 0 - dWorldYOffset * Math.Sin(dSeamNormalAngle) + dWorldZOffset * Math.Cos(dSeamNormalAngle);
-            this.numEditor_oframeX.Value = (decimal)Math.Round(doframeX, 1);
-            this.numEditor_oframeY.Value = (decimal)Math.Round(doframeY, 1);
+            double dSeamNormalAngle = Math.PI * ((double)this.numEditor_numSeamNormalAngle.Value) / 180;
+            if (this.pipeGrooveModel.numPipeGrooveType >= 3)
+            {
+                double doframeX = dWorldYOffset * Math.Cos(dSeamNormalAngle) + dWorldZOffset * Math.Sin(dSeamNormalAngle);
+                double doframeY = 0 - dWorldYOffset * Math.Sin(dSeamNormalAngle) + dWorldZOffset * Math.Cos(dSeamNormalAngle);
+                this.numEditor_oframeX.Value = (decimal)Math.Round(doframeX, 1);
+                this.numEditor_oframeY.Value = (decimal)Math.Round(doframeY, 1);
+                this.numEditor_oframeZ.Value = (decimal)Math.Round(dWorldXOffset, 1);
+            }
+            else
+            {
+                this.numEditor_oframeX.Value = (decimal)Math.Round(dWorldXOffset, 1);
+                this.numEditor_oframeY.Value = (decimal)Math.Round(dWorldYOffset, 1);
+                this.numEditor_oframeZ.Value = (decimal)Math.Round(dWorldZOffset, 1);
+            }
             this.menuItem_Apply.Enabled = true;
+
         }
+
     }
 }

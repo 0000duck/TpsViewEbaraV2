@@ -128,11 +128,11 @@ namespace TpsViewEbaraV2NameSpace
                     if (disposing)
                     {
                         //ToDo: Call the Dispose method of all FP SDK instances that may otherwise cause memory leak
-                        if (this.weldProcedure != null)
-                        {
-                            this.weldProcedure.Dispose();
-                            this.weldProcedure = null;
-                        }
+                        //if (this.weldProcedure != null)
+                        //{
+                        //    this.weldProcedure.Dispose();
+                        //    this.weldProcedure = null;
+                        //}
 
                         if (components != null)
                         {
@@ -1588,6 +1588,7 @@ namespace TpsViewEbaraV2NameSpace
                     , System.Windows.Forms.MessageBoxButtons.OK);
             }
         }
+
         private void menuItem_Close_Click(object sender, EventArgs e)
         {
             this.CloseMe();
@@ -1677,7 +1678,14 @@ namespace TpsViewEbaraV2NameSpace
             double numWeaveWidth90 = Convert.ToDouble(this.numEditor_numWeaveWidth90.Value);
             numWeaveWidth = numWeaveWidth==0.1 ? 0 : numWeaveWidth;
             numWeaveWidth90 = numWeaveWidth90 == 0.1 ? 0 : numWeaveWidth90;
-            this.dataEditor_strWeldProcedureID.Text = string.Format("s{0}j{1}w{2}-{3}", this.numEditor_numWeldSpeed.Value, this.numEditor_numSche.Value, numWeaveWidth, numWeaveWidth90);
+            if (this.comboBox_numWeaveShape.SelectedIndex == 0)
+            {
+                this.dataEditor_strWeldProcedureID.Text = string.Format("s{0}j{1}", this.numEditor_numWeldSpeed.Value, this.numEditor_numSche.Value);
+            }
+            else
+            {
+                this.dataEditor_strWeldProcedureID.Text = string.Format("s{0}j{1}w{2}-{3}", this.numEditor_numWeldSpeed.Value, this.numEditor_numSche.Value, numWeaveWidth, numWeaveWidth90);
+            }
             this.menuItem_Apply.Enabled = true;
         }
 

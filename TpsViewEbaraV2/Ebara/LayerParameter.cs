@@ -203,6 +203,7 @@ namespace TpsViewEbaraV2NameSpace.Ebara
             CircleTable.Rows.Add(row);
 
             this.CircleView = new DataView(this.CircleTable);
+            this.CircleView.AllowNew = false;
         }
         
         #region Dispose

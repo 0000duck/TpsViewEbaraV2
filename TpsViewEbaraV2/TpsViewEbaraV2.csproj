@@ -190,6 +190,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="TpsFormLayerParameter.resx">
       <DependentUpon>TpsFormLayerParameter.cs</DependentUpon>
@@ -224,7 +225,7 @@
       <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
         <HostingProcess disable="1" />
       </FlavorProperties>
-      <UserProperties TDLELEMENTTYPE="GTPULibrary" TDLFILE="Gtpu.tdl" SDKVersion="5.8.0.0" />
+      <UserProperties SDKVersion="5.8.0.0" TDLFILE="Gtpu.tdl" TDLELEMENTTYPE="GTPULibrary" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Condition="'$(TargetFrameworkVersion)' == 'v1.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.v1.targets" />

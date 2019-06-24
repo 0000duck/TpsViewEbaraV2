@@ -40,6 +40,7 @@ namespace TpsViewEbaraV2NameSpace
         private DataGridTextBoxColumn dataGridTextBoxColumn_numDegree0;
         private DataGridTextBoxColumn dataGridTextBoxColumn_OptimizationType;
         private DataGridTableStyle dataGridTableStyle_Circles;
+        private CompactAlphaPad compactAlphaPad1;
 
         /// <summary>
         /// Required designer variable.
@@ -136,6 +137,7 @@ namespace TpsViewEbaraV2NameSpace
             this.dataGridTextBoxColumn_numDegree0 = new System.Windows.Forms.DataGridTextBoxColumn();
             this.dataGridTextBoxColumn_OptimizationType = new System.Windows.Forms.DataGridTextBoxColumn();
             this.dataGridTableStyle_Circles = new System.Windows.Forms.DataGridTableStyle();
+            this.compactAlphaPad1 = new ABB.Robotics.Tps.Windows.Forms.CompactAlphaPad();
             this.SuspendLayout();
             // 
             // pictureBox_Logo
@@ -155,8 +157,6 @@ namespace TpsViewEbaraV2NameSpace
             this.menuItem_Refresh.Checked = false;
             this.menuItem_Refresh.DockToRight = true;
             this.menuItem_Refresh.Enabled = true;
-            this.menuItem_Refresh.Image = null;
-            this.menuItem_Refresh.ImageSelected = null;
             this.menuItem_Refresh.Index = 0;
             this.menuItem_Refresh.Pressed = false;
             this.menuItem_Refresh.Text = "Refresh";
@@ -168,8 +168,6 @@ namespace TpsViewEbaraV2NameSpace
             this.menuItem_Apply.Checked = false;
             this.menuItem_Apply.DockToRight = true;
             this.menuItem_Apply.Enabled = true;
-            this.menuItem_Apply.Image = null;
-            this.menuItem_Apply.ImageSelected = null;
             this.menuItem_Apply.Index = 1;
             this.menuItem_Apply.Pressed = false;
             this.menuItem_Apply.Text = "Apply";
@@ -181,8 +179,6 @@ namespace TpsViewEbaraV2NameSpace
             this.menuItem_Close.Checked = false;
             this.menuItem_Close.DockToRight = true;
             this.menuItem_Close.Enabled = true;
-            this.menuItem_Close.Image = null;
-            this.menuItem_Close.ImageSelected = null;
             this.menuItem_Close.Index = 2;
             this.menuItem_Close.Pressed = false;
             this.menuItem_Close.Text = "Close";
@@ -289,7 +285,6 @@ namespace TpsViewEbaraV2NameSpace
             // dataGridTextBoxColumn1
             // 
             this.dataGridTextBoxColumn1.Format = "";
-            this.dataGridTextBoxColumn1.FormatInfo = null;
             this.dataGridTextBoxColumn1.HeaderText = "Type";
             this.dataGridTextBoxColumn1.MappingName = "OptimizationType";
             this.dataGridTextBoxColumn1.Width = 120;
@@ -297,63 +292,54 @@ namespace TpsViewEbaraV2NameSpace
             // dataGridTextBoxColumn2
             // 
             this.dataGridTextBoxColumn2.Format = "";
-            this.dataGridTextBoxColumn2.FormatInfo = null;
             this.dataGridTextBoxColumn2.HeaderText = "0";
             this.dataGridTextBoxColumn2.MappingName = "numDegree0";
             // 
             // dataGridTextBoxColumn3
             // 
             this.dataGridTextBoxColumn3.Format = "";
-            this.dataGridTextBoxColumn3.FormatInfo = null;
             this.dataGridTextBoxColumn3.HeaderText = "90";
             this.dataGridTextBoxColumn3.MappingName = "numDegree90";
             // 
             // dataGridTextBoxColumn4
             // 
             this.dataGridTextBoxColumn4.Format = "";
-            this.dataGridTextBoxColumn4.FormatInfo = null;
             this.dataGridTextBoxColumn4.HeaderText = "180";
             this.dataGridTextBoxColumn4.MappingName = "numDegree180";
             // 
             // dataGridTextBoxColumn5
             // 
             this.dataGridTextBoxColumn5.Format = "";
-            this.dataGridTextBoxColumn5.FormatInfo = null;
             this.dataGridTextBoxColumn5.HeaderText = "270";
             this.dataGridTextBoxColumn5.MappingName = "numDegree270";
             // 
             // dataGridTextBoxColumn_numDegree270
             // 
             this.dataGridTextBoxColumn_numDegree270.Format = "";
-            this.dataGridTextBoxColumn_numDegree270.FormatInfo = null;
             this.dataGridTextBoxColumn_numDegree270.HeaderText = "numDegree270";
             this.dataGridTextBoxColumn_numDegree270.MappingName = "numDegree270";
             // 
             // dataGridTextBoxColumn_numDegree180
             // 
             this.dataGridTextBoxColumn_numDegree180.Format = "";
-            this.dataGridTextBoxColumn_numDegree180.FormatInfo = null;
             this.dataGridTextBoxColumn_numDegree180.HeaderText = "numDegree180";
             this.dataGridTextBoxColumn_numDegree180.MappingName = "numDegree180";
             // 
             // dataGridTextBoxColumn_numDegree90
             // 
             this.dataGridTextBoxColumn_numDegree90.Format = "";
-            this.dataGridTextBoxColumn_numDegree90.FormatInfo = null;
             this.dataGridTextBoxColumn_numDegree90.HeaderText = "numDegree90";
             this.dataGridTextBoxColumn_numDegree90.MappingName = "numDegree90";
             // 
             // dataGridTextBoxColumn_numDegree0
             // 
             this.dataGridTextBoxColumn_numDegree0.Format = "";
-            this.dataGridTextBoxColumn_numDegree0.FormatInfo = null;
             this.dataGridTextBoxColumn_numDegree0.HeaderText = "numDegree0";
             this.dataGridTextBoxColumn_numDegree0.MappingName = "numDegree0";
             // 
             // dataGridTextBoxColumn_OptimizationType
             // 
             this.dataGridTextBoxColumn_OptimizationType.Format = "";
-            this.dataGridTextBoxColumn_OptimizationType.FormatInfo = null;
             this.dataGridTextBoxColumn_OptimizationType.HeaderText = "OptimizationType";
             this.dataGridTextBoxColumn_OptimizationType.MappingName = "OptimizationType";
             // 
@@ -365,6 +351,15 @@ namespace TpsViewEbaraV2NameSpace
             this.dataGridTableStyle_Circles.GridColumnStyles.Add(this.dataGridTextBoxColumn_numDegree180);
             this.dataGridTableStyle_Circles.GridColumnStyles.Add(this.dataGridTextBoxColumn_numDegree270);
             this.dataGridTableStyle_Circles.MappingName = "Circles";
+            // 
+            // compactAlphaPad1
+            // 
+            this.compactAlphaPad1.ActiveCharPanel = ABB.Robotics.Tps.Windows.Forms.CharSet.Characters;
+            this.compactAlphaPad1.Location = new System.Drawing.Point(0, 0);
+            this.compactAlphaPad1.Name = "compactAlphaPad1";
+            this.compactAlphaPad1.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.compactAlphaPad1.Size = new System.Drawing.Size(293, 167);
+            this.compactAlphaPad1.TabIndex = 0;
             // 
             // TpsFormLayerParameter
             // 

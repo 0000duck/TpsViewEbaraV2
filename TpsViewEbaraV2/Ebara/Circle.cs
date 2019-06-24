@@ -81,11 +81,36 @@ namespace TpsViewEbaraV2NameSpace.Ebara
             rCircleType.Dispose();
         }
 
+        #region Dispose
+
+        private bool _disposed;
+
+        ~Circle()
+        {
+            Dispose(false);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (_disposed)
+            {
+                return;
+            }
+            if (disposing)
+            {
+
+            }
+            _disposed = true;
+        }
+
+        #endregion
+
         #region IDisposable Members
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
 
         #endregion

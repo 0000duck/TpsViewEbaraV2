@@ -27,34 +27,38 @@ namespace TpsViewEbaraV2NameSpace
         private ABB.Robotics.Tps.Windows.Forms.NumericUpDown numericUpDown_intLayerNo;
         private TpsLabel tpsLabel_intLayerNo;
         private DataEditor dataEditor_strWeldProcedureID;
-        private TpsLabel tpsLabel_strWeldProcedureID;
-        private DataGrid dataGrid_Circle;
-        private DataGridTextBoxColumn dataGridTextBoxColumn_numDegree270;
-        private DataGridTextBoxColumn dataGridTextBoxColumn_numDegree180;
-        private DataGridTextBoxColumn dataGridTextBoxColumn_numDegree90;
-        private DataGridTextBoxColumn dataGridTextBoxColumn_numDegree0;
-        private DataGridTextBoxColumn dataGridTextBoxColumn_OptimizationType;
-        private DataGridTableStyle dataGridTableStyle_Circles;
         private CompactAlphaPad compactAlphaPad1;
-        private AlphaPad alphaPad_Circle;
-        private DataGridTextBoxColumn dataGridTextBoxColumn5;
-        private DataGridTextBoxColumn dataGridTextBoxColumn4;
-        private DataGridTextBoxColumn dataGridTextBoxColumn3;
-        private DataGridTextBoxColumn dataGridTextBoxColumn2;
-        private DataGridTextBoxColumn dataGridTextBoxColumn1;
-        private DataGridTableStyle dataGridTableStyle1;
-        private DataGridTableStyle dataGridTableStyle3;
-        private DataGridTextBoxColumn dataGridTextBoxColumn11;
-        private DataGridTextBoxColumn dataGridTextBoxColumn12;
-        private DataGridTextBoxColumn dataGridTextBoxColumn13;
-        private DataGridTextBoxColumn dataGridTextBoxColumn14;
-        private DataGridTextBoxColumn dataGridTextBoxColumn15;
-        private DataGridTextBoxColumn dataGridTextBoxColumn10;
-        private DataGridTextBoxColumn dataGridTextBoxColumn9;
-        private DataGridTextBoxColumn dataGridTextBoxColumn8;
-        private DataGridTextBoxColumn dataGridTextBoxColumn7;
-        private DataGridTextBoxColumn dataGridTextBoxColumn6;
-        private DataGridTableStyle dataGridTableStyle2;
+        private TpsLabel tpsLabel_rCircleOffsetX;
+        private TpsLabel tpsLabel_rCircleOffsetY;
+        private TpsLabel tpsLabel_rCircleRotationX;
+        private TpsLabel tpsLabel_rCircleRotationY;
+        private TpsLabel tpsLabel_rCircleRotationZ;
+        private TpsLabel tpsLabel_numDegree0;
+        private TpsLabel tpsLabel_numDegree90;
+        private TpsLabel tpsLabel_numDegree180;
+        private TpsLabel tpsLabel_numDegree270;
+        private NumEditor numEditor_rCircleOffsetX0;
+        private NumEditor numEditor_rCircleOffsetX90;
+        private NumEditor numEditor_rCircleOffsetX180;
+        private NumEditor numEditor_rCircleOffsetX270;
+        private NumEditor numEditor_rCircleOffsetY0;
+        private NumEditor numEditor_rCircleOffsetY90;
+        private NumEditor numEditor_rCircleOffsetY180;
+        private NumEditor numEditor_rCircleOffsetY270;
+        private NumEditor numEditor_rCircleRotationX0;
+        private NumEditor numEditor_rCircleRotationX90;
+        private NumEditor numEditor_rCircleRotationX180;
+        private NumEditor numEditor_rCircleRotationX270;
+        private NumEditor numEditor_rCircleRotationY0;
+        private NumEditor numEditor_rCircleRotationY90;
+        private NumEditor numEditor_rCircleRotationY180;
+        private NumEditor numEditor_rCircleRotationY270;
+        private NumEditor numEditor_rCircleRotationZ0;
+        private NumEditor numEditor_rCircleRotationZ90;
+        private NumEditor numEditor_rCircleRotationZ180;
+        private NumEditor numEditor_rCircleRotationZ270;
+        private ABB.Robotics.Tps.Windows.Forms.CheckBox checkBox_boolRefreshbyLayerParameters;
+        private ABB.Robotics.Tps.Windows.Forms.CheckBox checkBox_boolRefreshWeldProcedureID;
 
         /// <summary>
         /// Required designer variable.
@@ -71,15 +75,6 @@ namespace TpsViewEbaraV2NameSpace
                 this.rwSystem = rwSystem;
                 this.layerParameter = layerParameter;
                 this.numericUpDown_intLayerNo.Value = this.layerParameter.intLayerNo;
-
-                //this.dataGrid_Circle.BackgroundColor = System.Drawing.Color.Red;
-                //this.dataGrid_Circle.ForeColor = System.Drawing.Color.Pink;
-                //this.dataGrid_Circle.BackColor = System.Drawing.Color.Green;
-                //this.dataGrid_Circle.HeaderBackColor = System.Drawing.Color.Orange;
-                //this.dataGrid_Circle.HeaderForeColor = System.Drawing.Color.Green;
-                //this.dataGrid_Circle.GridLineColor = System.Drawing.Color.Green;
-                //this.dataGrid_Circle.SelectionBackColor = System.Drawing.Color.Red;
-                //this.dataGrid_Circle.SelectionForeColor = System.Drawing.Color.Violet;
 
                 InitializeTexts();
             }
@@ -112,7 +107,6 @@ namespace TpsViewEbaraV2NameSpace
                         //    this.layerParameter.Dispose();
                         //    this.layerParameter = null;
                         //}
-                        this.alphaPad_Circle.Dispose();
 
                         if (components != null)
                         {
@@ -143,34 +137,38 @@ namespace TpsViewEbaraV2NameSpace
             this.numericUpDown_intLayerNo = new ABB.Robotics.Tps.Windows.Forms.NumericUpDown();
             this.tpsLabel_intLayerNo = new ABB.Robotics.Tps.Windows.Forms.TpsLabel();
             this.dataEditor_strWeldProcedureID = new ABB.Robotics.Tps.Windows.Forms.DataEditor();
-            this.tpsLabel_strWeldProcedureID = new ABB.Robotics.Tps.Windows.Forms.TpsLabel();
-            this.dataGrid_Circle = new System.Windows.Forms.DataGrid();
-            this.dataGridTextBoxColumn_numDegree270 = new System.Windows.Forms.DataGridTextBoxColumn();
-            this.dataGridTextBoxColumn_numDegree180 = new System.Windows.Forms.DataGridTextBoxColumn();
-            this.dataGridTextBoxColumn_numDegree90 = new System.Windows.Forms.DataGridTextBoxColumn();
-            this.dataGridTextBoxColumn_numDegree0 = new System.Windows.Forms.DataGridTextBoxColumn();
-            this.dataGridTextBoxColumn_OptimizationType = new System.Windows.Forms.DataGridTextBoxColumn();
-            this.dataGridTableStyle_Circles = new System.Windows.Forms.DataGridTableStyle();
             this.compactAlphaPad1 = new ABB.Robotics.Tps.Windows.Forms.CompactAlphaPad();
-            this.alphaPad_Circle = new ABB.Robotics.Tps.Windows.Forms.AlphaPad();
-            this.dataGridTextBoxColumn5 = new System.Windows.Forms.DataGridTextBoxColumn();
-            this.dataGridTextBoxColumn4 = new System.Windows.Forms.DataGridTextBoxColumn();
-            this.dataGridTextBoxColumn3 = new System.Windows.Forms.DataGridTextBoxColumn();
-            this.dataGridTextBoxColumn2 = new System.Windows.Forms.DataGridTextBoxColumn();
-            this.dataGridTextBoxColumn1 = new System.Windows.Forms.DataGridTextBoxColumn();
-            this.dataGridTableStyle1 = new System.Windows.Forms.DataGridTableStyle();
-            this.dataGridTextBoxColumn10 = new System.Windows.Forms.DataGridTextBoxColumn();
-            this.dataGridTextBoxColumn9 = new System.Windows.Forms.DataGridTextBoxColumn();
-            this.dataGridTextBoxColumn8 = new System.Windows.Forms.DataGridTextBoxColumn();
-            this.dataGridTextBoxColumn7 = new System.Windows.Forms.DataGridTextBoxColumn();
-            this.dataGridTextBoxColumn6 = new System.Windows.Forms.DataGridTextBoxColumn();
-            this.dataGridTableStyle2 = new System.Windows.Forms.DataGridTableStyle();
-            this.dataGridTableStyle3 = new System.Windows.Forms.DataGridTableStyle();
-            this.dataGridTextBoxColumn11 = new System.Windows.Forms.DataGridTextBoxColumn();
-            this.dataGridTextBoxColumn12 = new System.Windows.Forms.DataGridTextBoxColumn();
-            this.dataGridTextBoxColumn13 = new System.Windows.Forms.DataGridTextBoxColumn();
-            this.dataGridTextBoxColumn14 = new System.Windows.Forms.DataGridTextBoxColumn();
-            this.dataGridTextBoxColumn15 = new System.Windows.Forms.DataGridTextBoxColumn();
+            this.tpsLabel_rCircleOffsetX = new ABB.Robotics.Tps.Windows.Forms.TpsLabel();
+            this.tpsLabel_rCircleOffsetY = new ABB.Robotics.Tps.Windows.Forms.TpsLabel();
+            this.tpsLabel_rCircleRotationX = new ABB.Robotics.Tps.Windows.Forms.TpsLabel();
+            this.tpsLabel_rCircleRotationY = new ABB.Robotics.Tps.Windows.Forms.TpsLabel();
+            this.tpsLabel_rCircleRotationZ = new ABB.Robotics.Tps.Windows.Forms.TpsLabel();
+            this.tpsLabel_numDegree0 = new ABB.Robotics.Tps.Windows.Forms.TpsLabel();
+            this.tpsLabel_numDegree90 = new ABB.Robotics.Tps.Windows.Forms.TpsLabel();
+            this.tpsLabel_numDegree180 = new ABB.Robotics.Tps.Windows.Forms.TpsLabel();
+            this.tpsLabel_numDegree270 = new ABB.Robotics.Tps.Windows.Forms.TpsLabel();
+            this.numEditor_rCircleOffsetX0 = new ABB.Robotics.Tps.Windows.Forms.NumEditor();
+            this.numEditor_rCircleOffsetX90 = new ABB.Robotics.Tps.Windows.Forms.NumEditor();
+            this.numEditor_rCircleOffsetX180 = new ABB.Robotics.Tps.Windows.Forms.NumEditor();
+            this.numEditor_rCircleOffsetX270 = new ABB.Robotics.Tps.Windows.Forms.NumEditor();
+            this.numEditor_rCircleOffsetY0 = new ABB.Robotics.Tps.Windows.Forms.NumEditor();
+            this.numEditor_rCircleOffsetY90 = new ABB.Robotics.Tps.Windows.Forms.NumEditor();
+            this.numEditor_rCircleOffsetY180 = new ABB.Robotics.Tps.Windows.Forms.NumEditor();
+            this.numEditor_rCircleOffsetY270 = new ABB.Robotics.Tps.Windows.Forms.NumEditor();
+            this.numEditor_rCircleRotationX0 = new ABB.Robotics.Tps.Windows.Forms.NumEditor();
+            this.numEditor_rCircleRotationX90 = new ABB.Robotics.Tps.Windows.Forms.NumEditor();
+            this.numEditor_rCircleRotationX180 = new ABB.Robotics.Tps.Windows.Forms.NumEditor();
+            this.numEditor_rCircleRotationX270 = new ABB.Robotics.Tps.Windows.Forms.NumEditor();
+            this.numEditor_rCircleRotationY0 = new ABB.Robotics.Tps.Windows.Forms.NumEditor();
+            this.numEditor_rCircleRotationY90 = new ABB.Robotics.Tps.Windows.Forms.NumEditor();
+            this.numEditor_rCircleRotationY180 = new ABB.Robotics.Tps.Windows.Forms.NumEditor();
+            this.numEditor_rCircleRotationY270 = new ABB.Robotics.Tps.Windows.Forms.NumEditor();
+            this.numEditor_rCircleRotationZ0 = new ABB.Robotics.Tps.Windows.Forms.NumEditor();
+            this.numEditor_rCircleRotationZ90 = new ABB.Robotics.Tps.Windows.Forms.NumEditor();
+            this.numEditor_rCircleRotationZ180 = new ABB.Robotics.Tps.Windows.Forms.NumEditor();
+            this.numEditor_rCircleRotationZ270 = new ABB.Robotics.Tps.Windows.Forms.NumEditor();
+            this.checkBox_boolRefreshbyLayerParameters = new ABB.Robotics.Tps.Windows.Forms.CheckBox();
+            this.checkBox_boolRefreshWeldProcedureID = new ABB.Robotics.Tps.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // pictureBox_Logo
@@ -289,74 +287,6 @@ namespace TpsViewEbaraV2NameSpace
             this.dataEditor_strWeldProcedureID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.dataEditor_strWeldProcedureID.Click += new System.EventHandler(this.dataEditor_strWeldProcedureID_Click);
             // 
-            // tpsLabel_strWeldProcedureID
-            // 
-            this.tpsLabel_strWeldProcedureID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tpsLabel_strWeldProcedureID.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
-            this.tpsLabel_strWeldProcedureID.Location = new System.Drawing.Point(269, 41);
-            this.tpsLabel_strWeldProcedureID.Multiline = true;
-            this.tpsLabel_strWeldProcedureID.Name = "tpsLabel_strWeldProcedureID";
-            this.tpsLabel_strWeldProcedureID.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
-            this.tpsLabel_strWeldProcedureID.Size = new System.Drawing.Size(169, 24);
-            this.tpsLabel_strWeldProcedureID.TabIndex = 31;
-            this.tpsLabel_strWeldProcedureID.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.tpsLabel_strWeldProcedureID.Title = "Weld Procedure ID";
-            // 
-            // dataGrid_Circle
-            // 
-            this.dataGrid_Circle.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.dataGrid_Circle.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Regular);
-            this.dataGrid_Circle.Location = new System.Drawing.Point(13, 87);
-            this.dataGrid_Circle.Name = "dataGrid_Circle";
-            this.dataGrid_Circle.Size = new System.Drawing.Size(480, 254);
-            this.dataGrid_Circle.TabIndex = 33;
-            this.dataGrid_Circle.TableStyles.Add(this.dataGridTableStyle3);
-            this.dataGrid_Circle.CurrentCellChanged += new System.EventHandler(this.dataGrid_Circle_CurrentCellChanged);
-            // 
-            // dataGridTextBoxColumn_numDegree270
-            // 
-            this.dataGridTextBoxColumn_numDegree270.Format = "";
-            this.dataGridTextBoxColumn_numDegree270.FormatInfo = null;
-            this.dataGridTextBoxColumn_numDegree270.HeaderText = "numDegree270";
-            this.dataGridTextBoxColumn_numDegree270.MappingName = "numDegree270";
-            // 
-            // dataGridTextBoxColumn_numDegree180
-            // 
-            this.dataGridTextBoxColumn_numDegree180.Format = "";
-            this.dataGridTextBoxColumn_numDegree180.FormatInfo = null;
-            this.dataGridTextBoxColumn_numDegree180.HeaderText = "numDegree180";
-            this.dataGridTextBoxColumn_numDegree180.MappingName = "numDegree180";
-            // 
-            // dataGridTextBoxColumn_numDegree90
-            // 
-            this.dataGridTextBoxColumn_numDegree90.Format = "";
-            this.dataGridTextBoxColumn_numDegree90.FormatInfo = null;
-            this.dataGridTextBoxColumn_numDegree90.HeaderText = "numDegree90";
-            this.dataGridTextBoxColumn_numDegree90.MappingName = "numDegree90";
-            // 
-            // dataGridTextBoxColumn_numDegree0
-            // 
-            this.dataGridTextBoxColumn_numDegree0.Format = "";
-            this.dataGridTextBoxColumn_numDegree0.FormatInfo = null;
-            this.dataGridTextBoxColumn_numDegree0.HeaderText = "numDegree0";
-            this.dataGridTextBoxColumn_numDegree0.MappingName = "numDegree0";
-            // 
-            // dataGridTextBoxColumn_OptimizationType
-            // 
-            this.dataGridTextBoxColumn_OptimizationType.Format = "";
-            this.dataGridTextBoxColumn_OptimizationType.FormatInfo = null;
-            this.dataGridTextBoxColumn_OptimizationType.HeaderText = "OptimizationType";
-            this.dataGridTextBoxColumn_OptimizationType.MappingName = "OptimizationType";
-            // 
-            // dataGridTableStyle_Circles
-            // 
-            this.dataGridTableStyle_Circles.GridColumnStyles.Add(this.dataGridTextBoxColumn_OptimizationType);
-            this.dataGridTableStyle_Circles.GridColumnStyles.Add(this.dataGridTextBoxColumn_numDegree0);
-            this.dataGridTableStyle_Circles.GridColumnStyles.Add(this.dataGridTextBoxColumn_numDegree90);
-            this.dataGridTableStyle_Circles.GridColumnStyles.Add(this.dataGridTextBoxColumn_numDegree180);
-            this.dataGridTableStyle_Circles.GridColumnStyles.Add(this.dataGridTextBoxColumn_numDegree270);
-            this.dataGridTableStyle_Circles.MappingName = "Circles";
-            // 
             // compactAlphaPad1
             // 
             this.compactAlphaPad1.ActiveCharPanel = ABB.Robotics.Tps.Windows.Forms.CharSet.Characters;
@@ -367,163 +297,748 @@ namespace TpsViewEbaraV2NameSpace
             this.compactAlphaPad1.TabIndex = 0;
             this.compactAlphaPad1.Target = null;
             // 
-            // alphaPad_Circle
+            // tpsLabel_rCircleOffsetX
             // 
-            this.alphaPad_Circle.ControlBorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.alphaPad_Circle.EnableStringSelectorMenuItem = true;
-            this.alphaPad_Circle.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
-            this.alphaPad_Circle.FormAppearance = false;
-            this.alphaPad_Circle.Icon = null;
-            this.alphaPad_Circle.Name = "AlphaPad";
-            this.alphaPad_Circle.SelectedText = "";
-            this.alphaPad_Circle.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
-            this.alphaPad_Circle.Size = new System.Drawing.Size(639, 390);
-            this.alphaPad_Circle.TabIndex = 0;
-            this.alphaPad_Circle.Closing += new System.ComponentModel.CancelEventHandler(this.alphaPad_Circle_Closing);
-            this.alphaPad_Circle.Closed += new System.EventHandler(this.alphaPad_Circle_Closed);
+            this.tpsLabel_rCircleOffsetX.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tpsLabel_rCircleOffsetX.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.tpsLabel_rCircleOffsetX.Location = new System.Drawing.Point(11, 115);
+            this.tpsLabel_rCircleOffsetX.Multiline = true;
+            this.tpsLabel_rCircleOffsetX.Name = "tpsLabel_rCircleOffsetX";
+            this.tpsLabel_rCircleOffsetX.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.tpsLabel_rCircleOffsetX.Size = new System.Drawing.Size(102, 24);
+            this.tpsLabel_rCircleOffsetX.TabIndex = 8;
+            this.tpsLabel_rCircleOffsetX.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.tpsLabel_rCircleOffsetX.Title = "Offset X";
             // 
-            // dataGridTextBoxColumn5
+            // tpsLabel_rCircleOffsetY
             // 
-            this.dataGridTextBoxColumn5.Format = "";
-            this.dataGridTextBoxColumn5.FormatInfo = null;
-            this.dataGridTextBoxColumn5.HeaderText = "270";
-            this.dataGridTextBoxColumn5.MappingName = "numDegree270";
+            this.tpsLabel_rCircleOffsetY.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tpsLabel_rCircleOffsetY.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.tpsLabel_rCircleOffsetY.Location = new System.Drawing.Point(11, 161);
+            this.tpsLabel_rCircleOffsetY.Multiline = true;
+            this.tpsLabel_rCircleOffsetY.Name = "tpsLabel_rCircleOffsetY";
+            this.tpsLabel_rCircleOffsetY.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.tpsLabel_rCircleOffsetY.Size = new System.Drawing.Size(102, 24);
+            this.tpsLabel_rCircleOffsetY.TabIndex = 8;
+            this.tpsLabel_rCircleOffsetY.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.tpsLabel_rCircleOffsetY.Title = "Offset Y";
             // 
-            // dataGridTextBoxColumn4
+            // tpsLabel_rCircleRotationX
             // 
-            this.dataGridTextBoxColumn4.Format = "";
-            this.dataGridTextBoxColumn4.FormatInfo = null;
-            this.dataGridTextBoxColumn4.HeaderText = "180";
-            this.dataGridTextBoxColumn4.MappingName = "numDegree180";
+            this.tpsLabel_rCircleRotationX.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tpsLabel_rCircleRotationX.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.tpsLabel_rCircleRotationX.Location = new System.Drawing.Point(11, 207);
+            this.tpsLabel_rCircleRotationX.Multiline = true;
+            this.tpsLabel_rCircleRotationX.Name = "tpsLabel_rCircleRotationX";
+            this.tpsLabel_rCircleRotationX.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.tpsLabel_rCircleRotationX.Size = new System.Drawing.Size(102, 24);
+            this.tpsLabel_rCircleRotationX.TabIndex = 8;
+            this.tpsLabel_rCircleRotationX.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.tpsLabel_rCircleRotationX.Title = "Rotation X";
             // 
-            // dataGridTextBoxColumn3
+            // tpsLabel_rCircleRotationY
             // 
-            this.dataGridTextBoxColumn3.Format = "";
-            this.dataGridTextBoxColumn3.FormatInfo = null;
-            this.dataGridTextBoxColumn3.HeaderText = "90";
-            this.dataGridTextBoxColumn3.MappingName = "numDegree90";
+            this.tpsLabel_rCircleRotationY.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tpsLabel_rCircleRotationY.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.tpsLabel_rCircleRotationY.Location = new System.Drawing.Point(11, 253);
+            this.tpsLabel_rCircleRotationY.Multiline = true;
+            this.tpsLabel_rCircleRotationY.Name = "tpsLabel_rCircleRotationY";
+            this.tpsLabel_rCircleRotationY.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.tpsLabel_rCircleRotationY.Size = new System.Drawing.Size(102, 24);
+            this.tpsLabel_rCircleRotationY.TabIndex = 8;
+            this.tpsLabel_rCircleRotationY.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.tpsLabel_rCircleRotationY.Title = "Rotation Y";
             // 
-            // dataGridTextBoxColumn2
+            // tpsLabel_rCircleRotationZ
             // 
-            this.dataGridTextBoxColumn2.Format = "";
-            this.dataGridTextBoxColumn2.FormatInfo = null;
-            this.dataGridTextBoxColumn2.HeaderText = "0";
-            this.dataGridTextBoxColumn2.MappingName = "numDegree0";
+            this.tpsLabel_rCircleRotationZ.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tpsLabel_rCircleRotationZ.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.tpsLabel_rCircleRotationZ.Location = new System.Drawing.Point(11, 299);
+            this.tpsLabel_rCircleRotationZ.Multiline = true;
+            this.tpsLabel_rCircleRotationZ.Name = "tpsLabel_rCircleRotationZ";
+            this.tpsLabel_rCircleRotationZ.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.tpsLabel_rCircleRotationZ.Size = new System.Drawing.Size(102, 24);
+            this.tpsLabel_rCircleRotationZ.TabIndex = 8;
+            this.tpsLabel_rCircleRotationZ.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.tpsLabel_rCircleRotationZ.Title = "Rotation Z";
+            this.tpsLabel_rCircleRotationZ.Visible = false;
             // 
-            // dataGridTextBoxColumn1
+            // tpsLabel_numDegree0
             // 
-            this.dataGridTextBoxColumn1.Format = "";
-            this.dataGridTextBoxColumn1.FormatInfo = null;
-            this.dataGridTextBoxColumn1.HeaderText = "Type";
-            this.dataGridTextBoxColumn1.MappingName = "OptimizationType";
-            this.dataGridTextBoxColumn1.Width = 140;
+            this.tpsLabel_numDegree0.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tpsLabel_numDegree0.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.tpsLabel_numDegree0.Location = new System.Drawing.Point(147, 85);
+            this.tpsLabel_numDegree0.Multiline = true;
+            this.tpsLabel_numDegree0.Name = "tpsLabel_numDegree0";
+            this.tpsLabel_numDegree0.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.tpsLabel_numDegree0.Size = new System.Drawing.Size(42, 24);
+            this.tpsLabel_numDegree0.TabIndex = 8;
+            this.tpsLabel_numDegree0.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.tpsLabel_numDegree0.Title = "0";
             // 
-            // dataGridTableStyle1
+            // tpsLabel_numDegree90
             // 
-            this.dataGridTableStyle1.GridColumnStyles.Add(this.dataGridTextBoxColumn1);
-            this.dataGridTableStyle1.GridColumnStyles.Add(this.dataGridTextBoxColumn2);
-            this.dataGridTableStyle1.GridColumnStyles.Add(this.dataGridTextBoxColumn3);
-            this.dataGridTableStyle1.GridColumnStyles.Add(this.dataGridTextBoxColumn4);
-            this.dataGridTableStyle1.GridColumnStyles.Add(this.dataGridTextBoxColumn5);
-            this.dataGridTableStyle1.MappingName = "Circles";
+            this.tpsLabel_numDegree90.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tpsLabel_numDegree90.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.tpsLabel_numDegree90.Location = new System.Drawing.Point(243, 85);
+            this.tpsLabel_numDegree90.Multiline = true;
+            this.tpsLabel_numDegree90.Name = "tpsLabel_numDegree90";
+            this.tpsLabel_numDegree90.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.tpsLabel_numDegree90.Size = new System.Drawing.Size(54, 24);
+            this.tpsLabel_numDegree90.TabIndex = 8;
+            this.tpsLabel_numDegree90.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.tpsLabel_numDegree90.Title = "90";
             // 
-            // dataGridTextBoxColumn10
+            // tpsLabel_numDegree180
             // 
-            this.dataGridTextBoxColumn10.Format = "";
-            this.dataGridTextBoxColumn10.FormatInfo = null;
-            this.dataGridTextBoxColumn10.HeaderText = "270";
-            this.dataGridTextBoxColumn10.MappingName = "numDegree270";
+            this.tpsLabel_numDegree180.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tpsLabel_numDegree180.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.tpsLabel_numDegree180.Location = new System.Drawing.Point(330, 85);
+            this.tpsLabel_numDegree180.Multiline = true;
+            this.tpsLabel_numDegree180.Name = "tpsLabel_numDegree180";
+            this.tpsLabel_numDegree180.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.tpsLabel_numDegree180.Size = new System.Drawing.Size(58, 24);
+            this.tpsLabel_numDegree180.TabIndex = 8;
+            this.tpsLabel_numDegree180.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.tpsLabel_numDegree180.Title = "180";
             // 
-            // dataGridTextBoxColumn9
+            // tpsLabel_numDegree270
             // 
-            this.dataGridTextBoxColumn9.Format = "";
-            this.dataGridTextBoxColumn9.FormatInfo = null;
-            this.dataGridTextBoxColumn9.HeaderText = "180";
-            this.dataGridTextBoxColumn9.MappingName = "numDegree180";
+            this.tpsLabel_numDegree270.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tpsLabel_numDegree270.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.tpsLabel_numDegree270.Location = new System.Drawing.Point(433, 85);
+            this.tpsLabel_numDegree270.Multiline = true;
+            this.tpsLabel_numDegree270.Name = "tpsLabel_numDegree270";
+            this.tpsLabel_numDegree270.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.tpsLabel_numDegree270.Size = new System.Drawing.Size(64, 24);
+            this.tpsLabel_numDegree270.TabIndex = 8;
+            this.tpsLabel_numDegree270.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.tpsLabel_numDegree270.Title = "270";
             // 
-            // dataGridTextBoxColumn8
+            // numEditor_rCircleOffsetX0
             // 
-            this.dataGridTextBoxColumn8.Format = "";
-            this.dataGridTextBoxColumn8.FormatInfo = null;
-            this.dataGridTextBoxColumn8.HeaderText = "90";
-            this.dataGridTextBoxColumn8.MappingName = "numDegree90";
+            this.numEditor_rCircleOffsetX0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numEditor_rCircleOffsetX0.CaretVisible = false;
+            this.numEditor_rCircleOffsetX0.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.numEditor_rCircleOffsetX0.Location = new System.Drawing.Point(119, 115);
+            this.numEditor_rCircleOffsetX0.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.numEditor_rCircleOffsetX0.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
+            this.numEditor_rCircleOffsetX0.Multiline = true;
+            this.numEditor_rCircleOffsetX0.Name = "numEditor_rCircleOffsetX0";
+            this.numEditor_rCircleOffsetX0.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.numEditor_rCircleOffsetX0.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.numEditor_rCircleOffsetX0.SelectionLength = 0;
+            this.numEditor_rCircleOffsetX0.SelectionStart = 0;
+            this.numEditor_rCircleOffsetX0.SelectionVisible = false;
+            this.numEditor_rCircleOffsetX0.Size = new System.Drawing.Size(80, 40);
+            this.numEditor_rCircleOffsetX0.TabIndex = 34;
+            this.numEditor_rCircleOffsetX0.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.numEditor_rCircleOffsetX0.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(this.dataControl_PropertyChanged);
             // 
-            // dataGridTextBoxColumn7
+            // numEditor_rCircleOffsetX90
             // 
-            this.dataGridTextBoxColumn7.Format = "";
-            this.dataGridTextBoxColumn7.FormatInfo = null;
-            this.dataGridTextBoxColumn7.HeaderText = "0";
-            this.dataGridTextBoxColumn7.MappingName = "numDegree0";
+            this.numEditor_rCircleOffsetX90.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numEditor_rCircleOffsetX90.CaretVisible = false;
+            this.numEditor_rCircleOffsetX90.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.numEditor_rCircleOffsetX90.Location = new System.Drawing.Point(218, 115);
+            this.numEditor_rCircleOffsetX90.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.numEditor_rCircleOffsetX90.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
+            this.numEditor_rCircleOffsetX90.Multiline = true;
+            this.numEditor_rCircleOffsetX90.Name = "numEditor_rCircleOffsetX90";
+            this.numEditor_rCircleOffsetX90.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.numEditor_rCircleOffsetX90.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.numEditor_rCircleOffsetX90.SelectionLength = 0;
+            this.numEditor_rCircleOffsetX90.SelectionStart = 0;
+            this.numEditor_rCircleOffsetX90.SelectionVisible = false;
+            this.numEditor_rCircleOffsetX90.Size = new System.Drawing.Size(80, 40);
+            this.numEditor_rCircleOffsetX90.TabIndex = 34;
+            this.numEditor_rCircleOffsetX90.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.numEditor_rCircleOffsetX90.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(this.dataControl_PropertyChanged);
             // 
-            // dataGridTextBoxColumn6
+            // numEditor_rCircleOffsetX180
             // 
-            this.dataGridTextBoxColumn6.Format = "";
-            this.dataGridTextBoxColumn6.FormatInfo = null;
-            this.dataGridTextBoxColumn6.HeaderText = "Type";
-            this.dataGridTextBoxColumn6.MappingName = "OptimizationType";
-            this.dataGridTextBoxColumn6.Width = 140;
+            this.numEditor_rCircleOffsetX180.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numEditor_rCircleOffsetX180.CaretVisible = false;
+            this.numEditor_rCircleOffsetX180.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.numEditor_rCircleOffsetX180.Location = new System.Drawing.Point(317, 115);
+            this.numEditor_rCircleOffsetX180.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.numEditor_rCircleOffsetX180.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
+            this.numEditor_rCircleOffsetX180.Multiline = true;
+            this.numEditor_rCircleOffsetX180.Name = "numEditor_rCircleOffsetX180";
+            this.numEditor_rCircleOffsetX180.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.numEditor_rCircleOffsetX180.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.numEditor_rCircleOffsetX180.SelectionLength = 0;
+            this.numEditor_rCircleOffsetX180.SelectionStart = 0;
+            this.numEditor_rCircleOffsetX180.SelectionVisible = false;
+            this.numEditor_rCircleOffsetX180.Size = new System.Drawing.Size(80, 40);
+            this.numEditor_rCircleOffsetX180.TabIndex = 34;
+            this.numEditor_rCircleOffsetX180.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.numEditor_rCircleOffsetX180.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(this.dataControl_PropertyChanged);
             // 
-            // dataGridTableStyle2
+            // numEditor_rCircleOffsetX270
             // 
-            this.dataGridTableStyle2.GridColumnStyles.Add(this.dataGridTextBoxColumn6);
-            this.dataGridTableStyle2.GridColumnStyles.Add(this.dataGridTextBoxColumn7);
-            this.dataGridTableStyle2.GridColumnStyles.Add(this.dataGridTextBoxColumn8);
-            this.dataGridTableStyle2.GridColumnStyles.Add(this.dataGridTextBoxColumn9);
-            this.dataGridTableStyle2.GridColumnStyles.Add(this.dataGridTextBoxColumn10);
-            this.dataGridTableStyle2.MappingName = "Circles";
+            this.numEditor_rCircleOffsetX270.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numEditor_rCircleOffsetX270.CaretVisible = false;
+            this.numEditor_rCircleOffsetX270.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.numEditor_rCircleOffsetX270.Location = new System.Drawing.Point(417, 115);
+            this.numEditor_rCircleOffsetX270.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.numEditor_rCircleOffsetX270.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
+            this.numEditor_rCircleOffsetX270.Multiline = true;
+            this.numEditor_rCircleOffsetX270.Name = "numEditor_rCircleOffsetX270";
+            this.numEditor_rCircleOffsetX270.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.numEditor_rCircleOffsetX270.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.numEditor_rCircleOffsetX270.SelectionLength = 0;
+            this.numEditor_rCircleOffsetX270.SelectionStart = 0;
+            this.numEditor_rCircleOffsetX270.SelectionVisible = false;
+            this.numEditor_rCircleOffsetX270.Size = new System.Drawing.Size(80, 40);
+            this.numEditor_rCircleOffsetX270.TabIndex = 34;
+            this.numEditor_rCircleOffsetX270.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.numEditor_rCircleOffsetX270.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(this.dataControl_PropertyChanged);
             // 
-            // dataGridTableStyle3
+            // numEditor_rCircleOffsetY0
             // 
-            this.dataGridTableStyle3.GridColumnStyles.Add(this.dataGridTextBoxColumn11);
-            this.dataGridTableStyle3.GridColumnStyles.Add(this.dataGridTextBoxColumn12);
-            this.dataGridTableStyle3.GridColumnStyles.Add(this.dataGridTextBoxColumn13);
-            this.dataGridTableStyle3.GridColumnStyles.Add(this.dataGridTextBoxColumn14);
-            this.dataGridTableStyle3.GridColumnStyles.Add(this.dataGridTextBoxColumn15);
-            this.dataGridTableStyle3.MappingName = "Circles";
+            this.numEditor_rCircleOffsetY0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numEditor_rCircleOffsetY0.CaretVisible = false;
+            this.numEditor_rCircleOffsetY0.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.numEditor_rCircleOffsetY0.Location = new System.Drawing.Point(119, 161);
+            this.numEditor_rCircleOffsetY0.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.numEditor_rCircleOffsetY0.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
+            this.numEditor_rCircleOffsetY0.Multiline = true;
+            this.numEditor_rCircleOffsetY0.Name = "numEditor_rCircleOffsetY0";
+            this.numEditor_rCircleOffsetY0.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.numEditor_rCircleOffsetY0.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.numEditor_rCircleOffsetY0.SelectionLength = 0;
+            this.numEditor_rCircleOffsetY0.SelectionStart = 0;
+            this.numEditor_rCircleOffsetY0.SelectionVisible = false;
+            this.numEditor_rCircleOffsetY0.Size = new System.Drawing.Size(80, 40);
+            this.numEditor_rCircleOffsetY0.TabIndex = 34;
+            this.numEditor_rCircleOffsetY0.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.numEditor_rCircleOffsetY0.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(this.dataControl_PropertyChanged);
             // 
-            // dataGridTextBoxColumn11
+            // numEditor_rCircleOffsetY90
             // 
-            this.dataGridTextBoxColumn11.Format = "";
-            this.dataGridTextBoxColumn11.FormatInfo = null;
-            this.dataGridTextBoxColumn11.HeaderText = "Type";
-            this.dataGridTextBoxColumn11.MappingName = "OptimizationType";
-            this.dataGridTextBoxColumn11.Width = 140;
+            this.numEditor_rCircleOffsetY90.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numEditor_rCircleOffsetY90.CaretVisible = false;
+            this.numEditor_rCircleOffsetY90.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.numEditor_rCircleOffsetY90.Location = new System.Drawing.Point(218, 161);
+            this.numEditor_rCircleOffsetY90.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.numEditor_rCircleOffsetY90.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
+            this.numEditor_rCircleOffsetY90.Multiline = true;
+            this.numEditor_rCircleOffsetY90.Name = "numEditor_rCircleOffsetY90";
+            this.numEditor_rCircleOffsetY90.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.numEditor_rCircleOffsetY90.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.numEditor_rCircleOffsetY90.SelectionLength = 0;
+            this.numEditor_rCircleOffsetY90.SelectionStart = 0;
+            this.numEditor_rCircleOffsetY90.SelectionVisible = false;
+            this.numEditor_rCircleOffsetY90.Size = new System.Drawing.Size(80, 40);
+            this.numEditor_rCircleOffsetY90.TabIndex = 34;
+            this.numEditor_rCircleOffsetY90.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.numEditor_rCircleOffsetY90.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(this.dataControl_PropertyChanged);
             // 
-            // dataGridTextBoxColumn12
+            // numEditor_rCircleOffsetY180
             // 
-            this.dataGridTextBoxColumn12.Format = "";
-            this.dataGridTextBoxColumn12.FormatInfo = null;
-            this.dataGridTextBoxColumn12.HeaderText = "0";
-            this.dataGridTextBoxColumn12.MappingName = "numDegree0";
+            this.numEditor_rCircleOffsetY180.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numEditor_rCircleOffsetY180.CaretVisible = false;
+            this.numEditor_rCircleOffsetY180.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.numEditor_rCircleOffsetY180.Location = new System.Drawing.Point(317, 161);
+            this.numEditor_rCircleOffsetY180.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.numEditor_rCircleOffsetY180.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
+            this.numEditor_rCircleOffsetY180.Multiline = true;
+            this.numEditor_rCircleOffsetY180.Name = "numEditor_rCircleOffsetY180";
+            this.numEditor_rCircleOffsetY180.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.numEditor_rCircleOffsetY180.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.numEditor_rCircleOffsetY180.SelectionLength = 0;
+            this.numEditor_rCircleOffsetY180.SelectionStart = 0;
+            this.numEditor_rCircleOffsetY180.SelectionVisible = false;
+            this.numEditor_rCircleOffsetY180.Size = new System.Drawing.Size(80, 40);
+            this.numEditor_rCircleOffsetY180.TabIndex = 34;
+            this.numEditor_rCircleOffsetY180.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.numEditor_rCircleOffsetY180.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(this.dataControl_PropertyChanged);
             // 
-            // dataGridTextBoxColumn13
+            // numEditor_rCircleOffsetY270
             // 
-            this.dataGridTextBoxColumn13.Format = "";
-            this.dataGridTextBoxColumn13.FormatInfo = null;
-            this.dataGridTextBoxColumn13.HeaderText = "90";
-            this.dataGridTextBoxColumn13.MappingName = "numDegree90";
+            this.numEditor_rCircleOffsetY270.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numEditor_rCircleOffsetY270.CaretVisible = false;
+            this.numEditor_rCircleOffsetY270.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.numEditor_rCircleOffsetY270.Location = new System.Drawing.Point(417, 161);
+            this.numEditor_rCircleOffsetY270.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.numEditor_rCircleOffsetY270.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
+            this.numEditor_rCircleOffsetY270.Multiline = true;
+            this.numEditor_rCircleOffsetY270.Name = "numEditor_rCircleOffsetY270";
+            this.numEditor_rCircleOffsetY270.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.numEditor_rCircleOffsetY270.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.numEditor_rCircleOffsetY270.SelectionLength = 0;
+            this.numEditor_rCircleOffsetY270.SelectionStart = 0;
+            this.numEditor_rCircleOffsetY270.SelectionVisible = false;
+            this.numEditor_rCircleOffsetY270.Size = new System.Drawing.Size(80, 40);
+            this.numEditor_rCircleOffsetY270.TabIndex = 34;
+            this.numEditor_rCircleOffsetY270.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.numEditor_rCircleOffsetY270.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(this.dataControl_PropertyChanged);
             // 
-            // dataGridTextBoxColumn14
+            // numEditor_rCircleRotationX0
             // 
-            this.dataGridTextBoxColumn14.Format = "";
-            this.dataGridTextBoxColumn14.FormatInfo = null;
-            this.dataGridTextBoxColumn14.HeaderText = "180";
-            this.dataGridTextBoxColumn14.MappingName = "numDegree180";
+            this.numEditor_rCircleRotationX0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numEditor_rCircleRotationX0.CaretVisible = false;
+            this.numEditor_rCircleRotationX0.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.numEditor_rCircleRotationX0.Location = new System.Drawing.Point(119, 207);
+            this.numEditor_rCircleRotationX0.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.numEditor_rCircleRotationX0.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
+            this.numEditor_rCircleRotationX0.Multiline = true;
+            this.numEditor_rCircleRotationX0.Name = "numEditor_rCircleRotationX0";
+            this.numEditor_rCircleRotationX0.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.numEditor_rCircleRotationX0.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.numEditor_rCircleRotationX0.SelectionLength = 0;
+            this.numEditor_rCircleRotationX0.SelectionStart = 0;
+            this.numEditor_rCircleRotationX0.SelectionVisible = false;
+            this.numEditor_rCircleRotationX0.Size = new System.Drawing.Size(80, 40);
+            this.numEditor_rCircleRotationX0.TabIndex = 34;
+            this.numEditor_rCircleRotationX0.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.numEditor_rCircleRotationX0.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(this.dataControl_PropertyChanged);
             // 
-            // dataGridTextBoxColumn15
+            // numEditor_rCircleRotationX90
             // 
-            this.dataGridTextBoxColumn15.Format = "";
-            this.dataGridTextBoxColumn15.FormatInfo = null;
-            this.dataGridTextBoxColumn15.HeaderText = "270";
-            this.dataGridTextBoxColumn15.MappingName = "numDegree270";
+            this.numEditor_rCircleRotationX90.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numEditor_rCircleRotationX90.CaretVisible = false;
+            this.numEditor_rCircleRotationX90.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.numEditor_rCircleRotationX90.Location = new System.Drawing.Point(218, 207);
+            this.numEditor_rCircleRotationX90.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.numEditor_rCircleRotationX90.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
+            this.numEditor_rCircleRotationX90.Multiline = true;
+            this.numEditor_rCircleRotationX90.Name = "numEditor_rCircleRotationX90";
+            this.numEditor_rCircleRotationX90.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.numEditor_rCircleRotationX90.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.numEditor_rCircleRotationX90.SelectionLength = 0;
+            this.numEditor_rCircleRotationX90.SelectionStart = 0;
+            this.numEditor_rCircleRotationX90.SelectionVisible = false;
+            this.numEditor_rCircleRotationX90.Size = new System.Drawing.Size(80, 40);
+            this.numEditor_rCircleRotationX90.TabIndex = 34;
+            this.numEditor_rCircleRotationX90.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.numEditor_rCircleRotationX90.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(this.dataControl_PropertyChanged);
+            // 
+            // numEditor_rCircleRotationX180
+            // 
+            this.numEditor_rCircleRotationX180.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numEditor_rCircleRotationX180.CaretVisible = false;
+            this.numEditor_rCircleRotationX180.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.numEditor_rCircleRotationX180.Location = new System.Drawing.Point(317, 207);
+            this.numEditor_rCircleRotationX180.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.numEditor_rCircleRotationX180.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
+            this.numEditor_rCircleRotationX180.Multiline = true;
+            this.numEditor_rCircleRotationX180.Name = "numEditor_rCircleRotationX180";
+            this.numEditor_rCircleRotationX180.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.numEditor_rCircleRotationX180.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.numEditor_rCircleRotationX180.SelectionLength = 0;
+            this.numEditor_rCircleRotationX180.SelectionStart = 0;
+            this.numEditor_rCircleRotationX180.SelectionVisible = false;
+            this.numEditor_rCircleRotationX180.Size = new System.Drawing.Size(80, 40);
+            this.numEditor_rCircleRotationX180.TabIndex = 34;
+            this.numEditor_rCircleRotationX180.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.numEditor_rCircleRotationX180.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(this.dataControl_PropertyChanged);
+            // 
+            // numEditor_rCircleRotationX270
+            // 
+            this.numEditor_rCircleRotationX270.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numEditor_rCircleRotationX270.CaretVisible = false;
+            this.numEditor_rCircleRotationX270.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.numEditor_rCircleRotationX270.Location = new System.Drawing.Point(417, 207);
+            this.numEditor_rCircleRotationX270.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.numEditor_rCircleRotationX270.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
+            this.numEditor_rCircleRotationX270.Multiline = true;
+            this.numEditor_rCircleRotationX270.Name = "numEditor_rCircleRotationX270";
+            this.numEditor_rCircleRotationX270.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.numEditor_rCircleRotationX270.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.numEditor_rCircleRotationX270.SelectionLength = 0;
+            this.numEditor_rCircleRotationX270.SelectionStart = 0;
+            this.numEditor_rCircleRotationX270.SelectionVisible = false;
+            this.numEditor_rCircleRotationX270.Size = new System.Drawing.Size(80, 40);
+            this.numEditor_rCircleRotationX270.TabIndex = 34;
+            this.numEditor_rCircleRotationX270.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.numEditor_rCircleRotationX270.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(this.dataControl_PropertyChanged);
+            // 
+            // numEditor_rCircleRotationY0
+            // 
+            this.numEditor_rCircleRotationY0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numEditor_rCircleRotationY0.CaretVisible = false;
+            this.numEditor_rCircleRotationY0.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.numEditor_rCircleRotationY0.Location = new System.Drawing.Point(119, 253);
+            this.numEditor_rCircleRotationY0.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.numEditor_rCircleRotationY0.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
+            this.numEditor_rCircleRotationY0.Multiline = true;
+            this.numEditor_rCircleRotationY0.Name = "numEditor_rCircleRotationY0";
+            this.numEditor_rCircleRotationY0.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.numEditor_rCircleRotationY0.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.numEditor_rCircleRotationY0.SelectionLength = 0;
+            this.numEditor_rCircleRotationY0.SelectionStart = 0;
+            this.numEditor_rCircleRotationY0.SelectionVisible = false;
+            this.numEditor_rCircleRotationY0.Size = new System.Drawing.Size(80, 40);
+            this.numEditor_rCircleRotationY0.TabIndex = 34;
+            this.numEditor_rCircleRotationY0.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.numEditor_rCircleRotationY0.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(this.dataControl_PropertyChanged);
+            // 
+            // numEditor_rCircleRotationY90
+            // 
+            this.numEditor_rCircleRotationY90.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numEditor_rCircleRotationY90.CaretVisible = false;
+            this.numEditor_rCircleRotationY90.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.numEditor_rCircleRotationY90.Location = new System.Drawing.Point(218, 253);
+            this.numEditor_rCircleRotationY90.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.numEditor_rCircleRotationY90.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
+            this.numEditor_rCircleRotationY90.Multiline = true;
+            this.numEditor_rCircleRotationY90.Name = "numEditor_rCircleRotationY90";
+            this.numEditor_rCircleRotationY90.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.numEditor_rCircleRotationY90.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.numEditor_rCircleRotationY90.SelectionLength = 0;
+            this.numEditor_rCircleRotationY90.SelectionStart = 0;
+            this.numEditor_rCircleRotationY90.SelectionVisible = false;
+            this.numEditor_rCircleRotationY90.Size = new System.Drawing.Size(80, 40);
+            this.numEditor_rCircleRotationY90.TabIndex = 34;
+            this.numEditor_rCircleRotationY90.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.numEditor_rCircleRotationY90.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(this.dataControl_PropertyChanged);
+            // 
+            // numEditor_rCircleRotationY180
+            // 
+            this.numEditor_rCircleRotationY180.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numEditor_rCircleRotationY180.CaretVisible = false;
+            this.numEditor_rCircleRotationY180.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.numEditor_rCircleRotationY180.Location = new System.Drawing.Point(317, 253);
+            this.numEditor_rCircleRotationY180.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.numEditor_rCircleRotationY180.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
+            this.numEditor_rCircleRotationY180.Multiline = true;
+            this.numEditor_rCircleRotationY180.Name = "numEditor_rCircleRotationY180";
+            this.numEditor_rCircleRotationY180.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.numEditor_rCircleRotationY180.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.numEditor_rCircleRotationY180.SelectionLength = 0;
+            this.numEditor_rCircleRotationY180.SelectionStart = 0;
+            this.numEditor_rCircleRotationY180.SelectionVisible = false;
+            this.numEditor_rCircleRotationY180.Size = new System.Drawing.Size(80, 40);
+            this.numEditor_rCircleRotationY180.TabIndex = 34;
+            this.numEditor_rCircleRotationY180.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.numEditor_rCircleRotationY180.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(this.dataControl_PropertyChanged);
+            // 
+            // numEditor_rCircleRotationY270
+            // 
+            this.numEditor_rCircleRotationY270.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numEditor_rCircleRotationY270.CaretVisible = false;
+            this.numEditor_rCircleRotationY270.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.numEditor_rCircleRotationY270.Location = new System.Drawing.Point(417, 253);
+            this.numEditor_rCircleRotationY270.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.numEditor_rCircleRotationY270.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
+            this.numEditor_rCircleRotationY270.Multiline = true;
+            this.numEditor_rCircleRotationY270.Name = "numEditor_rCircleRotationY270";
+            this.numEditor_rCircleRotationY270.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.numEditor_rCircleRotationY270.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.numEditor_rCircleRotationY270.SelectionLength = 0;
+            this.numEditor_rCircleRotationY270.SelectionStart = 0;
+            this.numEditor_rCircleRotationY270.SelectionVisible = false;
+            this.numEditor_rCircleRotationY270.Size = new System.Drawing.Size(80, 40);
+            this.numEditor_rCircleRotationY270.TabIndex = 34;
+            this.numEditor_rCircleRotationY270.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.numEditor_rCircleRotationY270.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(this.dataControl_PropertyChanged);
+            // 
+            // numEditor_rCircleRotationZ0
+            // 
+            this.numEditor_rCircleRotationZ0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numEditor_rCircleRotationZ0.CaretVisible = false;
+            this.numEditor_rCircleRotationZ0.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.numEditor_rCircleRotationZ0.Location = new System.Drawing.Point(119, 299);
+            this.numEditor_rCircleRotationZ0.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.numEditor_rCircleRotationZ0.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
+            this.numEditor_rCircleRotationZ0.Multiline = true;
+            this.numEditor_rCircleRotationZ0.Name = "numEditor_rCircleRotationZ0";
+            this.numEditor_rCircleRotationZ0.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.numEditor_rCircleRotationZ0.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.numEditor_rCircleRotationZ0.SelectionLength = 0;
+            this.numEditor_rCircleRotationZ0.SelectionStart = 0;
+            this.numEditor_rCircleRotationZ0.SelectionVisible = false;
+            this.numEditor_rCircleRotationZ0.Size = new System.Drawing.Size(80, 40);
+            this.numEditor_rCircleRotationZ0.TabIndex = 34;
+            this.numEditor_rCircleRotationZ0.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.numEditor_rCircleRotationZ0.Visible = false;
+            this.numEditor_rCircleRotationZ0.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(this.dataControl_PropertyChanged);
+            // 
+            // numEditor_rCircleRotationZ90
+            // 
+            this.numEditor_rCircleRotationZ90.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numEditor_rCircleRotationZ90.CaretVisible = false;
+            this.numEditor_rCircleRotationZ90.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.numEditor_rCircleRotationZ90.Location = new System.Drawing.Point(218, 299);
+            this.numEditor_rCircleRotationZ90.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.numEditor_rCircleRotationZ90.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
+            this.numEditor_rCircleRotationZ90.Multiline = true;
+            this.numEditor_rCircleRotationZ90.Name = "numEditor_rCircleRotationZ90";
+            this.numEditor_rCircleRotationZ90.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.numEditor_rCircleRotationZ90.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.numEditor_rCircleRotationZ90.SelectionLength = 0;
+            this.numEditor_rCircleRotationZ90.SelectionStart = 0;
+            this.numEditor_rCircleRotationZ90.SelectionVisible = false;
+            this.numEditor_rCircleRotationZ90.Size = new System.Drawing.Size(80, 40);
+            this.numEditor_rCircleRotationZ90.TabIndex = 34;
+            this.numEditor_rCircleRotationZ90.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.numEditor_rCircleRotationZ90.Visible = false;
+            this.numEditor_rCircleRotationZ90.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(this.dataControl_PropertyChanged);
+            // 
+            // numEditor_rCircleRotationZ180
+            // 
+            this.numEditor_rCircleRotationZ180.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numEditor_rCircleRotationZ180.CaretVisible = false;
+            this.numEditor_rCircleRotationZ180.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.numEditor_rCircleRotationZ180.Location = new System.Drawing.Point(317, 299);
+            this.numEditor_rCircleRotationZ180.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.numEditor_rCircleRotationZ180.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
+            this.numEditor_rCircleRotationZ180.Multiline = true;
+            this.numEditor_rCircleRotationZ180.Name = "numEditor_rCircleRotationZ180";
+            this.numEditor_rCircleRotationZ180.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.numEditor_rCircleRotationZ180.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.numEditor_rCircleRotationZ180.SelectionLength = 0;
+            this.numEditor_rCircleRotationZ180.SelectionStart = 0;
+            this.numEditor_rCircleRotationZ180.SelectionVisible = false;
+            this.numEditor_rCircleRotationZ180.Size = new System.Drawing.Size(80, 40);
+            this.numEditor_rCircleRotationZ180.TabIndex = 34;
+            this.numEditor_rCircleRotationZ180.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.numEditor_rCircleRotationZ180.Visible = false;
+            this.numEditor_rCircleRotationZ180.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(this.dataControl_PropertyChanged);
+            // 
+            // numEditor_rCircleRotationZ270
+            // 
+            this.numEditor_rCircleRotationZ270.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numEditor_rCircleRotationZ270.CaretVisible = false;
+            this.numEditor_rCircleRotationZ270.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.numEditor_rCircleRotationZ270.Location = new System.Drawing.Point(417, 299);
+            this.numEditor_rCircleRotationZ270.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.numEditor_rCircleRotationZ270.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
+            this.numEditor_rCircleRotationZ270.Multiline = true;
+            this.numEditor_rCircleRotationZ270.Name = "numEditor_rCircleRotationZ270";
+            this.numEditor_rCircleRotationZ270.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.numEditor_rCircleRotationZ270.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.numEditor_rCircleRotationZ270.SelectionLength = 0;
+            this.numEditor_rCircleRotationZ270.SelectionStart = 0;
+            this.numEditor_rCircleRotationZ270.SelectionVisible = false;
+            this.numEditor_rCircleRotationZ270.Size = new System.Drawing.Size(80, 40);
+            this.numEditor_rCircleRotationZ270.TabIndex = 34;
+            this.numEditor_rCircleRotationZ270.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.numEditor_rCircleRotationZ270.Visible = false;
+            this.numEditor_rCircleRotationZ270.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(this.dataControl_PropertyChanged);
+            // 
+            // checkBox_boolRefreshbyLayerParameters
+            // 
+            this.checkBox_boolRefreshbyLayerParameters.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.checkBox_boolRefreshbyLayerParameters.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.checkBox_boolRefreshbyLayerParameters.Location = new System.Drawing.Point(525, 115);
+            this.checkBox_boolRefreshbyLayerParameters.Name = "checkBox_boolRefreshbyLayerParameters";
+            this.checkBox_boolRefreshbyLayerParameters.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.checkBox_boolRefreshbyLayerParameters.Size = new System.Drawing.Size(103, 24);
+            this.checkBox_boolRefreshbyLayerParameters.TabIndex = 42;
+            this.checkBox_boolRefreshbyLayerParameters.Text = "Refresh";
+            this.checkBox_boolRefreshbyLayerParameters.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(this.dataControl_PropertyChanged);
+            // 
+            // checkBox_boolRefreshWeldProcedureID
+            // 
+            this.checkBox_boolRefreshWeldProcedureID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.checkBox_boolRefreshWeldProcedureID.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.checkBox_boolRefreshWeldProcedureID.Location = new System.Drawing.Point(260, 41);
+            this.checkBox_boolRefreshWeldProcedureID.Name = "checkBox_boolRefreshWeldProcedureID";
+            this.checkBox_boolRefreshWeldProcedureID.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.checkBox_boolRefreshWeldProcedureID.Size = new System.Drawing.Size(190, 24);
+            this.checkBox_boolRefreshWeldProcedureID.TabIndex = 42;
+            this.checkBox_boolRefreshWeldProcedureID.Text = "Weld Procedure ID";
+            this.checkBox_boolRefreshWeldProcedureID.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(this.dataControl_PropertyChanged);
             // 
             // TpsFormLayerParameter
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.Controls.Add(this.dataGrid_Circle);
+            this.Controls.Add(this.checkBox_boolRefreshWeldProcedureID);
+            this.Controls.Add(this.checkBox_boolRefreshbyLayerParameters);
+            this.Controls.Add(this.numEditor_rCircleRotationZ270);
+            this.Controls.Add(this.numEditor_rCircleRotationY270);
+            this.Controls.Add(this.numEditor_rCircleRotationX270);
+            this.Controls.Add(this.numEditor_rCircleOffsetY270);
+            this.Controls.Add(this.numEditor_rCircleOffsetX270);
+            this.Controls.Add(this.numEditor_rCircleRotationZ180);
+            this.Controls.Add(this.numEditor_rCircleRotationY180);
+            this.Controls.Add(this.numEditor_rCircleRotationX180);
+            this.Controls.Add(this.numEditor_rCircleOffsetY180);
+            this.Controls.Add(this.numEditor_rCircleOffsetX180);
+            this.Controls.Add(this.numEditor_rCircleRotationZ90);
+            this.Controls.Add(this.numEditor_rCircleRotationY90);
+            this.Controls.Add(this.numEditor_rCircleRotationX90);
+            this.Controls.Add(this.numEditor_rCircleOffsetY90);
+            this.Controls.Add(this.numEditor_rCircleOffsetX90);
+            this.Controls.Add(this.numEditor_rCircleRotationZ0);
+            this.Controls.Add(this.numEditor_rCircleRotationY0);
+            this.Controls.Add(this.numEditor_rCircleRotationX0);
+            this.Controls.Add(this.numEditor_rCircleOffsetY0);
+            this.Controls.Add(this.numEditor_rCircleOffsetX0);
             this.Controls.Add(this.dataEditor_strWeldProcedureID);
-            this.Controls.Add(this.tpsLabel_strWeldProcedureID);
             this.Controls.Add(this.numericUpDown_intLayerNo);
+            this.Controls.Add(this.tpsLabel_rCircleRotationZ);
+            this.Controls.Add(this.tpsLabel_rCircleRotationY);
+            this.Controls.Add(this.tpsLabel_rCircleRotationX);
+            this.Controls.Add(this.tpsLabel_rCircleOffsetY);
+            this.Controls.Add(this.tpsLabel_numDegree270);
+            this.Controls.Add(this.tpsLabel_numDegree180);
+            this.Controls.Add(this.tpsLabel_numDegree90);
+            this.Controls.Add(this.tpsLabel_numDegree0);
+            this.Controls.Add(this.tpsLabel_rCircleOffsetX);
             this.Controls.Add(this.tpsLabel_intLayerNo);
             this.Controls.Add(this.pictureBox_Logo);
             // 
@@ -536,10 +1051,39 @@ namespace TpsViewEbaraV2NameSpace
             this.Text = "Layer Parameter";
             this.Controls.SetChildIndex(this.pictureBox_Logo, 0);
             this.Controls.SetChildIndex(this.tpsLabel_intLayerNo, 0);
+            this.Controls.SetChildIndex(this.tpsLabel_rCircleOffsetX, 0);
+            this.Controls.SetChildIndex(this.tpsLabel_numDegree0, 0);
+            this.Controls.SetChildIndex(this.tpsLabel_numDegree90, 0);
+            this.Controls.SetChildIndex(this.tpsLabel_numDegree180, 0);
+            this.Controls.SetChildIndex(this.tpsLabel_numDegree270, 0);
+            this.Controls.SetChildIndex(this.tpsLabel_rCircleOffsetY, 0);
+            this.Controls.SetChildIndex(this.tpsLabel_rCircleRotationX, 0);
+            this.Controls.SetChildIndex(this.tpsLabel_rCircleRotationY, 0);
+            this.Controls.SetChildIndex(this.tpsLabel_rCircleRotationZ, 0);
             this.Controls.SetChildIndex(this.numericUpDown_intLayerNo, 0);
-            this.Controls.SetChildIndex(this.tpsLabel_strWeldProcedureID, 0);
             this.Controls.SetChildIndex(this.dataEditor_strWeldProcedureID, 0);
-            this.Controls.SetChildIndex(this.dataGrid_Circle, 0);
+            this.Controls.SetChildIndex(this.numEditor_rCircleOffsetX0, 0);
+            this.Controls.SetChildIndex(this.numEditor_rCircleOffsetY0, 0);
+            this.Controls.SetChildIndex(this.numEditor_rCircleRotationX0, 0);
+            this.Controls.SetChildIndex(this.numEditor_rCircleRotationY0, 0);
+            this.Controls.SetChildIndex(this.numEditor_rCircleRotationZ0, 0);
+            this.Controls.SetChildIndex(this.numEditor_rCircleOffsetX90, 0);
+            this.Controls.SetChildIndex(this.numEditor_rCircleOffsetY90, 0);
+            this.Controls.SetChildIndex(this.numEditor_rCircleRotationX90, 0);
+            this.Controls.SetChildIndex(this.numEditor_rCircleRotationY90, 0);
+            this.Controls.SetChildIndex(this.numEditor_rCircleRotationZ90, 0);
+            this.Controls.SetChildIndex(this.numEditor_rCircleOffsetX180, 0);
+            this.Controls.SetChildIndex(this.numEditor_rCircleOffsetY180, 0);
+            this.Controls.SetChildIndex(this.numEditor_rCircleRotationX180, 0);
+            this.Controls.SetChildIndex(this.numEditor_rCircleRotationY180, 0);
+            this.Controls.SetChildIndex(this.numEditor_rCircleRotationZ180, 0);
+            this.Controls.SetChildIndex(this.numEditor_rCircleOffsetX270, 0);
+            this.Controls.SetChildIndex(this.numEditor_rCircleOffsetY270, 0);
+            this.Controls.SetChildIndex(this.numEditor_rCircleRotationX270, 0);
+            this.Controls.SetChildIndex(this.numEditor_rCircleRotationY270, 0);
+            this.Controls.SetChildIndex(this.numEditor_rCircleRotationZ270, 0);
+            this.Controls.SetChildIndex(this.checkBox_boolRefreshbyLayerParameters, 0);
+            this.Controls.SetChildIndex(this.checkBox_boolRefreshWeldProcedureID, 0);
             this.ResumeLayout(false);
 
         }
@@ -568,10 +1112,43 @@ namespace TpsViewEbaraV2NameSpace
             {
                 this.layerParameter.RefreshData(this.rwSystem, Convert.ToInt32(this.numericUpDown_intLayerNo.Value));
                 this.dataEditor_strWeldProcedureID.Text = this.layerParameter.strLayerParameterID;
-                if (this.dataGrid_Circle.DataSource == null)
-                {
-                    this.dataGrid_Circle.DataSource = this.layerParameter.CircleView;
-                }                
+                this.numEditor_rCircleOffsetX0.Value = this.layerParameter.rCircleOffsetX.numDegree0;
+                this.numEditor_rCircleOffsetX90.Value = this.layerParameter.rCircleOffsetX.numDegree90;
+                this.numEditor_rCircleOffsetX180.Value = this.layerParameter.rCircleOffsetX.numDegree180;
+                this.numEditor_rCircleOffsetX270.Value = this.layerParameter.rCircleOffsetX.numDegree270;
+
+                this.numEditor_rCircleOffsetY0.Value = this.layerParameter.rCircleOffsetY.numDegree0;
+                this.numEditor_rCircleOffsetY90.Value = this.layerParameter.rCircleOffsetY.numDegree90;
+                this.numEditor_rCircleOffsetY180.Value = this.layerParameter.rCircleOffsetY.numDegree180;
+                this.numEditor_rCircleOffsetY270.Value = this.layerParameter.rCircleOffsetY.numDegree270;
+
+                this.numEditor_rCircleRotationX0.Value = this.layerParameter.rCircleRotationX.numDegree0;
+                this.numEditor_rCircleRotationX90.Value = this.layerParameter.rCircleRotationX.numDegree90;
+                this.numEditor_rCircleRotationX180.Value = this.layerParameter.rCircleRotationX.numDegree180;
+                this.numEditor_rCircleRotationX270.Value = this.layerParameter.rCircleRotationX.numDegree270;
+
+                this.numEditor_rCircleRotationY0.Value = this.layerParameter.rCircleRotationY.numDegree0;
+                this.numEditor_rCircleRotationY90.Value = this.layerParameter.rCircleRotationY.numDegree90;
+                this.numEditor_rCircleRotationY180.Value = this.layerParameter.rCircleRotationY.numDegree180;
+                this.numEditor_rCircleRotationY270.Value = this.layerParameter.rCircleRotationY.numDegree270;
+
+                this.numEditor_rCircleRotationZ0.Value = this.layerParameter.rCircleRotationZ.numDegree0;
+                this.numEditor_rCircleRotationZ90.Value = this.layerParameter.rCircleRotationZ.numDegree90;
+                this.numEditor_rCircleRotationZ180.Value = this.layerParameter.rCircleRotationZ.numDegree180;
+                this.numEditor_rCircleRotationZ270.Value = this.layerParameter.rCircleRotationZ.numDegree270;
+
+                ABB.Robotics.Controllers.RapidDomain.RapidData boolRapidData = rwSystem.Controller.Rapid.GetRapidData("T_ROB1", "WeldSyncModule", "boolRefreshbyLayerParameters");
+                ABB.Robotics.Controllers.RapidDomain.Bool bData = new ABB.Robotics.Controllers.RapidDomain.Bool();
+                bData.FillFromString(boolRapidData.Value.ToString());
+                this.checkBox_boolRefreshbyLayerParameters.Checked = bData;
+                boolRapidData.Dispose();
+
+                boolRapidData = rwSystem.Controller.Rapid.GetRapidData("T_ROB1", "WeldSyncModule", "boolRefreshWeldProcedureID");
+                bData = new ABB.Robotics.Controllers.RapidDomain.Bool();
+                bData.FillFromString(boolRapidData.Value.ToString());
+                this.checkBox_boolRefreshWeldProcedureID.Checked = bData;
+                boolRapidData.Dispose();
+                
                 this.menuItem_Apply.Enabled = false;
             }
             catch (Exception ex)
@@ -595,7 +1172,42 @@ namespace TpsViewEbaraV2NameSpace
             {
                 this.layerParameter.strLayerParameterID = this.dataEditor_strWeldProcedureID.Text;
 
+                this.layerParameter.rCircleOffsetX.numDegree0 = this.numEditor_rCircleOffsetX0.Value;
+                this.layerParameter.rCircleOffsetX.numDegree90 = this.numEditor_rCircleOffsetX90.Value;
+                this.layerParameter.rCircleOffsetX.numDegree180 = this.numEditor_rCircleOffsetX180.Value;
+                this.layerParameter.rCircleOffsetX.numDegree270 = this.numEditor_rCircleOffsetX270.Value;
+
+                this.layerParameter.rCircleOffsetY.numDegree0 = this.numEditor_rCircleOffsetY0.Value;
+                this.layerParameter.rCircleOffsetY.numDegree90 = this.numEditor_rCircleOffsetY90.Value;
+                this.layerParameter.rCircleOffsetY.numDegree180 = this.numEditor_rCircleOffsetY180.Value;
+                this.layerParameter.rCircleOffsetY.numDegree270 = this.numEditor_rCircleOffsetY270.Value;
+
+                this.layerParameter.rCircleRotationX.numDegree0 = this.numEditor_rCircleRotationX0.Value;
+                this.layerParameter.rCircleRotationX.numDegree90 = this.numEditor_rCircleRotationX90.Value;
+                this.layerParameter.rCircleRotationX.numDegree180 = this.numEditor_rCircleRotationX180.Value;
+                this.layerParameter.rCircleRotationX.numDegree270 = this.numEditor_rCircleRotationX270.Value;
+
+                this.layerParameter.rCircleRotationY.numDegree0 = this.numEditor_rCircleRotationY0.Value;
+                this.layerParameter.rCircleRotationY.numDegree90 = this.numEditor_rCircleRotationY90.Value;
+                this.layerParameter.rCircleRotationY.numDegree180 = this.numEditor_rCircleRotationY180.Value;
+                this.layerParameter.rCircleRotationY.numDegree270 = this.numEditor_rCircleRotationY270.Value;
+
+                this.layerParameter.rCircleRotationZ.numDegree0 = this.numEditor_rCircleRotationZ0.Value;
+                this.layerParameter.rCircleRotationZ.numDegree90 = this.numEditor_rCircleRotationZ90.Value;
+                this.layerParameter.rCircleRotationZ.numDegree180 = this.numEditor_rCircleRotationZ180.Value;
+                this.layerParameter.rCircleRotationZ.numDegree270 = this.numEditor_rCircleRotationZ270.Value;
+
                 this.layerParameter.ApplyData(this.rwSystem);
+
+                ABB.Robotics.Controllers.RapidDomain.RapidData boolRapidData = rwSystem.Controller.Rapid.GetRapidData("T_ROB1", "WeldSyncModule", "boolRefreshbyLayerParameters");
+                ABB.Robotics.Controllers.RapidDomain.Bool bData = new ABB.Robotics.Controllers.RapidDomain.Bool(this.checkBox_boolRefreshbyLayerParameters.Checked);
+                boolRapidData.Value = bData;
+                boolRapidData.Dispose();
+
+                boolRapidData = rwSystem.Controller.Rapid.GetRapidData("T_ROB1", "WeldSyncModule", "boolRefreshWeldProcedureID");
+                bData = new ABB.Robotics.Controllers.RapidDomain.Bool(this.checkBox_boolRefreshWeldProcedureID.Checked);
+                boolRapidData.Value = bData;
+                boolRapidData.Dispose();
 
                 this.menuItem_Apply.Enabled = false;
             }
@@ -631,45 +1243,11 @@ namespace TpsViewEbaraV2NameSpace
             this.menuItem_Apply.Enabled = true;
         }
 
-        private void dataGrid_Circle_CurrentCellChanged(object sender, EventArgs e)
-        {
-            if (this.dataGrid_Circle.CurrentCell.ColumnNumber > 0)
-            {
-                string strOptimizationType = this.dataGrid_Circle[this.dataGrid_Circle.CurrentCell.RowNumber, this.dataGrid_Circle.CurrentCell.ColumnNumber].ToString();
-                this.alphaPad_Circle.SelectedText = strOptimizationType;
-                this.alphaPad_Circle.ShowMe(this);
-            }
-        }
-
         private void numericUpDown_intLayerNo_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             this.Invoke(this.UpdateGUI);
             this.menuItem_Apply.Enabled = false;
         }
-
-        private void alphaPad_Circle_Closed(object sender, EventArgs e)
-        {
-            string strOptimizationType = this.dataGrid_Circle[this.dataGrid_Circle.CurrentCell.RowNumber,0].ToString();
-            DataRow row = this.layerParameter.CircleTable.Rows.Find(strOptimizationType);
-            if (row != null)
-            {
-                if (this.alphaPad_Circle.DialogResult == System.Windows.Forms.DialogResult.OK)
-                {
-                    row[this.dataGrid_Circle.CurrentCell.ColumnNumber] = this.alphaPad_Circle.SelectedText;
-                    //this.dataGrid_Circle[this.dataGrid_Circle.CurrentCell.RowNumber, this.dataGrid_Circle.CurrentCell.ColumnNumber] = this.alphaPad_Circle.SelectedText;
-                    this.menuItem_Apply.Enabled = true;
-                }
-            }
-        }
-
-        private void alphaPad_Circle_Closing(object sender, CancelEventArgs e)
-        {
-            if ((!Regex.IsMatch(this.alphaPad_Circle.SelectedText, @"^[+-]?\d*[.]?\d*$")) && (this.alphaPad_Circle.DialogResult == System.Windows.Forms.DialogResult.OK))
-            {
-                e.Cancel = true;
-            }
-        }
-
 
     }
 }

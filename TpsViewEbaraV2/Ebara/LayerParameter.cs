@@ -230,6 +230,8 @@ namespace TpsViewEbaraV2NameSpace.Ebara
                 }
                 if (this.CircleTable != null)
                 {
+                    this.CircleTable.Clear();
+                    //this.CircleTable.Reset();
                     this.CircleTable.Dispose();
                     this.CircleTable = null;
                 }

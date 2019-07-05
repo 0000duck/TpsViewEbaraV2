@@ -36,7 +36,7 @@ namespace TpsViewEbaraV2NameSpace
         private TpsLabel tpsLabel_WorldZOffset;
         private NumEditor numEditor_numSeamNormalAngle;
         private TpsLabel tpsLabel_numSeamNormalAngle;
-        private ABB.Robotics.Tps.Windows.Forms.Button button_UpdatebyOframeOffset;
+        private ABB.Robotics.Tps.Windows.Forms.Button button_UpdatebyWorldOffset;
         private ABB.Robotics.Tps.Windows.Forms.PictureBox pictureBox_Logo;
         private ABB.Robotics.Tps.Windows.Forms.ComboBox comboBox_numPipeGrooveType;
         private TpsLabel tpsLabel_numPipeGrooveType;
@@ -44,6 +44,7 @@ namespace TpsViewEbaraV2NameSpace
         private TpsLabel tpsLabel_WorldXOffset;
         private TpsLabel tpsLabel_numSeamCenterX;
         private NumEditor numEditor_numSeamCenterX;
+        private ABB.Robotics.Tps.Windows.Forms.Button button_UpdatebyOframeOffset;
 
         /// <summary>
         /// Required designer variable.
@@ -124,7 +125,7 @@ namespace TpsViewEbaraV2NameSpace
             this.tpsLabel_WorldZOffset = new ABB.Robotics.Tps.Windows.Forms.TpsLabel();
             this.numEditor_numSeamNormalAngle = new ABB.Robotics.Tps.Windows.Forms.NumEditor();
             this.tpsLabel_numSeamNormalAngle = new ABB.Robotics.Tps.Windows.Forms.TpsLabel();
-            this.button_UpdatebyOframeOffset = new ABB.Robotics.Tps.Windows.Forms.Button();
+            this.button_UpdatebyWorldOffset = new ABB.Robotics.Tps.Windows.Forms.Button();
             this.pictureBox_Logo = new ABB.Robotics.Tps.Windows.Forms.PictureBox();
             this.comboBox_numPipeGrooveType = new ABB.Robotics.Tps.Windows.Forms.ComboBox();
             this.tpsLabel_numPipeGrooveType = new ABB.Robotics.Tps.Windows.Forms.TpsLabel();
@@ -132,6 +133,7 @@ namespace TpsViewEbaraV2NameSpace
             this.tpsLabel_WorldXOffset = new ABB.Robotics.Tps.Windows.Forms.TpsLabel();
             this.tpsLabel_numSeamCenterX = new ABB.Robotics.Tps.Windows.Forms.TpsLabel();
             this.numEditor_numSeamCenterX = new ABB.Robotics.Tps.Windows.Forms.NumEditor();
+            this.button_UpdatebyOframeOffset = new ABB.Robotics.Tps.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // menuItem_Refresh
@@ -417,21 +419,21 @@ namespace TpsViewEbaraV2NameSpace
             this.tpsLabel_numSeamNormalAngle.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.tpsLabel_numSeamNormalAngle.Title = "Angle";
             // 
-            // button_UpdatebyOframeOffset
+            // button_UpdatebyWorldOffset
             // 
-            this.button_UpdatebyOframeOffset.BackColor = System.Drawing.Color.White;
-            this.button_UpdatebyOframeOffset.BackgroundImage = null;
-            this.button_UpdatebyOframeOffset.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.button_UpdatebyOframeOffset.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
-            this.button_UpdatebyOframeOffset.Image = null;
-            this.button_UpdatebyOframeOffset.Location = new System.Drawing.Point(278, 170);
-            this.button_UpdatebyOframeOffset.Name = "button_UpdatebyOframeOffset";
-            this.button_UpdatebyOframeOffset.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
-            this.button_UpdatebyOframeOffset.Size = new System.Drawing.Size(94, 70);
-            this.button_UpdatebyOframeOffset.TabIndex = 32;
-            this.button_UpdatebyOframeOffset.Text = "<=";
-            this.button_UpdatebyOframeOffset.TextAlign = ABB.Robotics.Tps.Windows.Forms.ContentAlignmentABB.MiddleCenter;
-            this.button_UpdatebyOframeOffset.Click += new System.EventHandler(this.button_UpdatebyWorldOffset_Click);
+            this.button_UpdatebyWorldOffset.BackColor = System.Drawing.Color.White;
+            this.button_UpdatebyWorldOffset.BackgroundImage = null;
+            this.button_UpdatebyWorldOffset.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.button_UpdatebyWorldOffset.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.button_UpdatebyWorldOffset.Image = null;
+            this.button_UpdatebyWorldOffset.Location = new System.Drawing.Point(278, 140);
+            this.button_UpdatebyWorldOffset.Name = "button_UpdatebyWorldOffset";
+            this.button_UpdatebyWorldOffset.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.button_UpdatebyWorldOffset.Size = new System.Drawing.Size(94, 70);
+            this.button_UpdatebyWorldOffset.TabIndex = 32;
+            this.button_UpdatebyWorldOffset.Text = "<=";
+            this.button_UpdatebyWorldOffset.TextAlign = ABB.Robotics.Tps.Windows.Forms.ContentAlignmentABB.MiddleCenter;
+            this.button_UpdatebyWorldOffset.Click += new System.EventHandler(this.button_UpdatebyWorldOffset_Click);
             // 
             // pictureBox_Logo
             // 
@@ -554,15 +556,32 @@ namespace TpsViewEbaraV2NameSpace
             this.numEditor_numSeamCenterX.TabIndex = 37;
             this.numEditor_numSeamCenterX.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
+            // button_UpdatebyOframeOffset
+            // 
+            this.button_UpdatebyOframeOffset.BackColor = System.Drawing.Color.White;
+            this.button_UpdatebyOframeOffset.BackgroundImage = null;
+            this.button_UpdatebyOframeOffset.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.button_UpdatebyOframeOffset.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.button_UpdatebyOframeOffset.Image = null;
+            this.button_UpdatebyOframeOffset.Location = new System.Drawing.Point(278, 216);
+            this.button_UpdatebyOframeOffset.Name = "button_UpdatebyOframeOffset";
+            this.button_UpdatebyOframeOffset.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.button_UpdatebyOframeOffset.Size = new System.Drawing.Size(94, 70);
+            this.button_UpdatebyOframeOffset.TabIndex = 38;
+            this.button_UpdatebyOframeOffset.Text = ">=";
+            this.button_UpdatebyOframeOffset.TextAlign = ABB.Robotics.Tps.Windows.Forms.ContentAlignmentABB.MiddleCenter;
+            this.button_UpdatebyOframeOffset.Click += new System.EventHandler(this.button_UpdatebyOframeOffset_Click);
+            // 
             // TpsFormWobjCurrent
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.Controls.Add(this.button_UpdatebyOframeOffset);
             this.Controls.Add(this.tpsLabel_numSeamCenterX);
             this.Controls.Add(this.numEditor_numSeamCenterX);
             this.Controls.Add(this.comboBox_numPipeGrooveType);
             this.Controls.Add(this.tpsLabel_numPipeGrooveType);
             this.Controls.Add(this.pictureBox_Logo);
-            this.Controls.Add(this.button_UpdatebyOframeOffset);
+            this.Controls.Add(this.button_UpdatebyWorldOffset);
             this.Controls.Add(this.numEditor_numSeamNormalAngle);
             this.Controls.Add(this.tpsLabel_numSeamNormalAngle);
             this.Controls.Add(this.tpsLabel_oframeZ);
@@ -599,12 +618,13 @@ namespace TpsViewEbaraV2NameSpace
             this.Controls.SetChildIndex(this.tpsLabel_oframeZ, 0);
             this.Controls.SetChildIndex(this.tpsLabel_numSeamNormalAngle, 0);
             this.Controls.SetChildIndex(this.numEditor_numSeamNormalAngle, 0);
-            this.Controls.SetChildIndex(this.button_UpdatebyOframeOffset, 0);
+            this.Controls.SetChildIndex(this.button_UpdatebyWorldOffset, 0);
             this.Controls.SetChildIndex(this.pictureBox_Logo, 0);
             this.Controls.SetChildIndex(this.tpsLabel_numPipeGrooveType, 0);
             this.Controls.SetChildIndex(this.comboBox_numPipeGrooveType, 0);
             this.Controls.SetChildIndex(this.numEditor_numSeamCenterX, 0);
             this.Controls.SetChildIndex(this.tpsLabel_numSeamCenterX, 0);
+            this.Controls.SetChildIndex(this.button_UpdatebyOframeOffset, 0);
             this.ResumeLayout(false);
 
         }
@@ -651,8 +671,14 @@ namespace TpsViewEbaraV2NameSpace
                 if (this.pipeGrooveModel.numPipeGrooveType >= 3)
                 {
                     this.numEditor_WorldXOffset.Value = (Decimal)this.wobjCurrent.Oframe.Trans.Z;
-                    this.numEditor_WorldYOffset.Value = 0;
-                    this.numEditor_WorldZOffset.Value = 0;
+
+                    double dSeamNormalAngle = 0-Math.PI * ((double)this.numEditor_numSeamNormalAngle.Value) / 180;
+
+                    double doframeX = this.wobjCurrent.Oframe.Trans.X;
+                    double doframeY = this.wobjCurrent.Oframe.Trans.Y;
+
+                    this.numEditor_WorldYOffset.Value = (decimal)Math.Round(doframeX * Math.Cos(dSeamNormalAngle) + doframeY * Math.Sin(dSeamNormalAngle),1);
+                    this.numEditor_WorldZOffset.Value = (decimal)Math.Round(0 - doframeX * Math.Sin(dSeamNormalAngle) + doframeY * Math.Cos(dSeamNormalAngle),1);
                 }
                 else
                 {
@@ -733,7 +759,28 @@ namespace TpsViewEbaraV2NameSpace
                 this.numEditor_oframeZ.Value = (decimal)Math.Round(dWorldZOffset, 1);
             }
             this.menuItem_Apply.Enabled = true;
+        }
 
+        private void button_UpdatebyOframeOffset_Click(object sender, EventArgs e)
+        {
+            if (this.pipeGrooveModel.numPipeGrooveType >= 3)
+            {
+                this.numEditor_WorldXOffset.Value = this.numEditor_oframeZ.Value;
+
+                double dSeamNormalAngle = 0 - Math.PI * ((double)this.numEditor_numSeamNormalAngle.Value) / 180;
+
+                double doframeX = (double)this.numEditor_oframeX.Value;
+                double doframeY = (double)this.numEditor_oframeY.Value;
+
+                this.numEditor_WorldYOffset.Value = (decimal)Math.Round(doframeX * Math.Cos(dSeamNormalAngle) + doframeY * Math.Sin(dSeamNormalAngle), 1);
+                this.numEditor_WorldZOffset.Value = (decimal)Math.Round(0 - doframeX * Math.Sin(dSeamNormalAngle) + doframeY * Math.Cos(dSeamNormalAngle), 1);
+            }
+            else
+            {
+                this.numEditor_WorldXOffset.Value = this.numEditor_oframeX.Value;
+                this.numEditor_WorldYOffset.Value = this.numEditor_oframeY.Value;
+                this.numEditor_WorldZOffset.Value = this.numEditor_oframeZ.Value;
+            }     
         }
 
     }

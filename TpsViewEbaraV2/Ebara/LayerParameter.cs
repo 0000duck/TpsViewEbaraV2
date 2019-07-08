@@ -44,11 +44,11 @@ namespace TpsViewEbaraV2NameSpace.Ebara
             set { circleOffsetX = value; }
         }
 
-        private Circle circleOffsetY;
-        public Circle rCircleOffsetY
+        private Circle circleOffsetZ;
+        public Circle rCircleOffsetZ
         {
-            get { return circleOffsetY; }
-            set { circleOffsetY = value; }
+            get { return circleOffsetZ; }
+            set { circleOffsetZ = value; }
         }
 
         private Circle circleRotationX;
@@ -85,7 +85,7 @@ namespace TpsViewEbaraV2NameSpace.Ebara
         {
             this.intLayerNo = 1;
             this.circleOffsetX = new Circle();
-            this.circleOffsetY = new Circle();
+            this.circleOffsetZ = new Circle();
             this.circleRotationX = new Circle();
             this.circleRotationY = new Circle();
             this.circleRotationZ = new Circle();
@@ -167,12 +167,12 @@ namespace TpsViewEbaraV2NameSpace.Ebara
             CircleTable.Rows.Add(row);
 
             row = CircleTable.NewRow();
-            row["OptimizationType"] = "OffsetY";
-            //row["numDegree0"] = this.rCircleOffsetY.numDegree0;
-            //row["numDegree90"] = this.rCircleOffsetY.numDegree90;
-            //row["numDegree180"] = this.rCircleOffsetY.numDegree180;
-            //row["numDegree270"] = this.rCircleOffsetY.numDegree270;
-            //row["numCurveType"] = this.rCircleOffsetY.numCurveType;
+            row["OptimizationType"] = "OffsetZ";
+            //row["numDegree0"] = this.rCircleOffsetZ.numDegree0;
+            //row["numDegree90"] = this.rCircleOffsetZ.numDegree90;
+            //row["numDegree180"] = this.rCircleOffsetZ.numDegree180;
+            //row["numDegree270"] = this.rCircleOffsetZ.numDegree270;
+            //row["numCurveType"] = this.rCircleOffsetZ.numCurveType;
             CircleTable.Rows.Add(row);
 
             row = CircleTable.NewRow();
@@ -240,10 +240,10 @@ namespace TpsViewEbaraV2NameSpace.Ebara
                     this.rCircleOffsetX.Dispose();
                     this.rCircleOffsetX = null;
                 }
-                if (this.rCircleOffsetY != null)
+                if (this.rCircleOffsetZ != null)
                 {
-                    this.rCircleOffsetY.Dispose();
-                    this.rCircleOffsetY = null;
+                    this.rCircleOffsetZ.Dispose();
+                    this.rCircleOffsetZ = null;
                 }
                 if (this.rCircleRotationX != null)
                 {
@@ -283,7 +283,7 @@ namespace TpsViewEbaraV2NameSpace.Ebara
         public override string ToString()
         {
             return string.Format("[{0},{1},{2},{3},{4},{5},\"{6}\"]"
-                , this.numWorkAngleDeclination, this.rCircleOffsetX, this.rCircleOffsetY
+                , this.numWorkAngleDeclination, this.rCircleOffsetX, this.rCircleOffsetZ
                 , this.rCircleRotationX, this.rCircleRotationY, this.rCircleRotationZ, this.strLayerParameterID);
         }
 
@@ -301,7 +301,7 @@ namespace TpsViewEbaraV2NameSpace.Ebara
             //ErrorHandler.AddErrorMessage("MichaelLog", rLayerParameterUserDefine.Components[i].ToString());
 
             this.rCircleOffsetX.RefreshData(rwSystem, rLayerParameterUserDefine.Components[i++].ToString());
-            this.rCircleOffsetY.RefreshData(rwSystem, rLayerParameterUserDefine.Components[i++].ToString());
+            this.rCircleOffsetZ.RefreshData(rwSystem, rLayerParameterUserDefine.Components[i++].ToString());
             this.rCircleRotationX.RefreshData(rwSystem, rLayerParameterUserDefine.Components[i++].ToString());
             this.rCircleRotationY.RefreshData(rwSystem, rLayerParameterUserDefine.Components[i++].ToString());
             this.rCircleRotationZ.RefreshData(rwSystem, rLayerParameterUserDefine.Components[i++].ToString());
@@ -320,12 +320,12 @@ namespace TpsViewEbaraV2NameSpace.Ebara
             row[4] = this.circleOffsetX.numDegree270;
             row[5] = this.circleOffsetX.numCurveType;
 
-            row = this.CircleTable.Rows.Find("OffsetY");
-            row[1] = this.circleOffsetY.numDegree0;
-            row[2] = this.circleOffsetY.numDegree90;
-            row[3] = this.circleOffsetY.numDegree180;
-            row[4] = this.circleOffsetY.numDegree270;
-            row[5] = this.circleOffsetY.numCurveType;
+            row = this.CircleTable.Rows.Find("OffsetZ");
+            row[1] = this.circleOffsetZ.numDegree0;
+            row[2] = this.circleOffsetZ.numDegree90;
+            row[3] = this.circleOffsetZ.numDegree180;
+            row[4] = this.circleOffsetZ.numDegree270;
+            row[5] = this.circleOffsetZ.numCurveType;
 
             row = this.CircleTable.Rows.Find("RotationX");
             row[1] = this.circleRotationX.numDegree0;

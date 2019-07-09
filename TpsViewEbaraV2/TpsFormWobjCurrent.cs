@@ -664,13 +664,13 @@ namespace TpsViewEbaraV2NameSpace
                 RapidData rapidData = rwSystem.Controller.Rapid.GetRapidData("T_ROB1", "CalibDataModule", "wobjCurrent");
                 this.wobjCurrent.FillFromString(rapidData.Value.ToString());
 
-                this.numEditor_oframeX.Value = (Decimal)this.wobjCurrent.Oframe.Trans.X;
-                this.numEditor_oframeY.Value = (Decimal)this.wobjCurrent.Oframe.Trans.Y;
-                this.numEditor_oframeZ.Value = (Decimal)this.wobjCurrent.Oframe.Trans.Z;
+                this.numEditor_oframeX.Value = (Decimal)Math.Round(this.wobjCurrent.Oframe.Trans.X,1);
+                this.numEditor_oframeY.Value = (Decimal)Math.Round(this.wobjCurrent.Oframe.Trans.Y,1);
+                this.numEditor_oframeZ.Value = (Decimal)Math.Round(this.wobjCurrent.Oframe.Trans.Z, 1);
 
                 if (this.pipeGrooveModel.numPipeGrooveType >= 3)
                 {
-                    this.numEditor_WorldXOffset.Value = (Decimal)this.wobjCurrent.Oframe.Trans.Z;
+                    this.numEditor_WorldXOffset.Value = (Decimal)Math.Round(this.wobjCurrent.Oframe.Trans.Z,1);
 
                     double dSeamNormalAngle = 0-Math.PI * ((double)this.numEditor_numSeamNormalAngle.Value) / 180;
 
@@ -682,9 +682,9 @@ namespace TpsViewEbaraV2NameSpace
                 }
                 else
                 {
-                    this.numEditor_WorldXOffset.Value = (Decimal)this.wobjCurrent.Oframe.Trans.X;
-                    this.numEditor_WorldYOffset.Value = (Decimal)this.wobjCurrent.Oframe.Trans.Y;
-                    this.numEditor_WorldZOffset.Value = (Decimal)this.wobjCurrent.Oframe.Trans.Z;
+                    this.numEditor_WorldXOffset.Value = (Decimal)Math.Round(this.wobjCurrent.Oframe.Trans.X,1);
+                    this.numEditor_WorldYOffset.Value = (Decimal)Math.Round(this.wobjCurrent.Oframe.Trans.Y,1);
+                    this.numEditor_WorldZOffset.Value = (Decimal)Math.Round(this.wobjCurrent.Oframe.Trans.Z,1);
                 }      
 
                 this.menuItem_Apply.Enabled = false;

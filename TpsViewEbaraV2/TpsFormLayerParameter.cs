@@ -24,7 +24,6 @@ namespace TpsViewEbaraV2NameSpace
         private ABB.Robotics.Tps.Windows.Forms.MenuItem menuItem_Refresh;
         private ABB.Robotics.Tps.Windows.Forms.MenuItem menuItem_Apply;
         private ABB.Robotics.Tps.Windows.Forms.MenuItem menuItem_Close;
-        private ABB.Robotics.Tps.Windows.Forms.NumericUpDown numericUpDown_intLayerNo;
         private TpsLabel tpsLabel_intLayerNo;
         private DataEditor dataEditor_strWeldProcedureID;
         private CompactAlphaPad compactAlphaPad1;
@@ -59,6 +58,7 @@ namespace TpsViewEbaraV2NameSpace
         private NumEditor numEditor_rCircleRotationZ270;
         private ABB.Robotics.Tps.Windows.Forms.CheckBox checkBox_boolRefreshbyLayerParameters;
         private ABB.Robotics.Tps.Windows.Forms.CheckBox checkBox_boolRefreshWeldProcedureID;
+        private NumEditor numEditor_intLayerNo;
 
         /// <summary>
         /// Required designer variable.
@@ -74,7 +74,8 @@ namespace TpsViewEbaraV2NameSpace
                 this._tpsRm = rM;
                 this.rwSystem = rwSystem;
                 this.layerParameter = layerParameter;
-                this.numericUpDown_intLayerNo.Value = this.layerParameter.intLayerNo;
+                //this.numericUpDown_intLayerNo.Value = this.layerParameter.intLayerNo;
+                this.numEditor_intLayerNo.Value = this.layerParameter.intLayerNo;
 
                 InitializeTexts();
             }
@@ -134,7 +135,6 @@ namespace TpsViewEbaraV2NameSpace
             this.menuItem_Refresh = new ABB.Robotics.Tps.Windows.Forms.MenuItem();
             this.menuItem_Apply = new ABB.Robotics.Tps.Windows.Forms.MenuItem();
             this.menuItem_Close = new ABB.Robotics.Tps.Windows.Forms.MenuItem();
-            this.numericUpDown_intLayerNo = new ABB.Robotics.Tps.Windows.Forms.NumericUpDown();
             this.tpsLabel_intLayerNo = new ABB.Robotics.Tps.Windows.Forms.TpsLabel();
             this.dataEditor_strWeldProcedureID = new ABB.Robotics.Tps.Windows.Forms.DataEditor();
             this.compactAlphaPad1 = new ABB.Robotics.Tps.Windows.Forms.CompactAlphaPad();
@@ -169,6 +169,7 @@ namespace TpsViewEbaraV2NameSpace
             this.numEditor_rCircleRotationZ270 = new ABB.Robotics.Tps.Windows.Forms.NumEditor();
             this.checkBox_boolRefreshbyLayerParameters = new ABB.Robotics.Tps.Windows.Forms.CheckBox();
             this.checkBox_boolRefreshWeldProcedureID = new ABB.Robotics.Tps.Windows.Forms.CheckBox();
+            this.numEditor_intLayerNo = new ABB.Robotics.Tps.Windows.Forms.NumEditor();
             this.SuspendLayout();
             // 
             // pictureBox_Logo
@@ -221,39 +222,6 @@ namespace TpsViewEbaraV2NameSpace
             this.menuItem_Close.Text = "Close";
             this.menuItem_Close.Width = 128;
             this.menuItem_Close.Click += new System.EventHandler(this.menuItem_Close_Click);
-            // 
-            // numericUpDown_intLayerNo
-            // 
-            this.numericUpDown_intLayerNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericUpDown_intLayerNo.CaretVisible = false;
-            this.numericUpDown_intLayerNo.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
-            this.numericUpDown_intLayerNo.Location = new System.Drawing.Point(116, 41);
-            this.numericUpDown_intLayerNo.Maximum = new decimal(new int[] {
-            40,
-            0,
-            0,
-            0});
-            this.numericUpDown_intLayerNo.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown_intLayerNo.Multiline = true;
-            this.numericUpDown_intLayerNo.Name = "numericUpDown_intLayerNo";
-            this.numericUpDown_intLayerNo.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.numericUpDown_intLayerNo.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
-            this.numericUpDown_intLayerNo.SelectionLength = 0;
-            this.numericUpDown_intLayerNo.SelectionStart = 0;
-            this.numericUpDown_intLayerNo.SelectionVisible = false;
-            this.numericUpDown_intLayerNo.Size = new System.Drawing.Size(124, 40);
-            this.numericUpDown_intLayerNo.TabIndex = 9;
-            this.numericUpDown_intLayerNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.numericUpDown_intLayerNo.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown_intLayerNo.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(this.numericUpDown_intLayerNo_PropertyChanged);
             // 
             // tpsLabel_intLayerNo
             // 
@@ -1003,9 +971,38 @@ namespace TpsViewEbaraV2NameSpace
             this.checkBox_boolRefreshWeldProcedureID.Text = "Weld Procedure ID";
             this.checkBox_boolRefreshWeldProcedureID.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(this.dataControl_PropertyChanged);
             // 
+            // numEditor_intLayerNo
+            // 
+            this.numEditor_intLayerNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numEditor_intLayerNo.CaretVisible = false;
+            this.numEditor_intLayerNo.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.numEditor_intLayerNo.Location = new System.Drawing.Point(119, 41);
+            this.numEditor_intLayerNo.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.numEditor_intLayerNo.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
+            this.numEditor_intLayerNo.Multiline = true;
+            this.numEditor_intLayerNo.Name = "numEditor_intLayerNo";
+            this.numEditor_intLayerNo.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.numEditor_intLayerNo.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
+            this.numEditor_intLayerNo.SelectionLength = 0;
+            this.numEditor_intLayerNo.SelectionStart = 0;
+            this.numEditor_intLayerNo.SelectionVisible = false;
+            this.numEditor_intLayerNo.Size = new System.Drawing.Size(80, 40);
+            this.numEditor_intLayerNo.TabIndex = 43;
+            this.numEditor_intLayerNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.numEditor_intLayerNo.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(this.numEditor_intLayerNo_PropertyChanged);
+            // 
             // TpsFormLayerParameter
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.Controls.Add(this.numEditor_intLayerNo);
             this.Controls.Add(this.checkBox_boolRefreshWeldProcedureID);
             this.Controls.Add(this.checkBox_boolRefreshbyLayerParameters);
             this.Controls.Add(this.numEditor_rCircleRotationZ270);
@@ -1029,7 +1026,6 @@ namespace TpsViewEbaraV2NameSpace
             this.Controls.Add(this.numEditor_rCircleOffsetZ0);
             this.Controls.Add(this.numEditor_rCircleOffsetX0);
             this.Controls.Add(this.dataEditor_strWeldProcedureID);
-            this.Controls.Add(this.numericUpDown_intLayerNo);
             this.Controls.Add(this.tpsLabel_rCircleRotationZ);
             this.Controls.Add(this.tpsLabel_rCircleRotationY);
             this.Controls.Add(this.tpsLabel_rCircleRotationX);
@@ -1060,7 +1056,6 @@ namespace TpsViewEbaraV2NameSpace
             this.Controls.SetChildIndex(this.tpsLabel_rCircleRotationX, 0);
             this.Controls.SetChildIndex(this.tpsLabel_rCircleRotationY, 0);
             this.Controls.SetChildIndex(this.tpsLabel_rCircleRotationZ, 0);
-            this.Controls.SetChildIndex(this.numericUpDown_intLayerNo, 0);
             this.Controls.SetChildIndex(this.dataEditor_strWeldProcedureID, 0);
             this.Controls.SetChildIndex(this.numEditor_rCircleOffsetX0, 0);
             this.Controls.SetChildIndex(this.numEditor_rCircleOffsetZ0, 0);
@@ -1084,6 +1079,7 @@ namespace TpsViewEbaraV2NameSpace
             this.Controls.SetChildIndex(this.numEditor_rCircleRotationZ270, 0);
             this.Controls.SetChildIndex(this.checkBox_boolRefreshbyLayerParameters, 0);
             this.Controls.SetChildIndex(this.checkBox_boolRefreshWeldProcedureID, 0);
+            this.Controls.SetChildIndex(this.numEditor_intLayerNo, 0);
             this.ResumeLayout(false);
 
         }
@@ -1110,7 +1106,8 @@ namespace TpsViewEbaraV2NameSpace
         {
             try
             {
-                this.layerParameter.RefreshData(this.rwSystem, Convert.ToInt32(this.numericUpDown_intLayerNo.Value));
+                //this.layerParameter.RefreshData(this.rwSystem, Convert.ToInt32(this.numericUpDown_intLayerNo.Value));
+                this.layerParameter.RefreshData(this.rwSystem, Convert.ToInt32(this.numEditor_intLayerNo.Value));
                 this.dataEditor_strWeldProcedureID.Text = this.layerParameter.strLayerParameterID;
                 this.numEditor_rCircleOffsetX0.Value = this.layerParameter.rCircleOffsetX.numDegree0;
                 this.numEditor_rCircleOffsetX90.Value = this.layerParameter.rCircleOffsetX.numDegree90;
@@ -1243,7 +1240,7 @@ namespace TpsViewEbaraV2NameSpace
             this.menuItem_Apply.Enabled = true;
         }
 
-        private void numericUpDown_intLayerNo_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        private void numEditor_intLayerNo_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             this.Invoke(this.UpdateGUI);
             this.menuItem_Apply.Enabled = false;

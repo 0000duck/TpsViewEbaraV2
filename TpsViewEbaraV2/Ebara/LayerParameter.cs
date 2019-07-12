@@ -18,8 +18,8 @@ namespace TpsViewEbaraV2NameSpace.Ebara
         private const string strDataTypeModuleName = "GeneralModule";
         private const string strDataType = "RECORDLayerParameter";
 
-        public DataTable CircleTable = new DataTable("Circles");
-        public DataView CircleView = null;
+        //public DataTable CircleTable = new DataTable("Circles");
+        //public DataView CircleView = null;
 
         #region Fields
 
@@ -90,120 +90,120 @@ namespace TpsViewEbaraV2NameSpace.Ebara
             this.circleRotationY = new Circle();
             this.circleRotationZ = new Circle();
 
-            DataColumn column;
+            //DataColumn column;
 
-            column = new DataColumn();
-            column.DataType = System.Type.GetType("System.String");
-            column.ColumnName = "optimizationType";
-            column.AutoIncrement = false;
-            column.Caption = "optimizationType";
-            column.ReadOnly = true;
-            column.Unique = true;
-            CircleTable.Columns.Add(column);
+            //column = new DataColumn();
+            //column.DataType = System.Type.GetType("System.String");
+            //column.ColumnName = "optimizationType";
+            //column.AutoIncrement = false;
+            //column.Caption = "optimizationType";
+            //column.ReadOnly = true;
+            //column.Unique = true;
+            //CircleTable.Columns.Add(column);
 
-            column = new DataColumn();
-            column.DataType = System.Type.GetType("System.Decimal");
-            column.ColumnName = "numDegree0";
-            column.AutoIncrement = false;
-            column.Caption = "numDegree0";
-            column.ReadOnly = false;
-            column.Unique = false;
-            column.DefaultValue = 0;
-            CircleTable.Columns.Add(column);
+            //column = new DataColumn();
+            //column.DataType = System.Type.GetType("System.Decimal");
+            //column.ColumnName = "numDegree0";
+            //column.AutoIncrement = false;
+            //column.Caption = "numDegree0";
+            //column.ReadOnly = false;
+            //column.Unique = false;
+            //column.DefaultValue = 0;
+            //CircleTable.Columns.Add(column);
 
-            column = new DataColumn();
-            column.DataType = System.Type.GetType("System.Decimal");
-            column.ColumnName = "numDegree90";
-            column.AutoIncrement = false;
-            column.Caption = "numDegree90";
-            column.ReadOnly = false;
-            column.Unique = false;
-            column.DefaultValue = 0;
-            CircleTable.Columns.Add(column);
+            //column = new DataColumn();
+            //column.DataType = System.Type.GetType("System.Decimal");
+            //column.ColumnName = "numDegree90";
+            //column.AutoIncrement = false;
+            //column.Caption = "numDegree90";
+            //column.ReadOnly = false;
+            //column.Unique = false;
+            //column.DefaultValue = 0;
+            //CircleTable.Columns.Add(column);
 
-            column = new DataColumn();
-            column.DataType = System.Type.GetType("System.Decimal");
-            column.ColumnName = "numDegree180";
-            column.AutoIncrement = false;
-            column.Caption = "numDegree180";
-            column.ReadOnly = false;
-            column.Unique = false;
-            column.DefaultValue = 0;
-            CircleTable.Columns.Add(column);
+            //column = new DataColumn();
+            //column.DataType = System.Type.GetType("System.Decimal");
+            //column.ColumnName = "numDegree180";
+            //column.AutoIncrement = false;
+            //column.Caption = "numDegree180";
+            //column.ReadOnly = false;
+            //column.Unique = false;
+            //column.DefaultValue = 0;
+            //CircleTable.Columns.Add(column);
 
-            column = new DataColumn();
-            column.DataType = System.Type.GetType("System.Decimal");
-            column.ColumnName = "numDegree270";
-            column.AutoIncrement = false;
-            column.Caption = "numDegree270";
-            column.ReadOnly = false;
-            column.Unique = false;
-            column.DefaultValue = 0;
-            CircleTable.Columns.Add(column);
+            //column = new DataColumn();
+            //column.DataType = System.Type.GetType("System.Decimal");
+            //column.ColumnName = "numDegree270";
+            //column.AutoIncrement = false;
+            //column.Caption = "numDegree270";
+            //column.ReadOnly = false;
+            //column.Unique = false;
+            //column.DefaultValue = 0;
+            //CircleTable.Columns.Add(column);
 
-            column = new DataColumn();
-            column.DataType = System.Type.GetType("System.Int32");
-            column.ColumnName = "numCurveType";
-            column.AutoIncrement = false;
-            column.Caption = "numCurveType";
-            column.ReadOnly = false;
-            column.Unique = false;
-            column.DefaultValue = 1;
-            CircleTable.Columns.Add(column);
+            //column = new DataColumn();
+            //column.DataType = System.Type.GetType("System.Int32");
+            //column.ColumnName = "numCurveType";
+            //column.AutoIncrement = false;
+            //column.Caption = "numCurveType";
+            //column.ReadOnly = false;
+            //column.Unique = false;
+            //column.DefaultValue = 1;
+            //CircleTable.Columns.Add(column);
 
-            DataColumn[] PrimaryKeyColumns = new DataColumn[1];
-            PrimaryKeyColumns[0] = CircleTable.Columns["OptimizationType"];
-            CircleTable.PrimaryKey = PrimaryKeyColumns;
+            //DataColumn[] PrimaryKeyColumns = new DataColumn[1];
+            //PrimaryKeyColumns[0] = CircleTable.Columns["OptimizationType"];
+            //CircleTable.PrimaryKey = PrimaryKeyColumns;
 
-            DataRow row;
+            //DataRow row;
 
-            row = CircleTable.NewRow();
-            row["OptimizationType"] = "OffsetX";
-            //row["numDegree0"] = this.rCircleOffsetX.numDegree0;
-            //row["numDegree90"] = this.rCircleOffsetX.numDegree90;
-            //row["numDegree180"] = this.rCircleOffsetX.numDegree180;
-            //row["numDegree270"] = this.rCircleOffsetX.numDegree270;
-            //row["numCurveType"] = this.rCircleOffsetX.numCurveType;
-            CircleTable.Rows.Add(row);
+            //row = CircleTable.NewRow();
+            //row["OptimizationType"] = "OffsetX";
+            ////row["numDegree0"] = this.rCircleOffsetX.numDegree0;
+            ////row["numDegree90"] = this.rCircleOffsetX.numDegree90;
+            ////row["numDegree180"] = this.rCircleOffsetX.numDegree180;
+            ////row["numDegree270"] = this.rCircleOffsetX.numDegree270;
+            ////row["numCurveType"] = this.rCircleOffsetX.numCurveType;
+            //CircleTable.Rows.Add(row);
 
-            row = CircleTable.NewRow();
-            row["OptimizationType"] = "OffsetZ";
-            //row["numDegree0"] = this.rCircleOffsetZ.numDegree0;
-            //row["numDegree90"] = this.rCircleOffsetZ.numDegree90;
-            //row["numDegree180"] = this.rCircleOffsetZ.numDegree180;
-            //row["numDegree270"] = this.rCircleOffsetZ.numDegree270;
-            //row["numCurveType"] = this.rCircleOffsetZ.numCurveType;
-            CircleTable.Rows.Add(row);
+            //row = CircleTable.NewRow();
+            //row["OptimizationType"] = "OffsetZ";
+            ////row["numDegree0"] = this.rCircleOffsetZ.numDegree0;
+            ////row["numDegree90"] = this.rCircleOffsetZ.numDegree90;
+            ////row["numDegree180"] = this.rCircleOffsetZ.numDegree180;
+            ////row["numDegree270"] = this.rCircleOffsetZ.numDegree270;
+            ////row["numCurveType"] = this.rCircleOffsetZ.numCurveType;
+            //CircleTable.Rows.Add(row);
 
-            row = CircleTable.NewRow();
-            row["OptimizationType"] = "RotationX";
-            //row["numDegree0"] = this.rCircleRotationX.numDegree0;
-            //row["numDegree90"] = this.rCircleRotationX.numDegree90;
-            //row["numDegree180"] = this.rCircleRotationX.numDegree180;
-            //row["numDegree270"] = this.rCircleRotationX.numDegree270;
-            //row["numCurveType"] = this.rCircleRotationX.numCurveType;
-            CircleTable.Rows.Add(row);
+            //row = CircleTable.NewRow();
+            //row["OptimizationType"] = "RotationX";
+            ////row["numDegree0"] = this.rCircleRotationX.numDegree0;
+            ////row["numDegree90"] = this.rCircleRotationX.numDegree90;
+            ////row["numDegree180"] = this.rCircleRotationX.numDegree180;
+            ////row["numDegree270"] = this.rCircleRotationX.numDegree270;
+            ////row["numCurveType"] = this.rCircleRotationX.numCurveType;
+            //CircleTable.Rows.Add(row);
 
-            row = CircleTable.NewRow();
-            row["OptimizationType"] = "RotationY";
-            //row["numDegree0"] = this.rCircleRotationY.numDegree0;
-            //row["numDegree90"] = this.rCircleRotationY.numDegree90;
-            //row["numDegree180"] = this.rCircleRotationY.numDegree180;
-            //row["numDegree270"] = this.rCircleRotationY.numDegree270;
-            //row["numCurveType"] = this.rCircleRotationY.numCurveType;
-            CircleTable.Rows.Add(row);
+            //row = CircleTable.NewRow();
+            //row["OptimizationType"] = "RotationY";
+            ////row["numDegree0"] = this.rCircleRotationY.numDegree0;
+            ////row["numDegree90"] = this.rCircleRotationY.numDegree90;
+            ////row["numDegree180"] = this.rCircleRotationY.numDegree180;
+            ////row["numDegree270"] = this.rCircleRotationY.numDegree270;
+            ////row["numCurveType"] = this.rCircleRotationY.numCurveType;
+            //CircleTable.Rows.Add(row);
 
-            row = CircleTable.NewRow();
-            row["OptimizationType"] = "RotationZ";
-            //row["numDegree0"] = this.rCircleRotationZ.numDegree0;
-            //row["numDegree90"] = this.rCircleRotationZ.numDegree90;
-            //row["numDegree180"] = this.rCircleRotationZ.numDegree180;
-            //row["numDegree270"] = this.rCircleRotationZ.numDegree270;
-            //row["numCurveType"] = this.rCircleRotationZ.numCurveType;
-            CircleTable.Rows.Add(row);
+            //row = CircleTable.NewRow();
+            //row["OptimizationType"] = "RotationZ";
+            ////row["numDegree0"] = this.rCircleRotationZ.numDegree0;
+            ////row["numDegree90"] = this.rCircleRotationZ.numDegree90;
+            ////row["numDegree180"] = this.rCircleRotationZ.numDegree180;
+            ////row["numDegree270"] = this.rCircleRotationZ.numDegree270;
+            ////row["numCurveType"] = this.rCircleRotationZ.numCurveType;
+            //CircleTable.Rows.Add(row);
 
-            this.CircleView = new DataView(this.CircleTable);
-            this.CircleView.AllowNew = false;
+            //this.CircleView = new DataView(this.CircleTable);
+            //this.CircleView.AllowNew = false;
         }
         
         #region Dispose
@@ -223,18 +223,18 @@ namespace TpsViewEbaraV2NameSpace.Ebara
             }
             if (disposing)
             {
-                if (this.CircleView != null)
-                {
-                    this.CircleView.Dispose();
-                    this.CircleView = null;
-                }
-                if (this.CircleTable != null)
-                {
-                    this.CircleTable.Clear();
-                    //this.CircleTable.Reset();
-                    this.CircleTable.Dispose();
-                    this.CircleTable = null;
-                }
+                //if (this.CircleView != null)
+                //{
+                //    this.CircleView.Dispose();
+                //    this.CircleView = null;
+                //}
+                //if (this.CircleTable != null)
+                //{
+                //    this.CircleTable.Clear();
+                //    //this.CircleTable.Reset();
+                //    this.CircleTable.Dispose();
+                //    this.CircleTable = null;
+                //}
                 if (this.rCircleOffsetX != null)
                 {
                     this.rCircleOffsetX.Dispose();
@@ -313,40 +313,40 @@ namespace TpsViewEbaraV2NameSpace.Ebara
             rLayerParameterType.Dispose();
             rLayerParameter.Dispose();
 
-            DataRow row = this.CircleTable.Rows.Find("OffsetX");
-            row[1] = this.circleOffsetX.numDegree0;
-            row[2] = this.circleOffsetX.numDegree90;
-            row[3] = this.circleOffsetX.numDegree180;
-            row[4] = this.circleOffsetX.numDegree270;
-            row[5] = this.circleOffsetX.numCurveType;
+            //DataRow row = this.CircleTable.Rows.Find("OffsetX");
+            //row[1] = this.circleOffsetX.numDegree0;
+            //row[2] = this.circleOffsetX.numDegree90;
+            //row[3] = this.circleOffsetX.numDegree180;
+            //row[4] = this.circleOffsetX.numDegree270;
+            //row[5] = this.circleOffsetX.numCurveType;
 
-            row = this.CircleTable.Rows.Find("OffsetZ");
-            row[1] = this.circleOffsetZ.numDegree0;
-            row[2] = this.circleOffsetZ.numDegree90;
-            row[3] = this.circleOffsetZ.numDegree180;
-            row[4] = this.circleOffsetZ.numDegree270;
-            row[5] = this.circleOffsetZ.numCurveType;
+            //row = this.CircleTable.Rows.Find("OffsetZ");
+            //row[1] = this.circleOffsetZ.numDegree0;
+            //row[2] = this.circleOffsetZ.numDegree90;
+            //row[3] = this.circleOffsetZ.numDegree180;
+            //row[4] = this.circleOffsetZ.numDegree270;
+            //row[5] = this.circleOffsetZ.numCurveType;
 
-            row = this.CircleTable.Rows.Find("RotationX");
-            row[1] = this.circleRotationX.numDegree0;
-            row[2] = this.circleRotationX.numDegree90;
-            row[3] = this.circleRotationX.numDegree180;
-            row[4] = this.circleRotationX.numDegree270;
-            row[5] = this.circleRotationX.numCurveType;
+            //row = this.CircleTable.Rows.Find("RotationX");
+            //row[1] = this.circleRotationX.numDegree0;
+            //row[2] = this.circleRotationX.numDegree90;
+            //row[3] = this.circleRotationX.numDegree180;
+            //row[4] = this.circleRotationX.numDegree270;
+            //row[5] = this.circleRotationX.numCurveType;
 
-            row = this.CircleTable.Rows.Find("RotationY");
-            row[1] = this.circleRotationY.numDegree0;
-            row[2] = this.circleRotationY.numDegree90;
-            row[3] = this.circleRotationY.numDegree180;
-            row[4] = this.circleRotationY.numDegree270;
-            row[5] = this.circleRotationY.numCurveType;
+            //row = this.CircleTable.Rows.Find("RotationY");
+            //row[1] = this.circleRotationY.numDegree0;
+            //row[2] = this.circleRotationY.numDegree90;
+            //row[3] = this.circleRotationY.numDegree180;
+            //row[4] = this.circleRotationY.numDegree270;
+            //row[5] = this.circleRotationY.numCurveType;
 
-            row = this.CircleTable.Rows.Find("RotationZ");
-            row[1] = this.circleRotationZ.numDegree0;
-            row[2] = this.circleRotationZ.numDegree90;
-            row[3] = this.circleRotationZ.numDegree180;
-            row[4] = this.circleRotationZ.numDegree270;
-            row[5] = this.circleRotationZ.numCurveType;
+            //row = this.CircleTable.Rows.Find("RotationZ");
+            //row[1] = this.circleRotationZ.numDegree0;
+            //row[2] = this.circleRotationZ.numDegree90;
+            //row[3] = this.circleRotationZ.numDegree180;
+            //row[4] = this.circleRotationZ.numDegree270;
+            //row[5] = this.circleRotationZ.numCurveType;
         }
 
         public void ApplyData(RWSystem rwSystem)

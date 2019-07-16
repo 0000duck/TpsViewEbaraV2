@@ -672,7 +672,7 @@ namespace TpsViewEbaraV2NameSpace
             this.checkBox_boolUseAlignedSTNbyFixedValue.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(182)))));
             this.checkBox_boolUseAlignedSTNbyFixedValue.Size = new System.Drawing.Size(235, 24);
             this.checkBox_boolUseAlignedSTNbyFixedValue.TabIndex = 34;
-            this.checkBox_boolUseAlignedSTNbyFixedValue.Text = "Dynamic STN1";
+            this.checkBox_boolUseAlignedSTNbyFixedValue.Text = "Static Roller Angle";
             this.checkBox_boolUseAlignedSTNbyFixedValue.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(this.dataControl_PropertyChanged);
             // 
             // tabControl1

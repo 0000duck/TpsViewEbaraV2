@@ -130,7 +130,7 @@ namespace TpsViewEbaraV2NameSpace.zh {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 动态计算变位机角度.
+        ///   Looks up a localized string similar to 静态旋转变位机.
         /// </summary>
         internal static string TXT_checkBox_boolUseAlignedSTNbyFixedValue {
             get {

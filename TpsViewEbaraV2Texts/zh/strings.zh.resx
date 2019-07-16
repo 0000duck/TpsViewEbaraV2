@@ -127,7 +127,7 @@
     <value>步进模式</value>
   </data>
   <data name="TXT_checkBox_boolUseAlignedSTNbyFixedValue" xml:space="preserve">
-    <value>动态计算变位机角度</value>
+    <value>静态旋转变位机</value>
   </data>
   <data name="TXT_EbaraUtility" xml:space="preserve">
     <value>调试助手</value>

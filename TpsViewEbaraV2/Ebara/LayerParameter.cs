@@ -30,8 +30,8 @@ namespace TpsViewEbaraV2NameSpace.Ebara
             set { layerNo = value; }
         }
 
-        private int workAngleDeclination;
-        public int numWorkAngleDeclination
+        private decimal workAngleDeclination;
+        public decimal numWorkAngleDeclination
         {
             get { return workAngleDeclination; }
             set { workAngleDeclination = value; }

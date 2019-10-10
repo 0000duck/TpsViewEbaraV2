@@ -983,7 +983,7 @@ namespace TpsViewEbaraV2NameSpace
             this.numEditor_intLayerNo.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
             this.numEditor_intLayerNo.Location = new System.Drawing.Point(119, 41);
             this.numEditor_intLayerNo.Maximum = new decimal(new int[] {
-            40,
+            80,
             0,
             0,
             0});
